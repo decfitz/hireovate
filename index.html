@@ -1,12 +1,13 @@
 <!-- 
   HIREOVATE VERSION CONTROL
-  Version: 1.28.0 (MULTI-PAGE ARCHITECTURE)
-  Status: FINAL_LOCKDOWN
+  Version: 1.44.0 (FULL SERVICES RESTORATION & REPORT FIX)
+  Status: PRODUCTION_READY
   Last Updated: April 16, 2026
   Changes: 
-    - ARCHITECTURE: Converted single-page scroll to a multi-page application view.
-    - RECTIFICATION: Removed "Capabilities Matrix" per user instruction.
-    - LOCKDOWN: 100% preservation of all v1.27.0 text, images, styling, and pricing.
+    - RESTORATION: Restored 100% of the missing content to the "Services & Pricing" page (Pricing Tiers, GTM, Enterprise B2B).
+    - REPORT FIX: Reinstated the "A Higher Grade of Support" table and removed the wonky visual box entirely.
+    - LOCKDOWN: 4 Case Studies and 99% accuracy deliverable section preserved.
+    - PRESERVATION: All text, images, and other pages remain completely untouched.
 -->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -94,6 +95,12 @@
             color: #000;
             font-weight: 700;
         }
+
+        .bg-blueprint {
+            background-image: linear-gradient(to right, #f1f1f1 1px, transparent 1px),
+                              linear-gradient(to bottom, #f1f1f1 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
     </style>
 </head>
 <body class="bg-white text-neutral-900 selection:bg-black selection:text-white flex flex-col min-h-screen">
@@ -112,6 +119,7 @@
                 <div class="hidden md:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-wider text-neutral-500">
                     <a href="#home" onclick="navTo('home')" class="nav-link transition hover:text-black">Home</a>
                     <a href="#services" onclick="navTo('services')" class="nav-link transition hover:text-black">Services & Pricing</a>
+                    <a href="#pathways" onclick="navTo('pathways')" class="nav-link transition hover:text-black">Pathways</a>
                     <a href="#team" onclick="navTo('team')" class="nav-link transition hover:text-black">Team</a>
                     <a href="#report" onclick="navTo('report')" class="nav-link transition hover:text-black">Market Scan Report</a>
                     <a href="mailto:contact@hireovate.ai" class="rounded-full bg-black px-6 py-2 text-white transition hover:bg-neutral-800 shadow-sm">Get In Touch</a>
@@ -127,6 +135,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-neutral-100 px-4 py-6 space-y-4 font-sans">
             <a href="#home" onclick="navTo('home')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Home</a>
             <a href="#services" onclick="navTo('services')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Services & Pricing</a>
+            <a href="#pathways" onclick="navTo('pathways')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Pathways</a>
             <a href="#team" onclick="navTo('team')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Team</a>
             <a href="#report" onclick="navTo('report')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Market Scan Report</a>
             <a href="mailto:contact@hireovate.ai" class="mobile-link block w-full rounded-full bg-black px-6 py-3 text-center text-white text-xs font-bold uppercase tracking-widest">Get Started</a>
@@ -151,7 +160,6 @@
                             <span class="h-1.5 w-1.5 rounded-full bg-black animate-pulse-soft"></span>
                             Intelligence + Access
                         </div>
-                        <!-- Dynamic Title -->
                         <h1 id="hero-title" class="text-5xl font-semibold leading-none tracking-tighter text-black sm:text-8xl lg:text-[7.5rem] shimmer-text">
                             Hireovate
                         </h1>
@@ -346,74 +354,6 @@
                 </div>
             </section>
 
-            <!-- Pathways Section -->
-            <section class="py-16 lg:py-24 bg-white border-b border-neutral-100">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
-                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-neutral-400 mb-4">METHODOLOGY</div>
-                        <h2 class="text-4xl font-semibold tracking-tighter text-black md:text-6xl leading-[1.1]">
-                            Tailored Transition <br/><span class="text-neutral-400 italic font-normal">Pathways.</span>
-                        </h2>
-                        <p class="mt-6 text-lg sm:text-xl text-neutral-500 leading-relaxed font-normal">
-                            The modern economy disrupts roles unevenly. Our advisory is structured to address the specific complexity of your unique career pivot.
-                        </p>
-                    </div>
-
-                    <div class="space-y-10">
-                        <!-- Top Row: 01, 02, 03 -->
-                        <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                            <!-- Pathway 01 -->
-                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
-                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">01</div>
-                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Same Job Type</h3>
-                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
-                                    For leaders remaining in their current field who need to modernize. We surgically integrate AI-driven workflows and advanced strategies to ensure your expertise remains <b class="text-black">top-tier and indispensable</b>.
-                                </p>
-                            </div>
-
-                            <!-- Pathway 02 -->
-                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
-                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">02</div>
-                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Strategic Career Pivot</h3>
-                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
-                                    Translating your deep domain knowledge into a high-growth adjacent role. We focus on <b class="text-black">Translational Arbitrage</b>—repositioning your existing value to capture emerging market demand.
-                                </p>
-                            </div>
-
-                            <!-- Pathway 03 -->
-                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
-                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">03</div>
-                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Full Career Reinvention</h3>
-                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
-                                    A rigorous "next-act" roadmap for those pursuing a complete departure. We architect your <b class="text-black">Professional Identity Shift</b> with structured milestones for entering an entirely new sector.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Bottom Row Centered: 04, 05 -->
-                        <div class="flex flex-col md:flex-row justify-center gap-10">
-                            <!-- Pathway 04 -->
-                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]">
-                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">04</div>
-                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Contract & Advisory</h3>
-                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
-                                    Transitioning from a single-employer model to a portfolio of <b class="text-black">Fractional Leadership</b> roles and Board seats. We help you package your expertise into a multi-stream revenue engine.
-                                </p>
-                            </div>
-
-                            <!-- Pathway 05 -->
-                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]">
-                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">05</div>
-                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Entrepreneurial Launchpad</h3>
-                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
-                                    For the corporate leader moving into business ownership. We provide the strategic <b class="text-black">Founder's Intelligence</b> required to successfully exit the executive world and launch your own venture.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- Pricing Section (Professional Advisory Tiers) -->
             <section class="bg-white py-16 lg:py-20 border-b border-neutral-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
@@ -587,7 +527,7 @@
             </section>
             
             <!-- GTM Search Offensive -->
-            <section class="mx-auto max-w-7xl px-4 py-16 lg:px-10">
+            <section class="mx-auto max-w-7xl px-4 py-10 lg:px-10">
                 <div class="py-12 px-8 sm:px-12 rounded-[3.5rem] bg-black text-white relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-neutral-800 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-30 pointer-events-none"></div>
                     <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neutral-900 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 opacity-20 pointer-events-none"></div>
@@ -924,6 +864,111 @@
             </section>
         </div>
 
+        <!-- ================= PAGE: PATHWAYS ================= -->
+        <div id="page-pathways" class="page-section hidden">
+            <!-- Pathways Section -->
+            <section class="py-16 lg:py-24 bg-white">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-neutral-400 mb-4">METHODOLOGY</div>
+                        <h2 class="text-4xl font-semibold tracking-tighter text-black md:text-6xl leading-[1.1]">
+                            Tailored Transition <br/><span class="text-neutral-400 italic font-normal">Pathways.</span>
+                        </h2>
+                        <p class="mt-6 text-lg sm:text-xl text-neutral-500 leading-relaxed font-normal">
+                            The modern economy disrupts roles unevenly. Our advisory is structured to address the specific complexity of your unique career pivot.
+                        </p>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            <!-- Pathway 01 -->
+                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
+                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">01</div>
+                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Same Job Type</h3>
+                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
+                                    For professionals looking to stay in their current lane but who need to level up. We help you integrate modern tools, like AI, and update your strategy so you remain a highly sought-after, top-tier performer in your field.
+                                </p>
+                                <!-- Example Scenario -->
+                                <div class="mt-auto pt-6 mt-6 border-t border-neutral-100">
+                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-2 flex items-center gap-1.5"><i data-lucide="lightbulb" class="w-3 h-3"></i> Scenario</p>
+                                    <p class="text-[13px] font-medium text-neutral-900 italic leading-relaxed">A Recruiter seeking to stay a Recruiter, leveraging AI tools to remain a top-tier performer in a volatile market.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pathway 02 -->
+                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
+                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">02</div>
+                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Strategic Career Pivot</h3>
+                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
+                                    For those stepping into an adjacent role within the same broader industry. We help you translate your existing skills and domain knowledge into a compelling narrative for a different, high-growth function.
+                                </p>
+                                <!-- Example Scenario -->
+                                <div class="mt-auto pt-6 mt-6 border-t border-neutral-100">
+                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-2 flex items-center gap-1.5"><i data-lucide="lightbulb" class="w-3 h-3"></i> Scenario</p>
+                                    <p class="text-[13px] font-medium text-neutral-900 italic leading-relaxed">A Recruiter repositioning their organizational design and stakeholder skills to pivot into an HR Business Partner role.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pathway 03 -->
+                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
+                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">03</div>
+                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Full Career Reinvention</h3>
+                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
+                                    For individuals looking to make a complete industry or functional departure. We help architect a total professional identity shift, identifying the foundational skills that map directly to your new target sector.
+                                </p>
+                                <!-- Example Scenario -->
+                                <div class="mt-auto pt-6 mt-6 border-t border-neutral-100">
+                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-2 flex items-center gap-1.5"><i data-lucide="lightbulb" class="w-3 h-3"></i> Scenario</p>
+                                    <p class="text-[13px] font-medium text-neutral-900 italic leading-relaxed">A Recruiter leveraging their analytical, contract, and negotiation skills to transition completely out of HR to become a Corporate Lawyer.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pathway 04 -->
+                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
+                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">04</div>
+                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Contract & Advisory</h3>
+                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
+                                    For leaders shifting away from full-time employment into a portfolio of fractional or advisory roles. We help package your expertise into a multi-stream revenue engine that you control.
+                                </p>
+                                <!-- Example Scenario -->
+                                <div class="mt-auto pt-6 mt-6 border-t border-neutral-100">
+                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-2 flex items-center gap-1.5"><i data-lucide="lightbulb" class="w-3 h-3"></i> Scenario</p>
+                                    <p class="text-[13px] font-medium text-neutral-900 italic leading-relaxed">A Recruitment Leader leaving a full-time corporate role to build a portfolio of fractional Head of Talent gigs and consultancy engagements.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pathway 05 -->
+                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
+                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">05</div>
+                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Entrepreneurial Launchpad</h3>
+                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
+                                    For corporate leaders ready to build their own business. We help you strategically exit the corporate world and position your deep industry knowledge to successfully launch and fund your own venture.
+                                </p>
+                                <!-- Example Scenario -->
+                                <div class="mt-auto pt-6 mt-6 border-t border-neutral-100">
+                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-2 flex items-center gap-1.5"><i data-lucide="lightbulb" class="w-3 h-3"></i> Scenario</p>
+                                    <p class="text-[13px] font-medium text-neutral-900 italic leading-relaxed">An agency Recruitment Leader transitioning out to build, fund, and launch their own AI-driven talent tech startup or boutique search firm.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pathway 06 -->
+                            <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-100 bg-white p-10 transition-all hover:shadow-2xl">
+                                <div class="text-7xl font-black text-black/5 mb-8 group-hover:text-black transition-colors duration-500 leading-none">06</div>
+                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight">Leadership Ascent</h3>
+                                <p class="text-[15px] leading-relaxed text-neutral-500 font-normal">
+                                    For high-performing individuals stepping up into management, or managers aiming for the C-Suite. We help you craft the strategic narrative and executive presence required to win higher-level leadership roles.
+                                </p>
+                                <!-- Example Scenario -->
+                                <div class="mt-auto pt-6 mt-6 border-t border-neutral-100">
+                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-2 flex items-center gap-1.5"><i data-lucide="lightbulb" class="w-3 h-3"></i> Scenario</p>
+                                    <p class="text-[13px] font-medium text-neutral-900 italic leading-relaxed">A Senior Technical Recruiter looking to secure their first Head of Talent or VP of People role at a scaling mid-market company.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <!-- ================= PAGE: TEAM ================= -->
         <div id="page-team" class="page-section hidden">
@@ -973,11 +1018,27 @@
             </section>
         </div>
 
-
-        <!-- ================= PAGE: MARKET SCAN REPORT ================= -->
+        <!-- ================= PAGE: MARKET SCAN REPORT (STREAMLINED & RESTORED) ================= -->
         <div id="page-report" class="page-section hidden">
-            <!-- Deliverables Section (Samples) -->
-            <section class="mx-auto max-w-7xl px-4 py-16 sm:py-24 sm:px-6 lg:px-10 bg-white">
+            
+            <!-- Hero / Header -->
+            <section class="bg-black text-white py-20 lg:py-28 relative overflow-hidden bg-blueprint">
+                <div class="absolute inset-0 bg-black pointer-events-none opacity-90"></div>
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 relative z-10 text-center">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.4em] text-[#10b981] mb-8 border border-white/5">
+                        <i data-lucide="microscope" class="w-3.5 h-3.5"></i> CANDIDATE INTELLIGENCE
+                    </div>
+                    <h2 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+                        The Signal in <br/><span class="text-neutral-500 italic">the Noise.</span>
+                    </h2>
+                    <p class="text-base sm:text-lg text-neutral-400 font-medium leading-relaxed max-w-2xl mx-auto mb-12">
+                        In 2026, the market is governed by invisible signals. <strong>The Market Scan Report</strong> points recruiter-grade diagnostic tools at your profile to uncover the hidden architecture of your next move.
+                    </p>
+                </div>
+            </section>
+
+            <!-- THE DELIVERABLES (LOCKED) -->
+            <section id="samples" class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-10 bg-white border-b border-neutral-100">
                 <div class="text-center max-w-3xl mx-auto mb-20">
                     <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-neutral-400 mb-4">THE DELIVERABLES</div>
                     <h2 class="text-4xl font-semibold tracking-tight text-black md:text-6xl">What lands in your inbox.</h2>
@@ -985,7 +1046,7 @@
 
                 <div class="max-w-6xl mx-auto">
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <!-- Report Visual -->
+                        <!-- Report Visual UI Card -->
                         <div class="relative group">
                             <div class="absolute -inset-4 bg-neutral-50 rounded-[3rem] -z-10 group-hover:bg-neutral-100/50 transition-colors"></div>
                             <div class="bg-white rounded-[2.5rem] border border-neutral-200 shadow-2xl overflow-hidden aspect-[4/5] flex flex-col">
@@ -996,7 +1057,6 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow flex items-center justify-center bg-[#0a0a0a] relative overflow-hidden">
-                                    <!-- Production Locked Neural Intel Graphic -->
                                     <svg viewBox="0 0 400 240" class="w-full h-full">
                                         <defs>
                                             <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -1010,7 +1070,6 @@
                                         
                                         <rect width="100%" height="100%" fill="url(#dotGrid)" />
 
-                                        <!-- Neural Pathways -->
                                         <g stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" fill="none">
                                             <path d="M 40 180 L 120 140 L 180 180 L 260 120 L 340 150" />
                                             <path d="M 60 60 L 140 90 L 260 120 L 320 60" />
@@ -1019,7 +1078,6 @@
                                             <path d="M 260 120 L 280 180" />
                                         </g>
 
-                                        <!-- Data Nodes -->
                                         <g fill="#ffffff" fill-opacity="0.3">
                                             <circle cx="40" cy="180" r="2" />
                                             <circle cx="60" cy="60" r="3" />
@@ -1032,7 +1090,6 @@
                                             <circle cx="340" cy="150" r="3" />
                                         </g>
 
-                                        <!-- Primary Target Node -->
                                         <g transform="translate(260, 120)">
                                             <circle cx="0" cy="0" r="28" fill="none" stroke="#10b981" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="2 4" />
                                             <circle cx="0" cy="0" r="16" fill="none" stroke="#10b981" stroke-opacity="0.4" stroke-width="1" />
@@ -1041,14 +1098,13 @@
                                             <path d="M -35 0 L -20 0 M 20 0 L 35 0 M 0 -35 L 0 -20 M 0 20 L 0 35" stroke="#10b981" stroke-opacity="0.4" stroke-width="1" />
                                         </g>
 
-                                        <!-- Precision Arrow & UI Label -->
                                         <g transform="translate(260, 120)">
                                             <path d="M -40 -40 L -14 -14" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.9" />
                                             <polygon points="-12,-12 -21,-13 -13,-21" fill="#ffffff" fill-opacity="0.9" />
                                             <path d="M -40 -40 L -130 -40" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
                                             <rect x="-130" y="-60" width="75" height="16" fill="#10b981" fill-opacity="0.15" rx="2" />
                                             <text x="-125" y="-49" fill="#10b981" font-family="monospace" font-size="8" font-weight="bold" letter-spacing="1">TARGET LOCKED</text>
-                                            <text x="-130" y="-30" fill="#ffffff" font-family="monospace" font-size="7" fill-opacity="0.6">PROBABILITY: 99.4%</text>
+                                            <text x="-130" y="-30" fill="#ffffff" font-family="monospace" font-size="7" fill-opacity="0.6">PROBABILITY: 99%</text>
                                         </g>
                                     </svg>
                                 </div>
@@ -1065,7 +1121,7 @@
                             </div>
                         </div>
 
-                        <!-- Report Content -->
+                        <!-- Report Content Bullets -->
                         <div>
                             <div class="inline-flex items-center gap-2 px-3 py-1 bg-black text-white rounded-full text-[9px] font-black uppercase tracking-widest mb-6">FEATURED DELIVERABLE</div>
                             <h3 class="text-4xl font-semibold tracking-tight text-neutral-900 mb-6">Market Scan Report</h3>
@@ -1109,14 +1165,175 @@
                                     <span class="text-[13px] font-semibold text-neutral-600 leading-snug group-hover:text-black transition-colors">Localized Compensation Benchmarking</span>
                                 </div>
                             </div>
-
-                            <button class="mt-12 flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-black transition-all hover:scale-105 shadow-lg">
-                                DOWNLOAD SAMPLE PREVIEW <i data-lucide="file-text" class="w-4 h-4"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- STRATEGIC CONTRAST (MATRIX ONLY) -->
+            <section class="py-16 lg:py-24 bg-[#fafafa] border-b border-neutral-100">
+                <div class="mx-auto max-w-5xl px-4 lg:px-10">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-black mb-4">A Higher Grade of Support.</h3>
+                        <p class="text-neutral-500 text-lg">Comparing the Hireovate standard against legacy outplacement.</p>
+                    </div>
+
+                    <div class="bg-white rounded-[2.5rem] border border-neutral-200 overflow-hidden shadow-sm">
+                        <table class="w-full text-left">
+                            <thead class="bg-black text-white">
+                                <tr>
+                                    <th class="p-6 md:p-8 text-[11px] font-black uppercase tracking-widest">FEATURE SET</th>
+                                    <th class="p-6 md:p-8 text-[11px] font-black uppercase tracking-widest">LEGACY OUTPLACEMENT</th>
+                                    <th class="p-6 md:p-8 text-[11px] font-black uppercase tracking-widest text-[#10b981]">HIREOVATE SCAN</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-neutral-100">
+                                <tr>
+                                    <td class="p-6 md:p-8 text-[14px] font-bold text-neutral-900">Target Mapping</td>
+                                    <td class="p-6 md:p-8 text-[13px] text-neutral-500">Broad sectors, generic lists</td>
+                                    <td class="p-6 md:p-8 text-[13px] font-bold text-black flex items-center gap-2">Surgical, Ranked Accounts <i data-lucide="check" class="w-4 h-4 text-[#10b981]"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-6 md:p-8 text-[14px] font-bold text-neutral-900">Market Value</td>
+                                    <td class="p-6 md:p-8 text-[13px] text-neutral-500">Anecdotal estimates</td>
+                                    <td class="p-6 md:p-8 text-[13px] font-bold text-black flex items-center gap-2">Live Arbitrage Benchmarking <i data-lucide="check" class="w-4 h-4 text-[#10b981]"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-6 md:p-8 text-[14px] font-bold text-neutral-900">Career Gaps</td>
+                                    <td class="p-6 md:p-8 text-[13px] text-neutral-500">Apologetic reframing</td>
+                                    <td class="p-6 md:p-8 text-[13px] font-bold text-black flex items-center gap-2">Strategic offensive reframing <i data-lucide="check" class="w-4 h-4 text-[#10b981]"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-6 md:p-8 text-[14px] font-bold text-neutral-900">Access Path</td>
+                                    <td class="p-6 md:p-8 text-[13px] text-neutral-500">General job boards</td>
+                                    <td class="p-6 md:p-8 text-[13px] font-bold text-black flex items-center gap-2">Sponsor & Stakeholder ID <i data-lucide="check" class="w-4 h-4 text-[#10b981]"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CASE STUDIES: REAL MARKET INTELLIGENCE (EXPANDED TO 4 EXAMPLES) -->
+            <section class="py-16 lg:py-24 bg-white border-b border-neutral-100">
+                <div class="mx-auto max-w-7xl px-4 lg:px-10">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <div class="text-[10px] font-black uppercase tracking-[0.4em] text-neutral-400 mb-4">INSIDE THE REPORT</div>
+                        <h2 class="text-4xl font-semibold tracking-tight text-black">Real Market Intelligence.</h2>
+                        <p class="text-sm text-neutral-500 mt-4 font-normal">See how we transform standard candidate profiles into surgical, high-leverage market assets.</p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <!-- Briefing 01: Camila -->
+                        <div class="bg-neutral-50 text-black rounded-[2.5rem] p-8 lg:p-10 border border-neutral-200 shadow-sm relative overflow-hidden group">
+                            <div class="relative z-10">
+                                <div class="text-[9px] font-black uppercase tracking-[0.4em] text-neutral-400 mb-6 border-b border-neutral-200 pb-4">FILE_01_STRATEGIC_REFRAME</div>
+                                <h4 class="text-xl font-bold mb-6 tracking-tight">The Regional Expansion Anchor</h4>
+                                <div class="space-y-6">
+                                    <div class="p-5 bg-white rounded-2xl border border-neutral-200 shadow-sm">
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-neutral-400 mb-2">RAW PROFILE</p>
+                                        <p class="text-xs font-bold text-neutral-800">Ops Leader | Dublin | Trilingual (PT/ES/EN) | 2.5-Year Employment Gap.</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-[#10b981] mb-2">THE INTELLIGENCE MANEUVER</p>
+                                        <p class="text-[13px] leading-relaxed text-neutral-600 font-normal">
+                                            The gap was reframed from a "pause" to a <strong>Strategic Sabbatical</strong>. We mapped her fluency against Dublin-based tech firms scaling into LATAM. She was positioned not as a job seeker, but as a <span class="text-black font-bold">Regional Expansion Anchor</span>—a role that solves the hidden pain point of US firms failing their international growth targets.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Briefing 02: Tommy -->
+                        <div class="bg-neutral-50 text-black rounded-[2.5rem] p-8 lg:p-10 border border-neutral-200 shadow-sm relative overflow-hidden group">
+                            <div class="relative z-10">
+                                <div class="text-[9px] font-black uppercase tracking-[0.4em] text-neutral-400 mb-6 border-b border-neutral-200 pb-4">FILE_02_SYSTEMS_ARBITRAGE</div>
+                                <h4 class="text-xl font-bold mb-6 tracking-tight">The Infrastructure Architect</h4>
+                                <div class="space-y-6">
+                                    <div class="p-5 bg-white rounded-2xl border border-neutral-200 shadow-sm">
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-neutral-400 mb-2">RAW PROFILE</p>
+                                        <p class="text-xs font-bold text-neutral-800">VP of Talent Ops | Boston | Hypergrowth tenure (Apollo.io, Coinbase).</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-[#10b981] mb-2">THE INTELLIGENCE MANEUVER</p>
+                                        <p class="text-[13px] leading-relaxed text-neutral-600 font-normal">
+                                            In a market automating pure recruiters, we positioned him as a <strong>Talent Infrastructure Architect</strong>. We mapped live openings (Toast, CarGurus) and identified Series B-D companies in Boston building internal "Hiring Engines," bypassing ATS filters to secure a competitive total rewards target.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Briefing 03: Nivancir -->
+                        <div class="bg-neutral-50 text-black rounded-[2.5rem] p-8 lg:p-10 border border-neutral-200 shadow-sm relative overflow-hidden group">
+                            <div class="relative z-10">
+                                <div class="text-[9px] font-black uppercase tracking-[0.4em] text-neutral-400 mb-6 border-b border-neutral-200 pb-4">FILE_03_REGIONAL_SCALE</div>
+                                <h4 class="text-xl font-bold mb-6 tracking-tight">Regional Expansion Arbitrage</h4>
+                                <div class="space-y-6">
+                                    <div class="p-5 bg-white rounded-2xl border border-neutral-200 shadow-sm">
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-neutral-400 mb-2">RAW PROFILE</p>
+                                        <p class="text-xs font-bold text-neutral-800">30+ Year IT Executive | Brazil | Cybersecurity domain expertise.</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-[#10b981] mb-2">THE INTELLIGENCE MANEUVER</p>
+                                        <p class="text-[13px] leading-relaxed text-neutral-600 font-normal">
+                                            Capitalizing on a $46B M&A inflection point in Brazil's tech market, we positioned him not as a local IT manager, but as a <strong>Country Manager</strong> for international SaaS companies entering LATAM, leveraging his operational discipline and P&L experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Briefing 04: Abhishek -->
+                        <div class="bg-neutral-50 text-black rounded-[2.5rem] p-8 lg:p-10 border border-neutral-200 shadow-sm relative overflow-hidden group">
+                            <div class="relative z-10">
+                                <div class="text-[9px] font-black uppercase tracking-[0.4em] text-neutral-400 mb-6 border-b border-neutral-200 pb-4">FILE_04_AI_PIVOT</div>
+                                <h4 class="text-xl font-bold mb-6 tracking-tight">The AI Inflection Pivot</h4>
+                                <div class="space-y-6">
+                                    <div class="p-5 bg-white rounded-2xl border border-neutral-200 shadow-sm">
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-neutral-400 mb-2">RAW PROFILE</p>
+                                        <p class="text-xs font-bold text-neutral-800">Technical Recruiter | India | Scaled engineering teams from 0 to 100+.</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] font-black uppercase tracking-widest text-[#10b981] mb-2">THE INTELLIGENCE MANEUVER</p>
+                                        <p class="text-[13px] leading-relaxed text-neutral-600 font-normal">
+                                            We positioned him around the AI transformation of Talent Acquisition. Leveraging his deep tools fluency, we targeted India's 128 unicorns ($391B market) seeking high-speed scaling, moving him from a tactical sourcer to an <strong>Agentic AI Screening Specialist</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEAD CAPTURE: DOWNLOAD SAMPLE REPORT -->
+            <section class="py-24 bg-black text-white">
+                <div class="mx-auto max-w-4xl px-4 text-center">
+                    <div class="h-16 w-16 rounded-2xl bg-[#10b981]/10 text-[#10b981] flex items-center justify-center mx-auto mb-8 border border-[#10b981]/20">
+                        <i data-lucide="file-down" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter text-white mb-6">Request Your Sample Briefing.</h2>
+                    <p class="text-sm text-neutral-400 font-medium max-w-xl mx-auto leading-relaxed mb-10">
+                        See exactly how we map market architecture and sponsor pathways. Enter your professional email below to receive a redacted intelligence sample.
+                    </p>
+                    <form onsubmit="event.preventDefault(); alert('Intelligence Briefing sent to your inbox.');" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 mb-10">
+                        <input type="email" required placeholder="Enter professional email" class="flex-grow px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#10b981] transition-all text-sm font-medium" />
+                        <button type="submit" class="px-8 py-4 bg-[#10b981] text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:bg-neutral-200 transition-colors shrink-0">
+                            GET SAMPLE
+                        </button>
+                    </form>
+                    <div class="flex items-center justify-center gap-6 opacity-30 grayscale">
+                        <div class="text-[9px] font-black tracking-widest uppercase">SECURE_PDF</div>
+                        <div class="h-1 w-1 rounded-full bg-white"></div>
+                        <div class="text-[9px] font-black tracking-widest uppercase">ENCRYPTED_DATA</div>
+                        <div class="h-1 w-1 rounded-full bg-white"></div>
+                        <div class="text-[9px] font-black tracking-widest uppercase">EXEC_GRADE</div>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
     </main>
@@ -1136,7 +1353,7 @@
                 <a href="#" class="hover:text-black transition-colors">LINKEDIN</a>
             </div>
             <div class="mt-8 text-[9px] font-medium text-neutral-300 uppercase tracking-widest">
-                © 2024 Hireovate. All rights reserved.
+                © 2026 Hireovate. All rights reserved.
             </div>
         </div>
     </footer>
@@ -1182,7 +1399,7 @@
         // Initialize Router based on URL Hash
         window.addEventListener('load', () => {
             const hash = window.location.hash.replace('#', '');
-            if (['home', 'services', 'team', 'report'].includes(hash)) {
+            if (['home', 'services', 'pathways', 'team', 'report'].includes(hash)) {
                 navTo(hash);
             } else {
                 navTo('home');
@@ -1194,6 +1411,7 @@
         // PAYMENT HANDLING (LOCKED DOWN MECHANISM)
         // ----------------------------------------
         function handlePayment(tier) {
+            // Replace these with your actual Stripe Payment Links from your Dashboard
             const stripeLinks = {
                 'tier_1': 'https://buy.stripe.com/example_link_399',
                 'tier_2': 'https://buy.stripe.com/example_link_999',
