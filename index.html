@@ -1,14 +1,3 @@
-<!-- 
-  HIREOVATE VERSION CONTROL
-  Version: 7.7.1 (FULL SITE ARCHITECTURE RESTORE)
-  Status: LOCKED & PRODUCTION_READY
-  Last Updated: May 31, 2026
-  Changes: 
-    - CRITICAL FIX: Fully restored the missing 'Pathways' and 'About' pages that were swallowed by a previous patch.
-    - VERIFIED: Navigation perfectly links to all 8 pages (Home, Services, Pathways, About, Market Scan, Testimonials, AI Sprint, Contact).
-    - VERIFIED: Market Scan carousel includes all 5 requested images (Overview, Exec Summary, Tiered Scoring, Hidden Market, Comp/AI).
-    - VERIFIED: Custom detailed intake form on Market Scan is fully preserved.
--->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -295,7 +284,7 @@
                                 <h3 class="text-3xl font-bold text-black mb-4 tracking-tight relative z-10" style="font-family: ui-serif, Georgia, serif;">I'm in transition.</h3>
                                 <p class="text-[14px] sm:text-[15px] text-neutral-500 leading-relaxed mb-8 flex-grow relative z-10">Market scans, hidden-role intelligence, positioning, and a recruiter-grade execution plan — built by someone who knows how senior hiring really works.</p>
                                 <div class="flex items-center gap-3 text-[12px] font-black text-black uppercase tracking-widest mt-auto relative z-10">
-                                    Book a Market Scan
+                                    Start my Market Scan
                                     <div class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-[#10b981] group-hover:text-white group-hover:translate-x-1 transition-all"><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
                                 </div>
                             </a>
@@ -307,7 +296,7 @@
                                 <h3 class="text-3xl font-bold text-white mb-4 tracking-tight relative z-10" style="font-family: ui-serif, Georgia, serif;">We're managing workforce transition.</h3>
                                 <p class="text-[14px] sm:text-[15px] text-neutral-400 leading-relaxed mb-8 flex-grow relative z-10">One day. Three AI agents. Every departing employee leaves with a working job search system — not a generic portal login or passive resource pack.</p>
                                 <div class="flex items-center gap-3 text-[12px] font-black text-[#10b981] uppercase tracking-widest mt-auto relative z-10">
-                                    See AI Sprint
+                                    Book AI Sprint briefing
                                     <div class="w-8 h-8 rounded-full bg-[#10b981]/20 flex items-center justify-center group-hover:bg-[#10b981] group-hover:text-black group-hover:translate-x-1 transition-all"><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
                                 </div>
                             </a>
@@ -415,11 +404,11 @@
                     </div>
                     
                     <div class="flex flex-wrap justify-center gap-4 mt-12">
-                        <a href="#contact" onclick="navTo('contact')" class="px-8 py-4 rounded-xl bg-white text-black text-[14px] font-bold transition-all hover:scale-[1.02] hover:bg-neutral-200 shadow-xl flex items-center justify-center gap-2">
-                            Book a Call &rarr;
+                        <a href="#report" onclick="navTo('report')" class="px-8 py-4 rounded-xl bg-white text-black text-[14px] font-bold transition-all hover:scale-[1.02] hover:bg-neutral-200 shadow-xl flex items-center justify-center gap-2">
+                            Start my Market Scan &rarr;
                         </a>
                         <a href="#aisprint" onclick="navTo('aisprint')" class="px-8 py-4 rounded-xl border border-neutral-800 bg-transparent text-neutral-400 text-[14px] font-bold transition-all hover:text-white hover:border-neutral-600 hover:bg-neutral-900 flex items-center justify-center gap-2">
-                            Explore AI Sprint &rarr;
+                            Book AI Sprint briefing &rarr;
                         </a>
                     </div>
                 </div>
@@ -447,9 +436,6 @@
                                 <h3 class="text-lg font-bold text-black mb-3 flex items-center gap-2"><i data-lucide="building-2" class="w-5 h-5 text-[#10b981]"></i> For Companies</h3>
                                 <p class="text-sm text-neutral-600 leading-relaxed">We provide considerate, highly defensible workforce transition support that protects your employer brand and equips departing talent with real, recruiter-led market intelligence.</p>
                             </div>
-                        </div>
-                        <div class="mt-8 text-center">
-                            <a href="#pathways" onclick="navTo('pathways')" class="text-sm font-bold text-[#10b981] hover:text-[#059669] transition-colors inline-flex items-center justify-center gap-1 uppercase tracking-widest">Explore our Transition Pathways <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                         </div>
                     </div>
 
@@ -491,7 +477,7 @@
                                     </div>
                                     <div class="pt-6 mt-6 border-t border-neutral-200">
                                         <a href="#report" onclick="navTo('report')" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white border border-neutral-200 text-black text-[11px] font-bold uppercase tracking-widest hover:bg-neutral-50 transition-colors shadow-sm">
-                                            View Sample Report <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                            Start my Market Scan <i data-lucide="arrow-right" class="w-4 h-4"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -708,7 +694,7 @@
                                     </p>
                                     
                                     <a href="#aisprint" onclick="navTo('aisprint')" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-black text-white text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] shadow-2xl">
-                                        Discover the AI Sprint
+                                        Book AI Sprint briefing
                                         <i data-lucide="arrow-right" class="w-4 h-4 text-[#10b981]"></i>
                                     </a>
                                 </div>
@@ -807,24 +793,6 @@
                             </p>
                         </div>
                     </div>
-
-                    <!-- Closing CTA -->
-                    <div class="mt-24 text-center bg-black rounded-[3rem] p-12 sm:p-20 relative overflow-hidden shadow-2xl">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#10b981]/20 to-transparent opacity-50 pointer-events-none"></div>
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-[#10b981]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-                        
-                        <div class="relative z-10">
-                            <h3 class="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight" style="font-family: ui-serif, Georgia, serif;">Not sure which pathway fits?</h3>
-                            <p class="text-lg text-neutral-400 mb-10 max-w-xl mx-auto leading-relaxed">
-                                That's what the first 30 minutes are for. Let's map your territory together before we launch the scan.
-                            </p>
-                            <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] hover:bg-[#059669] shadow-xl">
-                                Book a Strategy Call
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
             </section>
         </div>
@@ -894,7 +862,7 @@
             </section>
         </div>
 
-        <!-- ================= PAGE: TESTIMONIALS (NEW) ================= -->
+        <!-- ================= PAGE: TESTIMONIALS ================= -->
         <div id="page-testimonials" class="page-section hidden">
             <section class="py-24 lg:py-32 bg-white fade-up border-b border-neutral-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
@@ -943,7 +911,6 @@
                 </div>
             </section>
         </div>
-
 
         <!-- ================= PAGE: MARKET SCAN ================= -->
         <div id="page-report" class="page-section hidden">
@@ -1319,7 +1286,7 @@
                           (name, email, LinkedIn profile, and the information provided above) for the purpose
                           of assessing fit and, if mutually agreed, delivering the Market Scan service. I
                           understand my data will be handled in accordance with the
-                          <a href="/privacy" class="accent-text underline hover:no-underline">Hireovate Privacy Policy</a>,
+                          <a href="#privacy" onclick="navTo('privacy')" class="accent-text underline hover:no-underline">Hireovate Privacy Policy</a>,
                           that I can withdraw consent and request deletion at any time by emailing
                           <a href="mailto:hello@hireovate.com" class="accent-text underline hover:no-underline">hello@hireovate.com</a>,
                           and that no marketing communications will be sent without separate explicit opt-in.
@@ -1355,7 +1322,7 @@
                     <img src="https://hireovate.com/images/Career-Offensive-Overview.png" alt="Career Offensive Overview" class="w-full h-auto rounded-[2rem] shadow-2xl border border-neutral-200 mb-16">
 
                     <div class="text-center">
-                        <p class="text-black text-lg font-semibold mb-6">Ready to turn your market scan into an execution engine?</p>
+                        <p class="text-black text-lg font-semibold mb-6">Ready to go for the Career Offensive?</p>
                         <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-black text-white text-[12px] font-black uppercase tracking-widest hover:bg-neutral-800 transition-colors shadow-lg">
                             Get in Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
@@ -1366,17 +1333,17 @@
 
         <!-- ================= PAGE: AI SPRINT ================= -->
         <div id="page-aisprint" class="page-section hidden">
-            <section class="bg-[#fafafa] pt-24 pb-16 relative overflow-hidden fade-up border-b border-neutral-100">
+            <section class="bg-[#fafafa] pt-32 pb-20 relative overflow-hidden fade-up border-b border-neutral-100">
                 <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
                 
                 <div class="mx-auto max-w-5xl px-4 sm:px-6 relative z-10 text-center">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-widest mb-6 shadow-sm">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-widest mb-8 shadow-sm">
                         AI Career Readiness Sprint
                     </div>
                     <h2 class="text-5xl lg:text-7xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">
                         Your people are leaving. <br/><span class="text-neutral-400 italic font-normal">Make sure they leave ready.</span>
                     </h2>
-                    <p class="text-xl text-neutral-500 font-medium max-w-3xl mx-auto leading-relaxed mb-8">
+                    <p class="text-xl text-neutral-500 font-medium max-w-3xl mx-auto leading-relaxed mb-10">
                         A practical one-day programme that equips transitioning employees with AI tools, career intelligence, and a structured job search plan — so they land faster and your employer brand stays intact.
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
@@ -1384,7 +1351,7 @@
                         <a href="#programme" onclick="document.getElementById('programme').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 rounded-full bg-white border border-neutral-200 text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:bg-neutral-50 shadow-sm">See the Programme</a>
                     </div>
 
-                    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-neutral-200 rounded-[2rem] overflow-hidden border border-neutral-200">
+                    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-neutral-200 rounded-[2rem] overflow-hidden border border-neutral-200">
                         <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">1</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Day</div></div>
                         <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">3</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">AI Agents Built</div></div>
                         <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">5</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Hours Workshop</div></div>
@@ -1393,9 +1360,9 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 fade-up">
+            <section class="bg-white py-20 lg:py-32 fade-up">
                 <div class="mx-auto max-w-4xl px-4 sm:px-6">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROBLEM</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Outplacement hasn't kept up.</h2>
                     </div>
@@ -1407,9 +1374,9 @@
                 </div>
             </section>
 
-            <section class="bg-[#fafafa] py-16 lg:py-20 border-y border-neutral-100 fade-up">
+            <section class="bg-[#fafafa] py-20 lg:py-32 border-y border-neutral-100 fade-up">
                 <div class="mx-auto max-w-4xl px-4 sm:px-6">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHAT IT IS</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">One day. Three AI agents. <br/><span class="italic text-neutral-400">A complete job search system.</span></h2>
                     </div>
@@ -1421,10 +1388,10 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 fade-up">
+            <section class="bg-white py-20 lg:py-32 fade-up">
                 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 text-center">
                     <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">OUTCOMES</div>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-12" style="font-family: ui-serif, Georgia, serif;">What every participant leaves with.</h2>
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-16" style="font-family: ui-serif, Georgia, serif;">What every participant leaves with.</h2>
                     
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
                         <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
@@ -1461,15 +1428,15 @@
                 </div>
             </section>
 
-            <section id="programme" class="bg-black py-16 lg:py-20 fade-up relative overflow-hidden">
+            <section id="programme" class="bg-black py-20 lg:py-32 fade-up relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 to-black pointer-events-none"></div>
                 <div class="mx-auto max-w-4xl px-4 sm:px-6 relative z-10">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROGRAMME</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">The day at a glance.</h2>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-6 mb-12 text-left">
+                    <div class="grid md:grid-cols-2 gap-6 mb-16 text-left">
                         <div class="border border-neutral-800 bg-neutral-900/50 p-8 rounded-[2rem]">
                             <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-3">In Person</p>
                             <p class="text-neutral-400 text-sm leading-relaxed">Your office or offsite venue. Facilitator travels to you. Best for cohorts who benefit from shared energy and real-time coaching.</p>
@@ -1496,9 +1463,9 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 border-b border-neutral-100 fade-up">
+            <section class="bg-white py-20 lg:py-32 fade-up border-b border-neutral-100">
                 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHO IT'S FOR</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Built for employers who take transition seriously.</h2>
                     </div>
@@ -1523,12 +1490,12 @@
                 </div>
             </section>
 
-            <section class="bg-[#fafafa] py-16 lg:py-20 fade-up">
+            <section class="bg-[#fafafa] py-20 lg:py-32 fade-up">
                 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
                         <div class="text-left">
                             <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">YOUR FACILITATOR</div>
-                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-black mb-8" style="font-family: ui-serif, Georgia, serif;">Led by a recruiter.</h2>
+                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-black mb-8" style="font-family: ui-serif, Georgia, serif;">Led by a recruiter, not a trainer.</h2>
                             <div class="space-y-6 text-neutral-600 text-lg leading-relaxed">
                                 <p>The AI Sprint is facilitated by Declan Fitzgerald — founder of Hireovate and a 25-year executive recruitment leader. Declan has hired thousands of professionals across Microsoft, HubSpot, Meta, LinkedIn, and multiple startups.</p>
                                 <p>He has been made redundant three times and led teams through reductions three times. This programme is delivered by someone who has been on both sides of the table — who knows what hiring managers actually look for, how AI is changing the process, and what separates candidates who land from those who drift.</p>
@@ -1565,9 +1532,9 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 border-t border-neutral-100 fade-up">
+            <section class="bg-white py-20 lg:py-32 border-t border-neutral-100 fade-up">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">INVESTMENT</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Pricing.</h2>
                         <p class="text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed">Priced per cohort, not per head — so larger groups cost less per person. All pricing is for a single workshop day.</p>
@@ -1697,6 +1664,374 @@
             </section>
         </div>
 
+        <!-- ================= PAGE: ACCESSIBILITY ================= -->
+        <div id="page-accessibility" class="page-section hidden">
+            <section class="bg-white py-20 lg:py-32 fade-up">
+                <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-left">
+                    <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">Hireovate Ltd</div>
+                    <h2 class="text-4xl sm:text-5xl font-semibold tracking-tighter text-black mb-6 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
+                        Accessibility Statement
+                    </h2>
+                    <div class="text-sm text-neutral-500 mb-12 pb-8 border-b border-neutral-100">
+                        <p><strong>Website:</strong> <a href="https://www.hireovate.com" class="text-[#10b981] hover:underline">www.hireovate.com</a></p>
+                        <p><strong>Last updated:</strong> 5 June 2026</p>
+                    </div>
+
+                    <div class="space-y-12 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal">
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">1. Our commitment</h3>
+                            <p>Hireovate Ltd is committed to making hireovate.com accessible to as many people as possible, including users who rely on assistive technologies. We treat accessibility as an ongoing responsibility, integrated into how we design, build, and publish our website and the reports we produce for clients.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">2. Conformance status</h3>
+                            <p class="mb-4">We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA, published by the World Wide Web Consortium (W3C), and to the European harmonised standard EN 301 549, which incorporates WCAG 2.1 AA for digital services.</p>
+                            <p>At the date of this statement, hireovate.com is partially conformant with WCAG 2.1 Level AA. Partial conformance means that some parts of the content do not yet fully meet the standard. We are actively working to identify and resolve known issues.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">3. Accessibility features in place</h3>
+                            <p class="mb-4">The following measures are currently implemented across hireovate.com:</p>
+                            <ul class="list-disc pl-6 space-y-2 text-neutral-600">
+                                <li>Semantic HTML with a logical heading hierarchy</li>
+                                <li>Sufficient colour contrast between foreground text and background</li>
+                                <li>Keyboard navigation across primary navigation and forms</li>
+                                <li>Descriptive alternative text for content-bearing images</li>
+                                <li>Resizable text without loss of content or function</li>
+                                <li>Form fields with clear labels and validation messaging</li>
+                                <li>A responsive layout for desktop, tablet, and mobile devices</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">4. Known limitations</h3>
+                            <p class="mb-4">Despite our efforts, the following areas may not yet be fully accessible:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4 text-neutral-600">
+                                <li>Third-party embedded components (including form widgets and any embedded video) may not fully meet WCAG 2.1 AA</li>
+                                <li>Some downloadable PDF reports produced before 1 May 2026 may have limited tagging or imperfect reading order</li>
+                                <li>Decorative animations may not always offer a reduced-motion alternative for users with prefers-reduced-motion settings enabled</li>
+                            </ul>
+                            <p>These limitations are tracked and prioritised within our development cycle.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">5. PDF reports and downloadable documents</h3>
+                            <p class="mb-4">A meaningful share of Hireovate's output is delivered as PDF including our Market Scan Report, Career Offensive deliverables, and Executive Command outputs. For these documents we aim to provide selectable, machine-readable text, a logical reading order, and plain-language summaries of any complex tables or visuals.</p>
+                            <p>If you require a PDF report in an alternative format for example, a tagged accessible PDF, a Microsoft Word version, plain text, or large print - please contact us using the details in Section 8. We aim to provide an alternative format within 10 working days where reasonably possible.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">6. Compatibility</h3>
+                            <p class="mb-4">hireovate.com is designed to be compatible with:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4 text-neutral-600">
+                                <li>Current and previous major versions of Chrome, Safari, Firefox, and Edge on desktop</li>
+                                <li>iOS Safari and Android Chrome on mobile</li>
+                                <li>Screen readers including NVDA and JAWS on Windows, and VoiceOver on macOS and iOS</li>
+                            </ul>
+                            <p>The site is not designed to be used with browsers more than three major versions behind current release.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">7. Technical specifications</h3>
+                            <p class="mb-4">Accessibility on hireovate.com relies on the following technologies, used in combination with the browser and any assistive technology installed on the user's device:</p>
+                            <ul class="list-disc pl-6 space-y-2 text-neutral-600">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript (used progressively, with core content remaining accessible where reasonably possible)</li>
+                                <li>WAI-ARIA where required for dynamic components</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">8. Feedback and contact</h3>
+                            <p class="mb-4">We welcome feedback on the accessibility of hireovate.com. If you encounter a barrier, or if you need information from the site or a report in a different format, please contact us:</p>
+                            <ul class="space-y-2 mb-6 text-neutral-600">
+                                <li><strong>Email:</strong> <a href="mailto:hello@hireovate.com" class="text-[#10b981] hover:underline">hello@hireovate.com</a></li>
+                                <li><strong>Postal address:</strong> Hireovate Ltd, 197 Howth Road, Clontarf, Dublin, Ireland</li>
+                            </ul>
+                            <p>We aim to acknowledge accessibility feedback within five working days and to provide a substantive response within 15 working days.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">9. Enforcement procedure</h3>
+                            <p class="mb-4">In Ireland, the European Accessibility Act (Directive (EU) 2019/882) was transposed into Irish law by the European Union (Accessibility Requirements of Products and Services) Regulations 2023 (S.I. No. 636 of 2023), which came into force on 28 June 2025.</p>
+                            <p class="mb-4">If you are not satisfied with our response to your accessibility complaint, you may escalate the matter to the Competition and Consumer Protection Commission (CCPC), which is the designated market surveillance authority in Ireland for services within the scope of the Regulations, including e-commerce and related digital services. The National Disability Authority (NDA) advises the CCPC and other Irish regulators on the application of these requirements.</p>
+                            <p>For users accessing the site from the United Kingdom, the Equality Advisory and Support Service (EASS) can provide guidance on rights under the UK Equality Act 2010.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">10. Preparation and review of this statement</h3>
+                            <p>This statement was prepared on 25 May 2026 using a self-assessment methodology. It will be reviewed at least annually and whenever significant changes are made to the site or to the reports we publish.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE: PRIVACY ================= -->
+        <div id="page-privacy" class="page-section hidden">
+            <section class="bg-white py-20 lg:py-32 fade-up">
+                <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-left">
+                    <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">Hireovate / Recruitovate</div>
+                    <h2 class="text-4xl sm:text-5xl font-semibold tracking-tighter text-black mb-6 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
+                        Privacy Notice
+                    </h2>
+                    <div class="text-sm text-neutral-500 mb-12 pb-8 border-b border-neutral-100">
+                        <p><strong>Effective date:</strong> [Insert date]</p>
+                        <p><strong>Business:</strong> Hireovate, part of Recruitovate</p>
+                        <p><strong>Contact:</strong> [Insert email address]</p>
+                    </div>
+
+                    <div class="space-y-12 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal">
+                        <div>
+                            <p class="mb-4">Hireovate helps individuals and organisations navigate career transition using market intelligence, executive recruitment expertise, and modern AI-enabled tools.</p>
+                            <p>This Privacy Notice explains how we collect, use, store, and protect personal information when you visit our website, contact us, use our services, or participate in a Hireovate career transition programme.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">1. Information we collect</h3>
+                            <p class="mb-4">We may collect the following types of personal information:</p>
+                            <ul class="list-disc pl-6 space-y-4 text-neutral-600">
+                                <li><strong>Contact details:</strong> Name, email address, phone number, location, LinkedIn profile, and employer or company information.</li>
+                                <li><strong>Career information:</strong> CVs, resumes, LinkedIn profiles, job titles, employment history, skills, career preferences, target roles, compensation expectations, location preferences, and other information you choose to share with us.</li>
+                                <li><strong>Programme information:</strong> Notes from coaching sessions, market scan inputs, job search preferences, outreach plans, interview preparation materials, and feedback shared during the programme.</li>
+                                <li><strong>Website and usage data:</strong> Basic technical information such as browser type, device information, pages visited, referring links, and website usage patterns. This may be collected through analytics tools or cookies.</li>
+                                <li><strong>Payment and billing information:</strong> Where applicable, billing details, payment status, company invoicing details, and transaction records. We do not intentionally store full payment card details.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">2. How we use your information</h3>
+                            <p class="mb-4">We use personal information to:</p>
+                            <ul class="list-disc pl-6 space-y-2 text-neutral-600">
+                                <li>Provide Hireovate services and career transition support.</li>
+                                <li>Prepare market scans, target company lists, role research, positioning guidance, and outreach recommendations.</li>
+                                <li>Communicate with you about your enquiry, programme, or account.</li>
+                                <li>Improve our website, services, tools, and client experience.</li>
+                                <li>Manage billing, contracts, administration, and customer support.</li>
+                                <li>Comply with legal, regulatory, tax, accounting, and security obligations.</li>
+                                <li>Protect our business, users, and services from misuse or unauthorised access.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">3. Lawful basis for processing</h3>
+                            <p class="mb-4">Where GDPR or UK GDPR applies, we rely on one or more of the following lawful bases:</p>
+                            <ul class="list-disc pl-6 space-y-2 text-neutral-600">
+                                <li><strong>Contract:</strong> to provide services you or your employer have requested.</li>
+                                <li><strong>Legitimate interests:</strong> to operate and improve our business, respond to enquiries, manage client relationships, and provide relevant career transition support.</li>
+                                <li><strong>Consent:</strong> where you choose to provide optional information or agree to receive certain communications.</li>
+                                <li><strong>Legal obligation:</strong> where we need to retain or disclose information to comply with applicable law.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">4. Use of AI tools</h3>
+                            <p class="mb-4">Hireovate may use AI-enabled tools to help with research, drafting, market mapping, role analysis, company research, and career transition planning.</p>
+                            <p class="mb-4">We do not use AI tools to make automated final decisions about individuals. AI outputs are reviewed and interpreted by humans. You should not provide highly sensitive personal information unless we specifically request it and explain why it is needed.</p>
+                            <p>Where third-party AI or software tools are used, we take reasonable steps to limit the information shared and use providers that are appropriate for professional business use.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">5. Sharing your information</h3>
+                            <p class="mb-4">We may share personal information with:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4 text-neutral-600">
+                                <li>Service providers who support our website, email, analytics, document creation, scheduling, CRM, payment, or operational systems.</li>
+                                <li>Employers or sponsoring organisations, where they are paying for a programme, but only at an appropriate and proportionate level.</li>
+                                <li>Professional advisers, including legal, tax, accounting, or compliance advisers.</li>
+                                <li>Regulators, authorities, or other parties where required by law.</li>
+                                <li>Other parties where you have asked us to make an introduction or share information.</li>
+                            </ul>
+                            <p>We do not sell personal information.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">6. International users</h3>
+                            <p class="mb-4">Hireovate may work with individuals and organisations in Ireland, the UK, Europe, and the United States. This means personal information may be processed or accessed from different countries.</p>
+                            <p>Where required, we take steps to ensure appropriate safeguards are in place for international transfers of personal information.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">7. Data retention</h3>
+                            <p class="mb-4">We keep personal information only for as long as reasonably necessary for the purposes described in this notice.</p>
+                            <p class="mb-2">Typical retention periods may include:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4 text-neutral-600">
+                                <li><strong>Enquiry records:</strong> up to 24 months.</li>
+                                <li><strong>Client and programme records:</strong> up to 6 years where required for business, legal, accounting, or tax reasons.</li>
+                                <li><strong>Marketing contacts:</strong> until you unsubscribe or request deletion.</li>
+                                <li><strong>Website analytics:</strong> according to the settings of the relevant analytics provider.</li>
+                            </ul>
+                            <p>We may retain limited records where necessary to establish, exercise, or defend legal claims.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">8. Your rights</h3>
+                            <p class="mb-4">Depending on where you are located, you may have rights to:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4 text-neutral-600">
+                                <li>Access your personal information.</li>
+                                <li>Correct inaccurate information.</li>
+                                <li>Request deletion of your information.</li>
+                                <li>Restrict or object to certain processing.</li>
+                                <li>Request portability of your information.</li>
+                                <li>Withdraw consent where processing is based on consent.</li>
+                                <li>Complain to a data protection regulator.</li>
+                            </ul>
+                            <p>In Ireland, the relevant regulator is the Data Protection Commission. In the UK, it is the Information Commissioner's Office.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">9. Security</h3>
+                            <p>We use reasonable technical and organisational measures to protect personal information. No system is completely secure, so we cannot guarantee absolute security of information transmitted online. The FTC also recommends that businesses understand what personal information they hold, who has access to it, and how it flows through the business as part of good data security practice.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">10. Contact us</h3>
+                            <p class="mb-4">For questions about this Privacy Notice or how we handle personal information, contact:</p>
+                            <ul class="space-y-2 text-neutral-600">
+                                <li><strong>Business:</strong> Hireovate / Recruitovate</li>
+                                <li><strong>Email:</strong> <a href="mailto:[Insert email]" class="text-[#10b981] hover:underline">[Insert email]</a></li>
+                                <li><strong>Address:</strong> [Insert business address, if publishing]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE: TERMS ================= -->
+        <div id="page-terms" class="page-section hidden">
+            <section class="bg-white py-20 lg:py-32 fade-up">
+                <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-left">
+                    <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">Hireovate / Recruitovate</div>
+                    <h2 class="text-4xl sm:text-5xl font-semibold tracking-tighter text-black mb-6 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
+                        Terms of Use
+                    </h2>
+                    <div class="text-sm text-neutral-500 mb-12 pb-8 border-b border-neutral-100">
+                        <p><strong>Effective date:</strong> [Insert date]</p>
+                        <p><strong>Business:</strong> Hireovate, part of Recruitovate</p>
+                        <p><strong>Contact:</strong> [Insert email address]</p>
+                    </div>
+
+                    <div class="space-y-12 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal">
+                        <div>
+                            <p class="mb-4">These Terms apply when you access the Hireovate website, contact us, use our services, or participate in a Hireovate career transition programme.</p>
+                            <p>By using Hireovate, you agree to these Terms.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">1. About Hireovate</h3>
+                            <p class="mb-4">Hireovate provides career transition support, market intelligence, candidate positioning, job search strategy, AI-enabled research support, and practical guidance for individuals and organisations.</p>
+                            <p>Hireovate is not a recruitment agency acting to place candidates into specific roles. We support individuals in understanding the market, improving positioning, identifying relevant opportunities, and navigating transition more effectively.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">2. Our services</h3>
+                            <p class="mb-4">Our services may include:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4 text-neutral-600">
+                                <li>Career transition support.</li>
+                                <li>Market scan reports.</li>
+                                <li>Target company research.</li>
+                                <li>Role and compensation research.</li>
+                                <li>LinkedIn and CV guidance.</li>
+                                <li>Outreach and referral strategy.</li>
+                                <li>Interview preparation.</li>
+                                <li>AI-enabled job search planning.</li>
+                                <li>Executive transition advisory.</li>
+                                <li>Employer-sponsored transition support.</li>
+                            </ul>
+                            <p>The exact scope of services will depend on the package, proposal, statement of work, or written agreement agreed with you or your sponsoring organisation.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">3. No guarantee of employment</h3>
+                            <p class="mb-4">Hireovate does not guarantee that you will receive interviews, offers, employment, promotions, compensation increases, or introductions.</p>
+                            <p>Our work is designed to improve clarity, positioning, market understanding, and job search execution. Final hiring decisions are made by employers and other third parties.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">4. Your responsibilities</h3>
+                            <p class="mb-4">You agree to:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4 text-neutral-600">
+                                <li>Provide accurate and complete information.</li>
+                                <li>Review any documents, outreach messages, or materials before using them.</li>
+                                <li>Make your own decisions about roles, employers, compensation, relocation, and career moves.</li>
+                                <li>Use our materials responsibly and lawfully.</li>
+                                <li>Not misrepresent your experience, qualifications, identity, or work history.</li>
+                                <li>Not use Hireovate materials for unlawful, misleading, discriminatory, or harmful purposes.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">5. Use of AI-enabled tools</h3>
+                            <p class="mb-4">Hireovate may use AI-enabled tools to support research, drafting, analysis, and planning.</p>
+                            <p class="mb-4">AI tools can be useful, but they may produce incomplete, inaccurate, outdated, or imperfect outputs. Any AI-assisted material should be reviewed before use.</p>
+                            <p>Hireovate does not guarantee that AI-generated or AI-assisted outputs will be error-free, complete, or suitable for every situation.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">6. Professional guidance</h3>
+                            <p class="mb-4">Hireovate provides career, market, and transition guidance. We do not provide legal, financial, tax, immigration, psychological, or regulated professional advice.</p>
+                            <p>You should seek appropriate professional advice before making decisions involving contracts, employment law, immigration, tax, equity, pensions, compensation, settlement agreements, or other regulated matters.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">7. Employer-sponsored programmes</h3>
+                            <p class="mb-4">Where an employer or organisation sponsors your access to Hireovate, we may provide them with limited usage, participation, or programme-level information.</p>
+                            <p>We do not provide detailed private coaching notes or sensitive personal information to a sponsoring employer unless you have agreed, or unless required by law.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">8. Fees and payment</h3>
+                            <p class="mb-4">Fees, payment terms, refunds, cancellations, and service periods will be set out in the relevant proposal, order form, invoice, website checkout, or written agreement.</p>
+                            <p>Unless otherwise stated, fees are payable in advance.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">9. Intellectual property</h3>
+                            <p class="mb-4">All Hireovate materials, frameworks, reports, templates, guides, prompts, playbooks, website content, and service materials are owned by Hireovate or its licensors.</p>
+                            <p class="mb-4">You may use materials provided to you for your own personal career transition or internal business use, depending on the service purchased.</p>
+                            <p>You may not copy, resell, publish, distribute, repackage, or commercially exploit Hireovate materials without written permission.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">10. Third-party links and information</h3>
+                            <p class="mb-4">Hireovate may reference third-party websites, job boards, company pages, market data, salary sources, LinkedIn profiles, tools, or public information.</p>
+                            <p>We are not responsible for third-party websites, their content, availability, accuracy, or privacy practices.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">11. Limitation of liability</h3>
+                            <p class="mb-4">To the maximum extent permitted by law, Hireovate is not liable for indirect, incidental, consequential, special, or loss-of-opportunity damages.</p>
+                            <p class="mb-4">This includes loss of employment opportunity, loss of earnings, loss of business, reputational harm, or decisions made based on Hireovate materials or guidance.</p>
+                            <p>Nothing in these Terms limits liability where it would be unlawful to do so.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">12. Changes to services or terms</h3>
+                            <p class="mb-4">We may update our website, services, packages, pricing, or these Terms from time to time.</p>
+                            <p>The version published on our website will apply from the effective date shown above.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">13. Governing law</h3>
+                            <p class="mb-4">Unless otherwise agreed in writing, these Terms are governed by the laws of Ireland.</p>
+                            <p>Where required by applicable law, users may also have mandatory rights in their own jurisdiction.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">14. Contact us</h3>
+                            <p class="mb-4">For questions about these Terms, contact:</p>
+                            <ul class="space-y-2 text-neutral-600">
+                                <li><strong>Business:</strong> Hireovate / Recruitovate</li>
+                                <li><strong>Email:</strong> <a href="mailto:[Insert email]" class="text-[#10b981] hover:underline">[Insert email]</a></li>
+                                <li><strong>Address:</strong> [Insert business address, if publishing]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <footer class="py-12 border-t border-neutral-100 bg-white mt-auto">
@@ -1726,9 +2061,9 @@
                 <span class="text-lg font-bold tracking-tight text-neutral-900">Hire<span class="italic font-serif">o</span>vate</span>
             </div>
             <div class="flex flex-wrap justify-center gap-6 sm:gap-10 text-[10px] font-bold uppercase tracking-[0.4em] text-neutral-400">
-                <a href="#" class="hover:text-black transition-colors">PRIVACY</a>
-                <a href="#" class="hover:text-black transition-colors">TERMS</a>
-                <a href="https://docs.google.com/document/d/1Di7H7lsJcvRkhXfDYYEnHq7QeRhJ3uWJ80zzCG6T4FM/edit?usp=sharing" target="_blank" class="hover:text-black transition-colors">ACCESSIBILITY</a>
+                <a href="#privacy" onclick="navTo('privacy')" class="hover:text-black transition-colors">PRIVACY</a>
+                <a href="#terms" onclick="navTo('terms')" class="hover:text-black transition-colors">TERMS</a>
+                <a href="#accessibility" onclick="navTo('accessibility')" class="hover:text-black transition-colors">ACCESSIBILITY</a>
             </div>
             <div class="mt-8 text-[9px] font-medium text-neutral-300 uppercase tracking-widest text-center">© 2026 Hireovate. All rights reserved.</div>
         </div>
@@ -1771,7 +2106,7 @@
 
         window.addEventListener('load', () => {
             const hash = window.location.hash.replace('#', '');
-            if (['home', 'services', 'pathways', 'about', 'report', 'testimonials', 'aisprint', 'contact'].includes(hash)) {
+            if (['home', 'services', 'pathways', 'about', 'report', 'testimonials', 'aisprint', 'contact', 'privacy', 'terms', 'accessibility'].includes(hash)) {
                 navTo(hash);
             } else {
                 navTo('home');
