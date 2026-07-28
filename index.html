@@ -1,8 +1,9 @@
 <!-- 
   HIREOVATE PRODUCTION MASTER
-  Version: 8.1.0 (PRICING & VALUE LADDER UPDATE)
-  Status: LOCKED & PRODUCTION_READY
-  Last Updated: June 11, 2026
+  Version: 8.8.0 — GRADUATE INTELLIGENCE
+  Status: PREVIEW — NOT YET PRODUCTION
+  Based on: Version 8.7.0
+  Rollback file: hireovate-v8.7.0-original.html
 -->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -16,7 +17,7 @@
     <link rel="canonical" href="https://hireovate.com/">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='2.5' fill='%2310b981'/><g><rect x='15' y='1' width='2' height='2'/><polygon points='12,5 20,5 16,9'/></g><g><rect x='15' y='29' width='2' height='2'/><polygon points='12,27 20,27 16,23'/></g><g><rect x='1' y='15' width='2' height='2'/><polygon points='5,12 5,20 9,16'/></g><g><rect x='29' y='15' width='2' height='2'/><polygon points='27,12 27,20 23,16'/></g></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ffffff'/><circle cx='50' cy='50' r='18' fill='%2310b981' fill-opacity='0.15'/><circle cx='50' cy='50' r='6' fill='%2310b981'/><circle cx='50' cy='50' r='22' stroke='%2310b981' stroke-opacity='0.5' stroke-width='2' fill='none'/><circle cx='50' cy='50' r='34' stroke='%2310b981' stroke-opacity='0.3' stroke-width='2' fill='none'/><circle cx='50' cy='50' r='48' stroke='%2310b981' stroke-opacity='0.2' stroke-width='2' stroke-dasharray='2 4' fill='none'/><polygon points='50,14 44,4 56,4' fill='%23111111'/><polygon points='50,86 44,96 56,96' fill='%23111111'/><polygon points='14,50 4,44 4,56' fill='%23111111'/><polygon points='86,50 96,44 96,56' fill='%23111111'/><rect x='47' y='26' width='6' height='6' fill='%23111111'/><rect x='47' y='68' width='6' height='6' fill='%23111111'/><rect x='26' y='47' width='6' height='6' fill='%23111111'/><rect x='68' y='47' width='6' height='6' fill='%23111111'/></svg>">
     
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
@@ -28,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
         :root {
           --hireovate-accent: #10b981;
@@ -37,7 +39,7 @@
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .font-serif-intake { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
         .hero-bg-animate { transform: scale(1.05); opacity: 0; transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
-        .hero-bg-animate.visible { transform: scale(1); opacity: 1; } 
+        .hero-bg-animate.visible { transform: scale(1); opacity: 0.65; } 
         .fade-up { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         .delay-300 { transition-delay: 300ms; }
@@ -77,20 +79,6 @@
         @keyframes ai-char-reveal {
             0% { opacity: 0; filter: blur(12px); transform: translateY(20px); }
             100% { opacity: 1; filter: blur(0); transform: translateY(0); }
-        }
-
-        /* SVG Neural Mark Reveal */
-        .ai-mark-reveal {
-            opacity: 0;
-            transform: scale(0.8) translateZ(0);
-            filter: blur(10px);
-            animation: ai-mark-in 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            animation-delay: 0.5s;
-        }
-        @keyframes ai-mark-in {
-            0% { opacity: 0; transform: scale(0.8) rotate(-10deg); filter: blur(10px); }
-            50% { opacity: 1; filter: blur(2px); }
-            100% { opacity: 1; transform: scale(1) rotate(0); filter: blur(0); }
         }
 
         /* Form styling from the intake code */
@@ -161,8 +149,8 @@
     <nav class="sticky top-0 z-50 border-b border-neutral-100 bg-white/80 backdrop-blur-md">
         <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-10">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2.5 cursor-pointer" onclick="navTo('home')">
-                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-black text-white shadow-sm overflow-hidden relative">
+                <div class="flex items-center gap-2.5 cursor-pointer" onclick="navTo('home'); try { window.history.pushState({}, '', window.location.pathname); } catch(e) {}">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-black border border-neutral-200 shadow-sm overflow-hidden relative">
                         <svg viewBox="0 0 32 32" class="w-5 h-5" fill="currentColor">
                             <circle cx="16" cy="16" r="2.5" fill="#10b981" class="anim-converge-c" />
                             <g class="anim-converge-t">
@@ -186,13 +174,15 @@
                     <span class="text-xl font-bold tracking-tight text-neutral-900">Hireovate</span>
                 </div>
                 <div class="hidden md:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-wider text-neutral-500">
-                    <a href="#home" onclick="navTo('home')" class="nav-link transition hover:text-black">Home</a>
                     <a href="#services" onclick="navTo('services')" class="nav-link transition hover:text-black">Services</a>
                     <a href="#pathways" onclick="navTo('pathways')" class="nav-link transition hover:text-black">Pathways</a>
-                    <a href="#about" onclick="navTo('about')" class="nav-link transition hover:text-black">About</a>
                     <a href="#report" onclick="navTo('report')" class="nav-link transition hover:text-black">Market Scan</a>
                     <a href="#testimonials" onclick="navTo('testimonials')" class="nav-link transition hover:text-black">Testimonials</a>
                     <a href="#aisprint" onclick="navTo('aisprint')" class="nav-link transition hover:text-black text-[#10b981]">AI Sprint</a>
+                    <!-- GRADUATE INTELLIGENCE UPDATE START -->
+                    <a href="#graduate-intelligence" onclick="navTo('graduate-intelligence')" class="nav-link transition hover:text-black grad-feature-nav hidden">Graduate Intelligence</a>
+                    <!-- GRADUATE INTELLIGENCE UPDATE END -->
+                    <a href="#about" onclick="navTo('about')" class="nav-link transition hover:text-black">About</a>
                     <a href="#contact" onclick="navTo('contact')" class="rounded-full bg-black px-6 py-2 text-white transition hover:bg-neutral-800 shadow-sm">Get In Touch</a>
                 </div>
                 <button id="menu-toggle" class="md:hidden p-2 text-neutral-900" aria-label="Toggle Navigation">
@@ -203,13 +193,15 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-neutral-100 px-4 py-6 space-y-4 font-sans">
-            <a href="#home" onclick="navTo('home')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Home</a>
             <a href="#services" onclick="navTo('services')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Services</a>
             <a href="#pathways" onclick="navTo('pathways')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Pathways</a>
-            <a href="#about" onclick="navTo('about')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">About</a>
             <a href="#report" onclick="navTo('report')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Market Scan</a>
             <a href="#testimonials" onclick="navTo('testimonials')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">Testimonials</a>
             <a href="#aisprint" onclick="navTo('aisprint')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-[#10b981] hover:text-black">AI Sprint</a>
+            <!-- GRADUATE INTELLIGENCE UPDATE START -->
+            <a href="#graduate-intelligence" onclick="navTo('graduate-intelligence')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black grad-feature-mobile-nav hidden">Graduate Intelligence</a>
+            <!-- GRADUATE INTELLIGENCE UPDATE END -->
+            <a href="#about" onclick="navTo('about')" class="mobile-link block text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-black">About</a>
             <a href="#contact" onclick="navTo('contact')" class="mobile-link block w-full rounded-full bg-black px-6 py-3 text-center text-white text-xs font-bold uppercase tracking-widest">Get In Touch</a>
         </div>
     </nav>
@@ -220,16 +212,15 @@
         <!-- ================= PAGE: HOME ================= -->
         <div id="page-home" class="page-section block">
             <section class="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden bg-white pt-16 pb-8 md:pt-24 md:pb-10">
-                <div id="hero-bg" class="hero-bg-animate absolute inset-0 pointer-events-none">
-                    <img src="images/stairways%20hireovate.png" alt="Boutique architectural stairway background representing structured career pathways" class="h-full w-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-white/50 to-white"></div>
+                <div id="hero-bg" class="hero-bg-animate absolute inset-0 pointer-events-none opacity-100 visible">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Abstract architectural background representing structured career pathways" class="h-full w-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-b from-white/20 via-white/60 to-white"></div>
                 </div>
 
                 <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 text-center w-full">
                     <div id="hero-content" class="fade-up visible flex flex-col items-center">
-                        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#10b981]/30 bg-[#10b981]/10 px-4 py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#10b981] backdrop-blur-sm max-w-full text-center">
-                            <span class="h-1.5 w-1.5 rounded-full bg-[#10b981] animate-pulse-soft shrink-0"></span>
-                            <span>Career Intelligence for Work Transition</span>
+                        <div class="mb-6 inline-flex items-center justify-center px-5 py-2 rounded-full bg-white/60 backdrop-blur-md text-[#10b981] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] shadow-[0_2px_10px_rgba(0,0,0,0.05)] border border-white/50">
+                            Career Intelligence for Work Transition
                         </div>
                         
                         <h1 id="hero-title" class="flex flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8 text-5xl font-semibold leading-none tracking-tighter text-black sm:text-7xl lg:text-[7.5rem] mb-6">
@@ -244,24 +235,28 @@
                                 <span class="ai-char" style="animation-delay: 0.45s">t</span>
                                 <span class="ai-char" style="animation-delay: 0.5s">e</span>
                             </span>
-                            <svg viewBox="0 0 32 32" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 text-black shrink-0 ai-mark-reveal" fill="currentColor">
-                                <circle cx="16" cy="16" r="2.5" fill="#10b981" class="anim-converge-c" />
-                                <g class="anim-converge-t">
-                                    <rect x="15" y="1" width="2" height="2" />
-                                    <polygon points="12,5 20,5 16,9" />
-                                </g>
-                                <g class="anim-converge-b">
-                                    <rect x="15" y="29" width="2" height="2" />
-                                    <polygon points="12,27 20,27 16,23" />
-                                </g>
-                                <g class="anim-converge-l">
-                                    <rect x="1" y="15" width="2" height="2" />
-                                    <polygon points="5,12 5,20 9,16" />
-                                </g>
-                                <g class="anim-converge-r">
-                                    <rect x="29" y="15" width="2" height="2" />
-                                    <polygon points="27,12 27,20 23,16" />
-                                </g>
+                            <svg viewBox="0 0 100 100" class="w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-28 shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Center Glow -->
+                                <circle cx="50" cy="50" r="18" fill="#10b981" fill-opacity="0.15" style="filter: blur(8px);"></circle>
+                                <!-- Center Dot -->
+                                <circle cx="50" cy="50" r="6" fill="#10b981"></circle>
+                                
+                                <!-- Concentric Rings -->
+                                <circle cx="50" cy="50" r="22" stroke="#10b981" stroke-opacity="0.5" stroke-width="0.75"></circle>
+                                <circle cx="50" cy="50" r="34" stroke="#10b981" stroke-opacity="0.3" stroke-width="0.75"></circle>
+                                <circle cx="50" cy="50" r="48" stroke="#10b981" stroke-opacity="0.2" stroke-width="0.75" stroke-dasharray="2 4"></circle>
+                                
+                                <!-- Outer Triangles (Pointing Inward) -->
+                                <polygon points="50,14 46,6 54,6" fill="#111111"></polygon>
+                                <polygon points="50,86 46,94 54,94" fill="#111111"></polygon>
+                                <polygon points="14,50 6,46 6,54" fill="#111111"></polygon>
+                                <polygon points="86,50 94,46 94,54" fill="#111111"></polygon>
+                                
+                                <!-- Inner Squares -->
+                                <rect x="48" y="27" width="4" height="4" fill="#111111"></rect>
+                                <rect x="48" y="69" width="4" height="4" fill="#111111"></rect>
+                                <rect x="27" y="48" width="4" height="4" fill="#111111"></rect>
+                                <rect x="69" y="48" width="4" height="4" fill="#111111"></rect>
                             </svg>
                         </h1>
 
@@ -269,18 +264,13 @@
                             We help senior professionals navigate the AI economy by uncovering hidden opportunities and mapping smarter routes into their next role.
                         </p>
 
-                        <div class="mb-14 inline-flex items-start sm:items-center gap-4 px-5 py-4 bg-[#fafafa] rounded-2xl border border-neutral-200 text-left max-w-3xl mx-auto shadow-sm">
-                            <div class="w-12 h-12 rounded-full bg-black shrink-0 flex items-center justify-center text-white"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
-                            <p class="text-[14px] sm:text-[15px] text-neutral-600 font-medium leading-relaxed">
-                                <strong class="text-black">Built by a former executive recruiting leader</strong> with 25+ years across Meta, LinkedIn, Microsoft, HubSpot, Apollo and high-growth tech — combining elite search methods, investor market intelligence and AI-enabled research.
-                            </p>
-                        </div>
-
+                        <!-- Hidden Market Bridge -->
                         <h2 class="text-2xl sm:text-3xl font-bold text-black mb-8 tracking-tight max-w-3xl mx-auto" style="font-family: ui-serif, Georgia, serif;">
                             Most candidates search the visible market. <br class="hidden sm:block"/><span class="text-neutral-400 italic font-normal">Hireovate helps you access the hidden one.</span>
                         </h2>
 
-                        <div class="grid md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto mb-14 text-left">
+                        <!-- GRADUATE INTELLIGENCE UPDATE START -->
+                        <div id="hero-card-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto mb-14 text-left transition-all duration-300">
                             <a href="#report" onclick="navTo('report')" class="group relative flex flex-col p-8 sm:p-10 rounded-[2rem] border border-neutral-200 bg-white hover:shadow-xl transition-all overflow-hidden">
                                 <p class="text-[10px] font-black uppercase tracking-[0.25em] text-neutral-400 mb-4 relative z-10">For Professionals</p>
                                 <h3 class="text-3xl font-bold text-black mb-4 tracking-tight relative z-10" style="font-family: ui-serif, Georgia, serif;">I'm in transition.</h3>
@@ -302,7 +292,30 @@
                                     <div class="w-8 h-8 rounded-full bg-[#10b981]/20 flex items-center justify-center group-hover:bg-[#10b981] group-hover:text-black group-hover:translate-x-1 transition-all"><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
                                 </div>
                             </a>
+
+                            <a id="grad-hero-card" href="#graduate-intelligence" onclick="navTo('graduate-intelligence')" class="group relative flex flex-col p-8 sm:p-10 rounded-[2rem] border border-neutral-200 bg-white hover:shadow-xl transition-all overflow-hidden hidden grad-feature-card">
+                                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-4 relative z-10 flex items-center gap-2">
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> FOR GRADUATES, MBAs, UNIVERSITIES & BUSINESS SCHOOLS
+                                </p>
+                                <h3 class="text-3xl font-bold text-black mb-4 tracking-tight relative z-10" style="font-family: ui-serif, Georgia, serif;">Entering a difficult labour market.</h3>
+                                <p class="text-[14px] sm:text-[15px] text-neutral-500 leading-relaxed mb-8 flex-grow relative z-10">Personalised career intelligence, target-company mapping, live and hidden-market opportunities, emerging-skills analysis, visa and work-permit guidance, referral and outreach strategy, and a practical execution plan.</p>
+                                <div class="flex items-center gap-3 text-[12px] font-black text-black uppercase tracking-widest mt-auto relative z-10">
+                                    EXPLORE GRADUATE INTELLIGENCE
+                                    <div class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-[#10b981] group-hover:text-white group-hover:translate-x-1 transition-all"><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+                                </div>
+                            </a>
                         </div>
+                        
+                        <!-- Move the credibility box below the cards -->
+                        <!-- Credibility Box -->
+                        <div class="mb-14 inline-flex items-start sm:items-center gap-4 px-5 py-4 bg-[#fafafa] rounded-2xl border border-neutral-200 text-left max-w-3xl mx-auto shadow-sm">
+                            <div class="w-12 h-12 rounded-full bg-black shrink-0 flex items-center justify-center text-white"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                            <p class="text-[14px] sm:text-[15px] text-neutral-600 font-medium leading-relaxed">
+                                <strong class="text-black">Built by a former executive recruiting leader</strong> with 25+ years across Meta, LinkedIn, Microsoft, HubSpot, Apollo and high-growth tech — combining elite search methods, investor market intelligence and AI-enabled research.
+                            </p>
+                        </div>
+                        <!-- GRADUATE INTELLIGENCE UPDATE END -->
+                        
                     </div>
             
                     <div id="hero-stats" class="fade-up delay-700 flex items-center justify-center pt-8 border-t border-neutral-200 max-w-4xl mx-auto w-full">
@@ -328,24 +341,104 @@
                 </div>
             </section>
 
-            <section class="pt-12 pb-20 lg:pt-16 lg:pb-32 bg-white fade-up border-b border-neutral-100">
+            <!-- HIREOVATE VIDEO SECTION -->
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+            <section class="hov-section" aria-label="Hireovate overview video">
+              <div class="hov-wrap">
+                <span class="hov-eyebrow"><span class="hov-tick"></span>Watch overview</span>
+                <h2 class="hov-head">What Hireovate actually does <br/><span class="hov-accent">in one minute.</span></h2>
+
+                <div class="hov-shell" id="hovShell">
+                  <video id="hovVid" muted playsinline preload="none" controls controlsList="nodownload noplaybackrate"
+                         poster="https://hireovate.com/images/hireovate-overview-poster.jpg">
+                    <source src="https://hireovate.com/images/hireovate-overview-720p-silent.mp4" type="video/mp4">
+                  </video>
+                  <div class="hov-progress" id="hovProg"></div>
+                  <button class="hov-overlay" id="hovOverlay" type="button" aria-label="Play the overview">
+                    <span class="hov-scrim"></span>
+                    <span class="hov-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#04221a"/></svg></span>
+                    <span class="hov-tag">Hireovate, explained</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <style>
+              .hov-section{background:#f7f9f8;padding:96px 0;font-family:'Inter',system-ui,-apple-system,sans-serif}
+              .hov-section .hov-wrap{max-width:1040px;margin:0 auto;padding:0 24px;text-align:center}
+              .hov-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#0ea372;margin-bottom:20px}
+              .hov-tick{width:6px;height:6px;border-radius:50%;background:#10B981}
+              .hov-head{font-size:clamp(28px,4.4vw,46px);font-weight:800;letter-spacing:-.02em;line-height:1.12;color:#1A1A1A;margin:0 auto 18px;max-width:820px}
+              .hov-accent{color:#10B981}
+              .hov-sub{font-size:clamp(15px,1.6vw,17px);line-height:1.55;color:#5b6470;max-width:600px;margin:0 auto 44px}
+
+              .hov-shell{position:relative;max-width:900px;margin:0 auto;border-radius:18px;overflow:hidden;background:#fff;aspect-ratio:16/9;border:1px solid #e7eae9;box-shadow:0 40px 80px -32px rgba(16,24,20,.4)}
+              .hov-shell video{width:100%;height:100%;object-fit:cover;display:block;background:#fff}
+              .hov-progress{position:absolute;left:0;bottom:0;height:3px;width:0;background:#10B981;transition:width .15s linear;z-index:3}
+
+              .hov-overlay{position:absolute;inset:0;border:0;padding:0;margin:0;cursor:pointer;background:transparent;z-index:2;transition:opacity .25s}
+              .hov-shell.is-playing .hov-overlay{opacity:0;pointer-events:none}
+              .hov-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,10,.06),rgba(8,12,10,.02) 45%,rgba(8,12,10,.42))}
+              .hov-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:#10B981;display:grid;place-items:center;box-shadow:0 14px 36px -6px rgba(16,185,129,.6);transition:transform .2s,background .2s}
+              .hov-overlay:hover .hov-play{transform:translate(-50%,-50%) scale(1.07);background:#0ea372}
+              .hov-play svg{margin-left:4px}
+              .hov-tag{position:absolute;left:20px;bottom:18px;color:#fff;font-size:14px;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+              .hov-overlay:focus-visible{outline:3px solid #10B981;outline-offset:3px}
+
+              @media(max-width:640px){
+                .hov-section{padding:64px 0}
+                .hov-tag{font-size:12.5px;left:14px;bottom:14px}
+                .hov-play{width:62px;height:62px}
+              }
+              @media(prefers-reduced-motion:reduce){.hov-overlay,.hov-play{transition:none}}
+            </style>
+
+            <script>
+              (function(){
+                var shell=document.getElementById('hovShell');
+                var vid=document.getElementById('hovVid');
+                var overlay=document.getElementById('hovOverlay');
+                var prog=document.getElementById('hovProg');
+                if(!shell||!vid)return;
+                var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                function play(){var p=vid.play();if(p&&p.catch)p.catch(function(){});}
+                vid.addEventListener('play',function(){shell.classList.add('is-playing');});
+                vid.addEventListener('ended',function(){shell.classList.remove('is-playing');}); // overlay returns => click replays
+                vid.addEventListener('timeupdate',function(){if(vid.duration)prog.style.width=(vid.currentTime/vid.duration*100)+'%';});
+                overlay.addEventListener('click',function(){vid.currentTime=0;play();});
+
+                // Autoplay once when in view. Muted => allowed by browsers. Skipped for reduced-motion users.
+                var fired=false;
+                if('IntersectionObserver' in window && !reduced){
+                  var io=new IntersectionObserver(function(es){
+                    es.forEach(function(e){if(e.isIntersecting&&!fired){fired=true;play();io.disconnect();}});
+                  },{threshold:0.55});
+                  io.observe(shell);
+                }
+              })();
+            </script>
+
+            <!-- MERGED PROBLEM & INTELLIGENCE SECTION -->
+            <section class="pt-16 pb-24 lg:pt-24 lg:pb-32 bg-white fade-up border-b border-neutral-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-                    <div class="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-start">
+                    <div class="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
                         <div class="max-w-xl text-left">
                             <div class="text-[11px] font-bold uppercase tracking-[0.25em] text-neutral-400 mb-6 flex items-center gap-4">
-                                <span class="w-8 h-px bg-neutral-300"></span> THE PROBLEM
+                                <span class="w-8 h-px bg-neutral-300"></span> THE SHIFT
                             </div>
-                            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-black mb-8 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
-                                Outplacement hasn't <br/><em class="text-neutral-400 font-normal">kept up.</em>
+                            <h2 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-black mb-8 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
+                                Career Intelligence
                             </h2>
                             <div class="space-y-6 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal">
-                                <p>Most transition support still looks the way it did in 2015. Generic CV workshops. Group sessions on "networking." A portal login that nobody uses after week two.</p>
-                                <p>Meanwhile, the job market has fundamentally changed. <strong class="text-black font-semibold">AI is now embedded in how companies screen, assess, and hire.</strong> Candidates who can't use modern tools are falling behind — not because they lack experience, but because they lack fluency.</p>
-                                <p>Your departing employees don't need motivation talks. They need practical skills, working tools, and a system they can execute from day one.</p>
+                                <p>The legacy outplacement model was designed for a world where job markets moved slowly, hiring was human-led from end to end, and a polished CV was enough to get you into the room. That world no longer exists.</p>
+                                <p>Today, AI is reshaping every stage of the hiring process — from how companies source and screen candidates to how they assess, shortlist, and decide. <strong class="text-black font-semibold">Career transition support needs to reflect that reality.</strong></p>
+                                <p>Hireovate represents a new category: <strong class="text-black font-semibold">Career Intelligence.</strong> We combine real-time market data, AI-powered research and positioning tools, and the domain expertise of a 25-year executive recruitment career — someone who has hired at the companies your candidates want to work for, who has been made redundant and led reductions, and who understands both sides of the table.</p>
+                                <p>Whether you are an individual navigating a career pivot or a company managing workforce transition at scale, the approach is the same: replace passive support with active intelligence, and <strong class="text-black font-semibold">give people a system they can execute — not a portal they'll forget.</strong></p>
                             </div>
                         </div>
 
-                        <div class="flex flex-col rounded-[1.25rem] overflow-hidden shadow-2xl border border-neutral-200">
+                        <div class="flex flex-col rounded-[1.25rem] overflow-hidden shadow-2xl border border-neutral-200 bg-white">
                             <div class="grid grid-cols-2">
                                 <div class="p-5 sm:p-6 bg-neutral-100 border-b border-r border-neutral-200 flex items-center"><h3 class="text-[10px] font-black uppercase tracking-widest text-neutral-500">Legacy Outplacement</h3></div>
                                 <div class="p-5 sm:p-6 bg-black border-b border-neutral-800 flex items-center"><h3 class="text-[10px] font-black uppercase tracking-widest text-white">Hireovate</h3></div>
@@ -384,32 +477,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="relative bg-[#0a0a0a] py-24 lg:py-32 overflow-hidden fade-up">
-                <div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-white mb-2 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
-                            AI-native transition intelligence.
-                        </h2>
-                        <h2 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-neutral-400 mb-12 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
-                            <em class="font-normal italic">This is what comes next.</em>
-                        </h2>
-                    </div>
                     
-                    <div class="space-y-8 text-[16px] sm:text-[17px] text-neutral-400 leading-relaxed font-normal text-left max-w-3xl mx-auto mb-16">
-                        <p>The legacy outplacement model was designed for a world where job markets moved slowly, hiring was human-led from end to end, and a polished CV was enough to get you into the room. That world no longer exists.</p>
-                        <p>Today, AI is reshaping every stage of the hiring process — from how companies source and screen candidates to how they assess, shortlist, and decide. <strong class="text-white font-semibold">Career transition support needs to reflect that reality.</strong></p>
-                        <p>Hireovate represents a new category: <strong class="text-white font-semibold">Career Intelligence.</strong> We combine real-time market data, AI-powered research and positioning tools, and the domain expertise of a 25-year executive recruitment career — someone who has hired at the companies your candidates want to work for, who has been made redundant and led reductions, and who understands both sides of the table.</p>
-                        <p>Whether you are an individual navigating a career pivot or a company managing workforce transition at scale, the approach is the same: <strong class="text-white font-semibold">replace passive support with active intelligence, and give people a system they can execute — not a portal they'll forget.</strong></p>
-                    </div>
-                    
-                    <div class="flex flex-wrap justify-center gap-4 mt-12">
-                        <a href="#report" onclick="navTo('report')" class="px-8 py-4 rounded-xl bg-white text-black text-[14px] font-bold transition-all hover:scale-[1.02] hover:bg-neutral-200 shadow-xl flex items-center justify-center gap-2">
+                    <div class="flex flex-wrap items-center justify-center gap-4 mt-16 pt-12 border-t border-neutral-100 max-w-3xl mx-auto">
+                        <a href="#report" onclick="navTo('report')" class="px-8 py-4 rounded-xl bg-black text-white text-[14px] font-bold transition-all hover:scale-[1.02] hover:bg-neutral-800 shadow-xl flex items-center justify-center gap-2">
                             Start my Market Scan &rarr;
                         </a>
-                        <a href="#aisprint" onclick="navTo('aisprint')" class="px-8 py-4 rounded-xl border border-neutral-800 bg-transparent text-neutral-400 text-[14px] font-bold transition-all hover:text-white hover:border-neutral-600 hover:bg-neutral-900 flex items-center justify-center gap-2">
+                        <a href="#aisprint" onclick="navTo('aisprint')" class="px-8 py-4 rounded-xl border border-neutral-200 bg-white text-black text-[14px] font-bold transition-all hover:bg-neutral-50 shadow-sm flex items-center justify-center gap-2">
                             Book AI Sprint briefing &rarr;
                         </a>
                     </div>
@@ -422,7 +495,9 @@
             <section class="relative bg-white py-16 lg:py-24 border-b border-neutral-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
                     <div class="max-w-4xl mx-auto text-center mb-16">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#10b981]/10 text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-widest mb-6">WAYS TO WORK TOGETHER</div>
+                        <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#10b981]/10 text-[#10b981] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] shadow-sm mb-6">
+                            WAYS TO WORK TOGETHER
+                        </div>
                         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter text-black mb-8 leading-[1.1]">
                             Recruiter-grade intelligence, strategy, and execution.
                         </h2>
@@ -483,16 +558,10 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pt-6 border-t border-neutral-100 mt-auto flex flex-col justify-end items-center text-center">
-                                    <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-2">Founding Client Launch Offer</div>
-                                    <div class="flex flex-wrap items-baseline justify-center gap-x-1.5 gap-y-1 mb-2">
-                                        <span class="text-3xl font-black text-black">From €650</span>
-                                        <span class="text-xl text-neutral-400 font-bold">/ £550 / $715</span>
-                                    </div>
-                                    <div class="text-[11px] font-bold text-neutral-500 uppercase tracking-widest flex flex-wrap items-center justify-center gap-2">
-                                        <span>Standard price: <span class="line-through opacity-80 text-[13px] ml-0.5">€950</span></span>
-                                    </div>
-                                    <div class="text-[10px] font-medium text-neutral-500 mt-2 leading-relaxed max-w-[90%]">Available for the first 20 clients while we refine the service. Your €650 credits against Career Offensive within 30 days.</div>
+                                <div class="pt-6 border-t border-neutral-100 mt-auto flex flex-col justify-end text-left">
+                                    <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-1">Launch Price <span class="text-neutral-400 font-bold ml-1">Clarity, fast</span></div>
+                                    <div class="text-2xl font-black text-black mb-1 tracking-tight">€450 / £385 / $495</div>
+                                    <div class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Standard €750</div>
                                 </div>
                             </div>
                             
@@ -523,15 +592,10 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="pt-6 border-t border-neutral-800 mt-auto flex flex-col justify-end items-center text-center">
-                                    <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-2">Founding Client Price</div>
-                                    <div class="flex flex-wrap items-baseline justify-center gap-x-1.5 gap-y-1 mb-2">
-                                        <span class="text-3xl font-black text-white">From €1,750</span>
-                                        <span class="text-xl text-neutral-500 font-bold">/ £1,475 / $1,925</span>
-                                    </div>
-                                    <div class="text-[11px] font-bold text-neutral-400 uppercase tracking-widest flex flex-wrap items-center justify-center gap-2">
-                                        <span>Standard price: <span class="line-through opacity-80 text-[13px] ml-0.5">€3,000</span></span>
-                                    </div>
+                                <div class="pt-6 border-t border-neutral-800 mt-auto flex flex-col justify-end text-left">
+                                    <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-1">Launch Price <span class="text-neutral-500 font-bold ml-1">Deeper support</span></div>
+                                    <div class="text-2xl font-black text-white mb-1 tracking-tight">€1,750 / £1,475 / $1,925</div>
+                                    <div class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Standard €3,000</div>
                                 </div>
                             </div>
 
@@ -562,18 +626,25 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="pt-6 border-t border-neutral-200 mt-auto flex flex-col justify-end items-center text-center">
-                                    <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-2">Founding Client Price</div>
-                                    <div class="flex flex-wrap items-baseline justify-center gap-x-1.5 gap-y-1 mb-2">
-                                        <span class="text-3xl font-black text-black">From €7,500</span>
-                                        <span class="text-xl text-neutral-400 font-bold">/ £6,350 / $8,250</span>
-                                    </div>
-                                    <div class="text-[11px] font-bold text-neutral-500 uppercase tracking-widest flex flex-wrap items-center justify-center gap-2">
-                                        <span>Standard price: <span class="line-through opacity-80 text-[13px] ml-0.5">€9,375</span></span>
-                                    </div>
-                                    <div class="text-[10px] font-medium text-neutral-500 mt-2 leading-relaxed max-w-[90%]">Confidential bespoke engagement</div>
+                                <div class="pt-6 border-t border-neutral-200 mt-auto flex flex-col justify-end text-left">
+                                    <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-1">Launch Price <span class="text-neutral-400 font-bold ml-1">High-stakes</span></div>
+                                    <div class="text-2xl font-black text-black mb-1 tracking-tight">€7,500 / £6,350 / $8,250</div>
+                                    <div class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Standard €9,375</div>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- Master Service Ladder PDF Download -->
+                        <div class="mt-16 flex flex-col items-center justify-center text-center fade-up delay-300">
+                            <div class="relative group">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-[#10b981] to-[#059669] rounded-full blur opacity-30 group-hover:opacity-60 transition duration-700"></div>
+                                <a href="https://drive.google.com/file/d/1uYwEket5DC3usLrlbR1onSNkLp2Wnv-G/view?usp=sharing" target="_blank" class="relative inline-flex items-center justify-center gap-3 px-8 py-5 sm:px-12 sm:py-6 rounded-full bg-black text-white text-[13px] sm:text-[15px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-neutral-900 shadow-2xl">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-[#10b981]"></i>
+                                    Click here for detailed tier breakdown
+                                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-neutral-400 group-hover:text-white transition-colors"></i>
+                                </a>
+                            </div>
+                            <p class="mt-6 text-sm text-neutral-500 font-medium max-w-md mx-auto leading-relaxed">Compare all 50+ intelligence features, data enrichment limits, and strategic deliverables across our advisory tiers.</p>
                         </div>
                     </div>
 
@@ -615,7 +686,7 @@
                                         <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
                                         <span>Per Person</span>
                                     </div>
-                                    <div class="text-[10px] font-medium text-neutral-500 mt-2 uppercase tracking-widest">Minimum of 10 people to run a class</div>
+                                    <div class="text-[10px] font-medium text-neutral-500 mt-2 uppercase tracking-widest">Minimum of 5 people to run a class</div>
                                 </div>
                             </div>
 
@@ -629,7 +700,7 @@
                                 </div>
                                 <div class="text-neutral-400 leading-relaxed flex-grow space-y-4 text-sm mb-8">
                                     <p>For companies that want to go beyond a single day. The AI Sprint equips your cohort with skills, but Career Offensive gives them a 45-day guided reentry programme.</p>
-                                    <p>For Directors, Heads of Function, senior managers, and experienced individual contributors who want to move beyond passive applications and run a deliberate, targeted search campaign.</p>
+                                    <p>Provide your impacted Individual Contributors and Managers with the sustained, personalised market intelligence that professionals pay €1,499 for. One standard of care for your core team.</p>
                                     <div class="pt-6 mt-6 border-t border-neutral-800">
                                         <h4 class="text-[10px] font-black uppercase tracking-widest text-white mb-3">Includes:</h4>
                                         <ul class="space-y-3 pb-2">
@@ -698,7 +769,6 @@
                             </div>
                         </div>
 
-                        <!-- Master Service Ladder PDF Download -->
                         <div class="max-w-4xl mx-auto text-left mt-16 p-6 sm:p-8 bg-neutral-50 rounded-2xl border border-neutral-200">
                             <h4 class="font-bold text-black mb-3 text-[16px]">The ROI of Defensible Support</h4>
                             <p class="text-[14.5px] text-neutral-600 leading-relaxed mb-4">Example: a 15-person impacted cohort can receive a full AI Career Readiness Sprint plus 45-day guided Career Offensive support for <strong class="text-black font-semibold">€41,250</strong>. That equips each person with AI tools, market intelligence, target-company mapping, outreach strategy, and execution checkpoints — at a lower cost than many traditional senior outplacement programmes, while delivering a more practical, active job-search system.</p>
@@ -822,6 +892,7 @@
                             </p>
                         </div>
                     </div>
+
                 </div>
             </section>
         </div>
@@ -831,62 +902,79 @@
             <section class="py-16 lg:py-24 bg-white fade-up border-b border-neutral-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
                     <div class="text-center max-w-3xl mx-auto mb-16">
-                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">Founder's Story</div>
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">Leadership</div>
                         <h2 class="text-4xl font-semibold tracking-tighter text-black md:text-6xl leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">Built by experience, <br/>driven by empathy.</h2>
                         <div class="mt-8 pt-8 border-t border-neutral-100">
                             <p class="text-xl text-neutral-600 italic font-medium leading-relaxed max-w-2xl mx-auto">"Hireovate was built to remove the uncertainty from career transitions. We pair the empathy of having been there with the precision of modern AI."</p>
                         </div>
                     </div>
 
-                    <div class="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
-                        <div class="space-y-8">
-                            <div class="rounded-[2.5rem] overflow-hidden shadow-2xl relative bg-neutral-50 aspect-[4/3] group">
-                                <img src="https://i.ibb.co/yFGkk1yK/family.jpg" alt="Declan Fitzgerald, Founder of Hireovate, with his family" class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
-                                <div class="absolute bottom-8 left-8 text-white">
-                                    <div class="font-bold text-2xl tracking-tight mb-1">Declan</div>
-                                    <div class="text-[10px] uppercase tracking-widest font-black text-[#10b981]">Founder & CEO</div>
-                                </div>
-                            </div>
-                            
-                            <div class="space-y-4 text-sm text-neutral-600 leading-relaxed font-normal p-8 bg-[#fafafa] rounded-[2.5rem] border border-neutral-100 shadow-sm">
-                                <p><b class="text-black">25+ Years in Elite Tech:</b> Led executive talent at Meta, LinkedIn, Microsoft, HubSpot, Apollo.io, and Neko Health.</p>
-                                <p><b class="text-black">Active Investor:</b> Partnered with Stage 2 Capital, and direct investments in 40+ high-growth companies, giving him unlisted visibility into the "Hidden Market".</p>
-                                <div class="pt-6 mt-6 space-y-4 border-t border-neutral-200">
-                                    <div class="flex gap-3 items-start">
-                                        <i data-lucide="award" class="w-4 h-4 text-neutral-400 shrink-0 mt-0.5"></i>
-                                        <span>Former Ireland U18 & U21 Soccer International. Awarded a soccer scholarship at University College Dublin.</span>
-                                    </div>
-                                    <div class="flex gap-3 items-start">
-                                        <i data-lucide="heart" class="w-4 h-4 text-neutral-400 shrink-0 mt-0.5"></i>
-                                        <span>Active charitable involvement with Fields of Life, Merchants Quay and Concern.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="space-y-10 text-lg leading-relaxed text-neutral-600 font-normal lg:pt-8 text-left">
-                            <div>
-                                <h3 class="text-2xl font-bold text-black mb-4 tracking-tight" style="font-family: ui-serif, Georgia, serif;">The Empathy of Experience</h3>
-                                <p class="mb-4">Having been made redundant three times in his career—and having had to lead teams through painful reductions three times as well—Declan fully understands the emotional and financial stakes of sudden workforce transition.</p>
-                                <p>He saw firsthand that legacy outplacement is fundamentally broken. It focuses on passive, legacy outplacement support and outdated PDF templates, rather than what executives actually need: <b class="text-black">tactical market reentry and leverage.</b> Hireovate was built to replace that passivity with active, recruiter-led market execution.</p>
-                            </div>
-                            
-                            <div class="p-8 lg:p-10 rounded-[2.5rem] bg-black text-white shadow-2xl relative overflow-hidden">
-                                <div class="absolute top-0 right-0 w-64 h-64 bg-[#10b981]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-                                <div class="relative z-10">
-                                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
-                                        <div class="p-2 bg-white/10 rounded-xl">
-                                            <i data-lucide="cpu" class="w-5 h-5 text-[#10b981]"></i>
-                                        </div>
-                                        <h3 class="text-xl font-bold text-white tracking-tight" style="font-family: ui-serif, Georgia, serif;">Why AI Changes Everything</h3>
-                                    </div>
-                                    <p class="text-[15px] text-neutral-300 leading-relaxed mb-4">In the past, mapping a career transition relied entirely on manual networking and public job boards. Today, the hiring landscape is driven by vast, fragmented data.</p>
-                                    <p class="text-[15px] text-neutral-300 leading-relaxed font-medium">By harnessing the latest LLM technologies and advanced data analysis, we no longer guess. We analyse live market signals including funding activity, hiring patterns, leadership movement, public job data, company growth signals, and recruiter-led market intelligence. We pair this capability with 25 years of elite recruiter intuition to map your "hidden market" with unprecedented precision.</p>
-                                </div>
+                    <!-- Image Section (Centered & Larger) -->
+                    <div class="max-w-5xl mx-auto mb-16">
+                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl relative bg-neutral-50 aspect-[4/3] md:aspect-[16/9] lg:aspect-[3/2] group">
+                            <img src="https://i.ibb.co/yFGkk1yK/family.jpg" alt="Declan and Camila with their family" class="w-full h-full object-cover object-[center_15%] block group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-8 left-8 sm:bottom-10 sm:left-10 text-white">
+                                <div class="font-bold text-3xl sm:text-4xl tracking-tight mb-2">Declan & Camila</div>
+                                <div class="text-[11px] sm:text-xs uppercase tracking-widest font-black text-[#10b981]">Declan, CEO and Founder * Camila, Director</div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Profiles Section (Side-by-side below image) -->
+                    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 mb-20 text-left">
+                        <!-- Declan Profile -->
+                        <div>
+                            <h3 class="text-3xl font-bold text-neutral-300 mb-1 tracking-tight">Declan</h3>
+                            <div class="text-[11px] font-black uppercase tracking-widest text-[#10b981] mb-6">Strategy & Delivery</div>
+                            <ul class="space-y-5 text-[15px] text-neutral-700">
+                                <li class="flex items-start gap-4">
+                                    <svg viewBox="0 0 32 32" class="w-5 h-5 text-black shrink-0 mt-0.5" fill="currentColor"><circle cx="16" cy="16" r="2.5" fill="#10b981" /><g><rect x="15" y="1" width="2" height="2" /><polygon points="12,5 20,5 16,9" /></g><g><rect x="15" y="29" width="2" height="2" /><polygon points="12,27 20,27 16,23" /></g><g><rect x="1" y="15" width="2" height="2" /><polygon points="5,12 5,20 9,16" /></g><g><rect x="29" y="15" width="2" height="2" /><polygon points="27,12 27,20 23,16" /></g></svg>
+                                    <span><strong class="text-black">25+ Years in Elite Tech:</strong> Senior Recruitment Leader at Meta, LinkedIn, Microsoft, HubSpot, Apollo.io, and Neko Health</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <svg viewBox="0 0 32 32" class="w-5 h-5 text-black shrink-0 mt-0.5" fill="currentColor"><circle cx="16" cy="16" r="2.5" fill="#10b981" /><g><rect x="15" y="1" width="2" height="2" /><polygon points="12,5 20,5 16,9" /></g><g><rect x="15" y="29" width="2" height="2" /><polygon points="12,27 20,27 16,23" /></g><g><rect x="1" y="15" width="2" height="2" /><polygon points="5,12 5,20 9,16" /></g><g><rect x="29" y="15" width="2" height="2" /><polygon points="27,12 27,20 23,16" /></g></svg>
+                                    <span><strong class="text-black">Active Investor:</strong> Stage 2 Capital, Tech Operators, Forge Global</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <svg viewBox="0 0 32 32" class="w-5 h-5 text-black shrink-0 mt-0.5" fill="currentColor"><circle cx="16" cy="16" r="2.5" fill="#10b981" /><g><rect x="15" y="1" width="2" height="2" /><polygon points="12,5 20,5 16,9" /></g><g><rect x="15" y="29" width="2" height="2" /><polygon points="12,27 20,27 16,23" /></g><g><rect x="1" y="15" width="2" height="2" /><polygon points="5,12 5,20 9,16" /></g><g><rect x="29" y="15" width="2" height="2" /><polygon points="27,12 27,20 23,16" /></g></svg>
+                                    <span class="font-bold text-black">Been made redundant 3 x times; had to make teams redundant 3 times</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <svg viewBox="0 0 32 32" class="w-5 h-5 text-black shrink-0 mt-0.5" fill="currentColor"><circle cx="16" cy="16" r="2.5" fill="#10b981" /><g><rect x="15" y="1" width="2" height="2" /><polygon points="12,5 20,5 16,9" /></g><g><rect x="15" y="29" width="2" height="2" /><polygon points="12,27 20,27 16,23" /></g><g><rect x="1" y="15" width="2" height="2" /><polygon points="5,12 5,20 9,16" /></g><g><rect x="29" y="15" width="2" height="2" /><polygon points="27,12 27,20 23,16" /></g></svg>
+                                    <span class="font-bold text-black">CEO & Founder, Client and Employee Consultancy</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Camila Profile -->
+                        <div>
+                            <h3 class="text-3xl font-bold text-neutral-300 mb-1 tracking-tight">Camila</h3>
+                            <div class="text-[11px] font-black uppercase tracking-widest text-[#10b981] mb-6">Marketing & Operations</div>
+                            <ul class="space-y-5 text-[15px] text-neutral-700">
+                                <li class="flex items-start gap-4">
+                                    <svg viewBox="0 0 32 32" class="w-5 h-5 text-black shrink-0 mt-0.5" fill="currentColor"><circle cx="16" cy="16" r="2.5" fill="#10b981" /><g><rect x="15" y="1" width="2" height="2" /><polygon points="12,5 20,5 16,9" /></g><g><rect x="15" y="29" width="2" height="2" /><polygon points="12,27 20,27 16,23" /></g><g><rect x="1" y="15" width="2" height="2" /><polygon points="5,12 5,20 9,16" /></g><g><rect x="29" y="15" width="2" height="2" /><polygon points="27,12 27,20 23,16" /></g></svg>
+                                    <span><strong class="text-black">15+ years in Tech:</strong> Microsoft, Google, Meta, Dulux Paint, Hunter Douglas</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <svg viewBox="0 0 32 32" class="w-5 h-5 text-black shrink-0 mt-0.5" fill="currentColor"><circle cx="16" cy="16" r="2.5" fill="#10b981" /><g><rect x="15" y="1" width="2" height="2" /><polygon points="12,5 20,5 16,9" /></g><g><rect x="15" y="29" width="2" height="2" /><polygon points="12,27 20,27 16,23" /></g><g><rect x="1" y="15" width="2" height="2" /><polygon points="5,12 5,20 9,16" /></g><g><rect x="29" y="15" width="2" height="2" /><polygon points="27,12 27,20 23,16" /></g></svg>
+                                    <span class="font-bold text-black">Made redundant twice, trainer for trust and safety at Meta for 10 years</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <svg viewBox="0 0 32 32" class="w-5 h-5 text-black shrink-0 mt-0.5" fill="currentColor"><circle cx="16" cy="16" r="2.5" fill="#10b981" /><g><rect x="15" y="1" width="2" height="2" /><polygon points="12,5 20,5 16,9" /></g><g><rect x="15" y="29" width="2" height="2" /><polygon points="12,27 20,27 16,23" /></g><g><rect x="1" y="15" width="2" height="2" /><polygon points="5,12 5,20 9,16" /></g><g><rect x="29" y="15" width="2" height="2" /><polygon points="27,12 27,20 23,16" /></g></svg>
+                                    <span class="font-bold text-black">Director, Marketing & Research</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Built to scale with you (Centered) -->
+                    <div class="max-w-4xl mx-auto p-10 sm:p-14 rounded-[2.5rem] bg-[#fafafa] border border-neutral-200 shadow-sm relative overflow-hidden text-center">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-[#10b981]"></div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-black mb-6 tracking-tight mt-2" style="font-family: ui-serif, Georgia, serif;">Built to scale with you.</h3>
+                        <p class="text-[15.5px] sm:text-[17px] text-neutral-600 leading-relaxed max-w-3xl mx-auto">Behind the core team sits a vetted associate network of senior HR and talent specialists, allowing us to ramp up quickly for large-scale or multi-site restructures — holding the same high bar on research, analysis, and candidate experience whether we're supporting one executive or several hundred impacted employees.</p>
+                    </div>
+
                 </div>
             </section>
         </div>
@@ -900,28 +988,28 @@
                         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter text-black mb-8 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">What leaders say about the Market Scan.</h2>
                     </div>
 
-                    <div class="columns-1 md:columns-2 gap-8 space-y-8 text-left">
+                    <div class="grid md:grid-cols-2 gap-8 text-left">
                         <!-- Card 1 -->
-                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group break-inside-avoid">
-                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8">"I've worked inside companies that spend tens of thousands on executive search intelligence — I wasn't expecting an individual service to deliver at that level. The Market Scan ranked over 50 companies against my profile, flagged which ones were actively hiring, and showed me compensation benchmarks drawn from current market data rather than outdated salary surveys. It also identified decision-makers at my top targets by name, which meant I could start warm outreach within days rather than weeks. It's the kind of clarity you don't realise you're missing until someone builds it for you."</p>
+                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group flex flex-col">
+                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8 flex-grow">"I've worked inside companies that spend tens of thousands on executive search intelligence — I wasn't expecting an individual service to deliver at that level. The Market Scan ranked over 50 companies against my profile, flagged which ones were actively hiring, and showed me compensation benchmarks drawn from current market data rather than outdated salary surveys. It also identified decision-makers at my top targets by name, which meant I could start warm outreach within days rather than weeks. It's the kind of clarity you don't realise you're missing until someone builds it for you."</p>
                             <div class="pt-6 border-t border-neutral-200">
                                 <div class="text-[13px] font-bold text-black uppercase tracking-wider">Kim Darling</div>
                                 <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Early HubSpot & LinkedIn, Builder & Advisor, Emerald Tiger, San Francisco</div>
                             </div>
                         </div>
-
+                        
                         <!-- Card 2 -->
-                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group break-inside-avoid">
-                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8">"I've experienced outplacement first-hand and it didn't come close to this. The standard offering — workshops, CV templates, a portal nobody logs into after week two — left me more frustrated than supported. The Market Scan delivered a ranked list of companies genuinely aligned to my background, mapped the key people I'd need to reach at each one, and gave me a structured two-week action plan with specific outreach steps rather than vague advice to 'network more.' It also connected my experience to roles and sectors I hadn't considered, which completely shifted how I was thinking about my search. This is what career transition support should actually look like."</p>
+                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group flex flex-col">
+                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8 flex-grow">"I've been through outplacement before and was underwhelmed — generic career portals, recycled advice, nothing built around my actual market. The Market Scan was a completely different experience. It ranked and tiered target companies by realistic fit, separated the aspirational from the accessible, and weighted geography properly — something most career tools get wrong. The hidden market targets section surfaced companies I'd never considered, the compensation benchmarking gave me real numbers I could use in live conversations, and the execution plan laid out exactly who to contact, how to reach them, and in what order. After the first report, I gave detailed feedback and Declan iterated within days — the revised version was materially stronger. The quality and personalization were significantly stronger than anything I've seen from traditional career transition support."</p>
                             <div class="pt-6 border-t border-neutral-200">
-                                <div class="text-[13px] font-bold text-black uppercase tracking-wider">Emma Lee</div>
-                                <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Senior Technology Leader, formerly Microsoft (16 years), Ireland</div>
+                                <div class="text-[13px] font-bold text-black uppercase tracking-wider">Matt Kelley</div>
+                                <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Senior Media & Ad Platform Executive, formerly Amazon & NBCU, Boston</div>
                             </div>
                         </div>
-                        
-                        <!-- Card 3 (New Declan Sweetman Quote) -->
-                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group break-inside-avoid">
-                            <div class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8 space-y-4">
+
+                        <!-- Card 3 (Declan Sweetman Restored) -->
+                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group flex flex-col">
+                            <div class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8 flex-grow space-y-4">
                                 <p>"When you've spent years at LinkedIn and Dell, you think you have a decent read on the job market. You know people, you know the landscape, you know how hiring works.</p>
                                 <p>Then you get a Market Scan showing exactly what you were missing.</p>
                                 <p>Hireovate came back with scored target companies across three tiers, live compensation benchmarks, named decision-makers, and outreach templates written specifically for my background. But the section that genuinely shifted my approach was the one on the hidden market. Companies not posting anything yet, but where the signals, funding, leadership changes, and team expansion make a senior sales hire in the next six months almost certain. That's where the real edge is, and I wouldn't have found it without this.</p>
@@ -930,29 +1018,28 @@
                             </div>
                             <div class="pt-6 border-t border-neutral-200">
                                 <div class="text-[13px] font-bold text-black uppercase tracking-wider">Declan Sweetman</div>
-                                <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Senior Sales Leader, Formerly LinkedIn & Dell, Dublin</div>
+                                <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Senior Sales Leader, formerly LinkedIn & Dell, Dublin</div>
                             </div>
                         </div>
-
+                        
                         <!-- Card 4 -->
-                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group break-inside-avoid">
-                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8">"I've been through outplacement before and was underwhelmed — generic career portals, recycled advice, nothing built around my actual market. The Market Scan was a completely different experience. It ranked and tiered target companies by realistic fit, separated the aspirational from the accessible, and weighted geography properly — something most career tools get wrong. The hidden market targets section surfaced companies I'd never considered, the compensation benchmarking gave me real numbers I could use in live conversations, and the execution plan laid out exactly who to contact, how to reach them, and in what order. After the first report, I gave detailed feedback and Declan iterated within days — the revised version was materially stronger. The quality and personalization were significantly stronger than anything I've seen from traditional career transition support."</p>
+                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group flex flex-col">
+                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8 flex-grow">"I've experienced outplacement first-hand and it didn't come close to this. The standard offering — workshops, CV templates, a portal nobody logs into after week two — left me more frustrated than supported. The Market Scan delivered a ranked list of companies genuinely aligned to my background, mapped the key people I'd need to reach at each one, and gave me a structured two-week action plan with specific outreach steps rather than vague advice to 'network more.' It also connected my experience to roles and sectors I hadn't considered, which completely shifted how I was thinking about my search. This is what career transition support should actually look like."</p>
                             <div class="pt-6 border-t border-neutral-200">
-                                <div class="text-[13px] font-bold text-black uppercase tracking-wider">Matt Kelley</div>
-                                <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Senior Media & Ad Platform Executive, formerly Amazon & NBCU, Boston</div>
+                                <div class="text-[13px] font-bold text-black uppercase tracking-wider">Emma Lee</div>
+                                <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Senior Technology Leader, formerly Microsoft (16 years), Ireland</div>
                             </div>
                         </div>
-
+                        
                         <!-- Card 5 -->
-                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group break-inside-avoid">
-                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8">"As a senior sales leader with over 20 years across LinkedIn and Forrester, I assumed my own network gave me strong market visibility. The Market Scan proved me wrong. It scored and ranked over 50 target companies, identified hiring signals I had no visibility on — funding rounds, leadership changes, team expansions — and surfaced roles at companies I hadn't connected to my profile. The compensation benchmarking was based on live market data, not generic bands, which gave me real leverage in conversations. It's recruiter-grade intelligence built for the candidate, and I haven't seen anyone else do it this way."</p>
+                        <div class="bg-[#fafafa] p-8 lg:p-10 rounded-[2.5rem] border border-neutral-200 shadow-sm hover:shadow-xl transition-all relative group flex flex-col">
+                            <p class="text-sm text-neutral-600 leading-relaxed font-medium italic mb-8 flex-grow">"As a senior sales leader with over 20 years across LinkedIn and Forrester, I assumed my own network gave me strong market visibility. The Market Scan proved me wrong. It scored and ranked over 50 target companies, identified hiring signals I had no visibility on — funding rounds, leadership changes, team expansions — and surfaced roles at companies I hadn't connected to my profile. The compensation benchmarking was based on live market data, not generic bands, which gave me real leverage in conversations. It's recruiter-grade intelligence built for the candidate, and I haven't seen anyone else do it this way."</p>
                             <div class="pt-6 border-t border-neutral-200">
                                 <div class="text-[13px] font-bold text-black uppercase tracking-wider">PJ Terry</div>
                                 <div class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Global Chief Sales Officer, formerly LinkedIn & Forrester Research, Dublin</div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
@@ -1085,7 +1172,7 @@
                       <div>
                         <p class="font-semibold text-neutral-900">If confirmed — secure payment link</p>
                         <p class="text-neutral-600 text-sm leading-relaxed">
-                          We send a Stripe payment link for <span class="line-through text-neutral-400">€950</span> <span class="font-semibold text-neutral-900">€650</span> <span class="text-xs uppercase tracking-wider accent-text ml-1">Founding Client Offer</span>.
+                          We send a Stripe payment link for <span class="line-through text-neutral-400">€750</span> <span class="font-semibold text-neutral-900">€450</span> <span class="text-xs uppercase tracking-wider accent-text ml-1">Launch Offer</span>.
                         </p>
                       </div>
                     </li>
@@ -1332,7 +1419,7 @@
                           (name, email, LinkedIn profile, and the information provided above) for the purpose
                           of assessing fit and, if mutually agreed, delivering the Market Scan service. I
                           understand my data will be handled in accordance with the
-                          <a href="#privacy" onclick="navTo('privacy')" class="accent-text underline hover:no-underline">Hireovate Privacy Policy</a>,
+                          <a href="/privacy" class="accent-text underline hover:no-underline">Hireovate Privacy Policy</a>,
                           that I can withdraw consent and request deletion at any time by emailing
                           <a href="mailto:hello@hireovate.com" class="accent-text underline hover:no-underline">hello@hireovate.com</a>,
                           and that no marketing communications will be sent without separate explicit opt-in.
@@ -1379,24 +1466,25 @@
 
         <!-- ================= PAGE: AI SPRINT ================= -->
         <div id="page-aisprint" class="page-section hidden">
-            <section class="bg-[#fafafa] pt-24 pb-16 relative overflow-hidden fade-up border-b border-neutral-100">
+            <section class="bg-[#fafafa] pt-32 pb-20 relative overflow-hidden fade-up border-b border-neutral-100">
                 <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
                 
                 <div class="mx-auto max-w-5xl px-4 sm:px-6 relative z-10 text-center">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-widest mb-6 shadow-sm">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-widest mb-8 shadow-sm">
                         AI Career Readiness Sprint
                     </div>
                     <h2 class="text-5xl lg:text-7xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">
                         Your people are leaving. <br/><span class="text-neutral-400 italic font-normal">Make sure they leave ready.</span>
                     </h2>
-                    <p class="text-xl text-neutral-500 font-medium max-w-3xl mx-auto leading-relaxed mb-8">
+                    <p class="text-xl text-neutral-500 font-medium max-w-3xl mx-auto leading-relaxed mb-10">
                         A practical one-day programme that equips transitioning employees with AI tools, career intelligence, and a structured job search plan — so they land faster and your employer brand stays intact.
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="#contact" onclick="navTo('contact')" class="px-8 py-4 rounded-full bg-black text-white text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-neutral-900 shadow-xl">Book AI Sprint briefing</a>
+                        <a href="#contact" onclick="navTo('contact')" class="px-8 py-4 rounded-full bg-black text-white text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-neutral-900 shadow-xl">Book a Briefing Call</a>
+                        <a href="#programme" onclick="document.getElementById('programme').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 rounded-full bg-white border border-neutral-200 text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:bg-neutral-50 shadow-sm">See the Programme</a>
                     </div>
 
-                    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-neutral-200 rounded-[2rem] overflow-hidden border border-neutral-200">
+                    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-neutral-200 rounded-[2rem] overflow-hidden border border-neutral-200">
                         <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">1</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Day</div></div>
                         <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">3</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">AI Agents Built</div></div>
                         <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">5</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Hours Workshop</div></div>
@@ -1405,9 +1493,9 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 fade-up">
+            <section class="bg-white py-20 lg:py-32 fade-up">
                 <div class="mx-auto max-w-4xl px-4 sm:px-6">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROBLEM</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Outplacement hasn't kept up.</h2>
                     </div>
@@ -1419,9 +1507,9 @@
                 </div>
             </section>
 
-            <section class="bg-[#fafafa] py-16 lg:py-20 border-y border-neutral-100 fade-up">
+            <section class="bg-[#fafafa] py-20 lg:py-32 border-y border-neutral-100 fade-up">
                 <div class="mx-auto max-w-4xl px-4 sm:px-6">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHAT IT IS</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">One day. Three AI agents. <br/><span class="italic text-neutral-400">A complete job search system.</span></h2>
                     </div>
@@ -1433,10 +1521,10 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 fade-up">
+            <section class="bg-white py-20 lg:py-32 fade-up">
                 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 text-center">
                     <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">OUTCOMES</div>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-12" style="font-family: ui-serif, Georgia, serif;">What every participant leaves with.</h2>
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-16" style="font-family: ui-serif, Georgia, serif;">What every participant leaves with.</h2>
                     
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
                         <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
@@ -1473,15 +1561,15 @@
                 </div>
             </section>
 
-            <section id="programme" class="bg-black py-16 lg:py-20 fade-up relative overflow-hidden">
+            <section id="programme" class="bg-black py-20 lg:py-32 fade-up relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 to-black pointer-events-none"></div>
                 <div class="mx-auto max-w-4xl px-4 sm:px-6 relative z-10">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROGRAMME</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">The day at a glance.</h2>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-6 mb-12 text-left">
+                    <div class="grid md:grid-cols-2 gap-6 mb-16 text-left">
                         <div class="border border-neutral-800 bg-neutral-900/50 p-8 rounded-[2rem]">
                             <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-3">In Person</p>
                             <p class="text-neutral-400 text-sm leading-relaxed">Your office or offsite venue. Facilitator travels to you. Best for cohorts who benefit from shared energy and real-time coaching.</p>
@@ -1508,9 +1596,9 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 border-b border-neutral-100 fade-up">
+            <section class="bg-white py-20 lg:py-32 border-b border-neutral-100 fade-up">
                 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center mb-10">
+                    <div class="text-center mb-16">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHO IT'S FOR</div>
                         <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Built for employers who take transition seriously.</h2>
                     </div>
@@ -1535,12 +1623,12 @@
                 </div>
             </section>
 
-            <section class="bg-[#fafafa] py-16 lg:py-20 fade-up">
+            <section class="bg-[#fafafa] py-20 lg:py-32 fade-up">
                 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
                         <div class="text-left">
                             <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">YOUR FACILITATOR</div>
-                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-black mb-8" style="font-family: ui-serif, Georgia, serif;">Led by a recruiter.</h2>
+                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-black mb-8" style="font-family: ui-serif, Georgia, serif;">Led by a recruiter, not a trainer.</h2>
                             <div class="space-y-6 text-neutral-600 text-lg leading-relaxed">
                                 <p>The AI Sprint is facilitated by Declan Fitzgerald — founder of Hireovate and a 25-year executive recruitment leader. Declan has hired thousands of professionals across Microsoft, HubSpot, Meta, LinkedIn, and multiple startups.</p>
                                 <p>He has been made redundant three times and led teams through reductions three times. This programme is delivered by someone who has been on both sides of the table — who knows what hiring managers actually look for, how AI is changing the process, and what separates candidates who land from those who drift.</p>
@@ -1577,7 +1665,7 @@
                 </div>
             </section>
 
-            <section class="bg-white py-16 lg:py-20 border-t border-neutral-100 fade-up">
+            <section class="bg-white py-20 lg:py-32 border-t border-neutral-100 fade-up">
                 <div class="mx-auto max-w-4xl px-4 sm:px-6 text-left">
                     <div class="text-center mb-10">
                         <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">FAQ</div>
@@ -1587,7 +1675,7 @@
                     <div class="space-y-10">
                         <div>
                             <h3 class="text-xl font-bold text-black mb-3">Is there a minimum number of participants required?</h3>
-                            <p class="text-neutral-600 leading-relaxed">Yes, there is a minimum of 10 people required to attend to run an AI Sprint class.</p>
+                            <p class="text-neutral-600 leading-relaxed">Yes, there is a minimum of 5 people required to attend to run an AI Sprint class.</p>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-black mb-3">Do participants need any technical background?</h3>
@@ -1630,6 +1718,219 @@
                 </div>
             </section>
         </div>
+
+        <!-- GRADUATE INTELLIGENCE UPDATE START -->
+        <!-- ================= PAGE: GRADUATE INTELLIGENCE ================= -->
+        <div id="page-graduate-intelligence" class="page-section hidden">
+            
+            <!-- SECTION A - PAGE HERO -->
+            <section class="relative bg-white pt-16 pb-16 md:pt-24 md:pb-24 border-b border-neutral-100 fade-up">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+                        <div class="w-full lg:w-1/2 text-left">
+                            <div class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#10b981] mb-6 flex items-center gap-4">
+                                <span class="w-8 h-px bg-[#10b981]"></span> GRADUATE INTELLIGENCE
+                            </div>
+                            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-6 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
+                                A smarter route into the graduate market.
+                            </h2>
+                            <p class="text-xl sm:text-2xl text-neutral-400 italic mb-8 font-normal" style="font-family: ui-serif, Georgia, serif;">
+                                For graduates, MBAs, and the careers teams supporting them.
+                            </p>
+                            <div class="space-y-6 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal mb-10">
+                                <p>Hireovate combines live market intelligence, recruiter expertise and AI-supported research to help graduates identify where they fit, which employers to target, how the market is changing and what to do next. For careers teams, it adds a tailored candidate-intelligence layer that strengthens existing guidance, employer engagement and employability support.</p>
+                            </div>
+                            <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] hover:bg-[#059669] shadow-xl">
+                                GET IN TOUCH
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <div class="w-full lg:w-1/2 relative rounded-[2rem] overflow-hidden shadow-2xl">
+                            <!-- Soft white fade effect using a pseudo-element overlay on the left edge (desktop only) -->
+                            <div class="hidden lg:block absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+                            <img src="images/graduate-intelligence-hero.png" alt="Two graduates looking towards a modern city skyline" class="w-full h-auto object-cover block">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION B - FOR GRADUATES AND MBAs -->
+            <section class="py-20 lg:py-32 bg-[#fafafa] fade-up relative">
+                <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                
+                <div class="mx-auto max-w-4xl px-4 sm:px-6 relative z-10 text-center mb-16">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#10b981]/10 text-[#10b981] mb-6">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">For graduates and MBAs</h3>
+                    <p class="text-xl text-neutral-500 font-medium mb-10 max-w-2xl mx-auto">
+                        A new career-intelligence layer for a more competitive and fast-changing labour market.
+                    </p>
+                    <p class="text-lg text-neutral-600 leading-relaxed text-left sm:text-center">
+                        The Graduate Market Scan goes beyond generic career advice, job boards and high-volume applications. It combines live market data, scored employer targeting, hidden-market signals, emerging-skills analysis, work-authorisation and mobility guidance, compensation context, referral strategy, outreach templates and a sequenced action plan. The result is a personalised view of where you fit, which employers offer the strongest opportunity, how to stand out and what actions to take first.
+                    </p>
+                </div>
+
+                <!-- SECTION C - EMBED THE GRADUATE MARKET SCAN IMAGE -->
+                <div class="mx-auto max-w-5xl px-4 sm:px-6 relative z-10 pb-12">
+                    <img src="images/graduate-market-scan-overview.png" alt="Overview of the information included in a Hireovate Graduate Market Scan" class="w-full h-auto rounded-[2rem] border border-neutral-200 shadow-sm cursor-pointer hover:shadow-md transition-shadow" onclick="window.open(this.src, '_blank')">
+                </div>
+            </section>
+
+            <!-- SECTION D - WHAT THE REPORT PROVIDES -->
+            <section class="py-20 lg:py-32 bg-white fade-up border-y border-neutral-100">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center mb-16 max-w-3xl mx-auto">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-neutral-100 text-black mb-6">
+                            <i data-lucide="layout-list" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">What the Graduate Market Scan gives you</h3>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left mb-16">
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">1. Market direction</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">A live view of the graduate and MBA labour market, including hiring demand, sector conditions and the roles most relevant to the individual.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">2. Scored target employers</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">A prioritised employer map based on profile fit, current demand, location, work-authorisation feasibility, growth signals and likely opportunity.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">3. Visible and hidden opportunities</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Verified live roles alongside companies showing funding, expansion, leadership or hiring signals before suitable roles become widely advertised.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">4. Worker mobility</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Practical guidance on graduate visas, work permits, employer sponsorship likelihood, geographic options and mobility constraints. Present this as market guidance, not immigration or legal advice.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">5. Referral and outreach strategy</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Warm-introduction routes, alumni strategies, decision-maker mapping, referral sequencing and tailored LinkedIn and email outreach templates.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">6. AI-economy positioning</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Analysis of how AI is changing target roles, which skills are becoming more important and how the graduate should position and upskill.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center max-w-2xl mx-auto p-6 bg-[#fafafa] rounded-2xl border border-neutral-200">
+                        <p class="text-[15px] font-medium text-black italic">Every report ends with a prioritised execution plan showing what to research, who to approach, how to sequence outreach and what to do next.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION E - PRICING -->
+            <section class="py-20 bg-[#fafafa] fade-up">
+                <div class="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+                    <div class="bg-white border border-neutral-200 p-10 sm:p-14 rounded-[2.5rem] shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-[#10b981]"></div>
+                        
+                        <h3 class="text-3xl font-bold text-black mb-4 tracking-tight" style="font-family: ui-serif, Georgia, serif;">Graduate Market Scan</h3>
+                        
+                        <div class="flex justify-center items-end gap-2 mb-6">
+                            <span class="text-6xl font-black text-black tracking-tighter">€360</span>
+                        </div>
+                        
+                        <p class="text-base text-neutral-600 mb-8 max-w-md mx-auto leading-relaxed">
+                            A personalised graduate and MBA career-intelligence report, priced 20% below the standard Hireovate Market Scan.
+                        </p>
+                        
+                        <div class="bg-neutral-50 rounded-xl p-4 mb-10 text-sm text-neutral-500 inline-block text-left">
+                            <div class="flex justify-between gap-8 mb-1"><span>Standard Market Scan launch price:</span> <span>€450</span></div>
+                            <div class="flex justify-between gap-8 mb-2 font-medium text-black"><span>Graduate Market Scan price:</span> <span>€360</span></div>
+                            <div class="flex justify-between gap-8 pt-2 border-t border-neutral-200 text-[#10b981] font-bold"><span>You save:</span> <span>€90</span></div>
+                        </div>
+
+                        <div class="text-xs text-neutral-400 font-medium tracking-widest uppercase mb-10 space-x-3">
+                            <span>€360</span> <span class="text-neutral-300">|</span> <span>£308</span> <span class="text-neutral-300">|</span> <span>$396</span>
+                        </div>
+                        
+                        <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] hover:bg-[#059669] shadow-md">
+                            GET IN TOUCH
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION F - CAREER SERVICE DEPARTMENTS -->
+            <section class="py-20 lg:py-32 bg-white fade-up border-t border-neutral-100">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center mb-16 max-w-3xl mx-auto">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-neutral-100 text-black mb-6">
+                            <i data-lucide="landmark" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">How Hireovate helps career service departments</h3>
+                        <p class="text-xl text-neutral-500 font-medium mb-8">
+                            A tailored career-intelligence layer that works alongside your careers team.
+                        </p>
+                        <p class="text-[16px] text-neutral-600 leading-relaxed text-left sm:text-center">
+                            Hireovate is designed to complement — not replace — existing careers and employability support. Careers teams already provide essential coaching, employer relationships, alumni access and student guidance. Hireovate adds an external, live intelligence layer: personalised employer maps, labour-market signals, work-authorisation context, hidden-market opportunities, outreach playbooks and structured execution plans. Advisors can use the report as a research pack before student meetings, align with students on realistic targets and spend more time on high-value guidance rather than repetitive market research.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 text-left">
+                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
+                            <h4 class="text-xl font-bold text-black mb-4">1. Sharper student targeting</h4>
+                            <p class="text-[15px] text-neutral-600 leading-relaxed">Help students focus on the employers, sectors, locations and roles where their profile has the strongest evidence of fit and demand.</p>
+                        </div>
+                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
+                            <h4 class="text-xl font-bold text-black mb-4">2. Faster movement towards employment</h4>
+                            <p class="text-[15px] text-neutral-600 leading-relaxed">Give students clearer priorities, realistic opportunities and a structured action sequence so they spend less time applying indiscriminately and move more quickly towards relevant interviews.</p>
+                        </div>
+                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
+                            <h4 class="text-xl font-bold text-black mb-4">3. More leverage for advisors</h4>
+                            <p class="text-[15px] text-neutral-600 leading-relaxed">Provide advisors with live market evidence, employer intelligence, mobility context and reusable frameworks that make individual conversations more focused and actionable.</p>
+                        </div>
+                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
+                            <h4 class="text-xl font-bold text-black mb-4">4. Better reporting and employer engagement</h4>
+                            <p class="text-[15px] text-neutral-600 leading-relaxed">Create clearer visibility into employer demand, emerging skills, student target markets and action progress, supporting employability reporting and more targeted employer partnerships.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION G - FLEXIBLE PARTNERSHIP MODELS -->
+            <section class="py-20 lg:py-32 bg-[#0a0a0a] fade-up">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center mb-16 max-w-3xl mx-auto">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white mb-6">
+                            <i data-lucide="handshake" class="w-5 h-5 text-[#10b981]"></i>
+                        </div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">Flexible partnership models</h3>
+                        <p class="text-xl text-neutral-400 font-medium">
+                            Designed to fit the way your institution supports its students.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 text-left mb-20">
+                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
+                            <h4 class="text-lg font-bold text-white mb-3">1. Embedded careers-service support</h4>
+                            <p class="text-sm text-neutral-400 leading-relaxed">Hireovate works alongside existing advisors, systems and student journeys as an external intelligence and enablement layer. The university retains the primary coaching and student relationship.</p>
+                        </div>
+                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
+                            <h4 class="text-lg font-bold text-white mb-3">2. MBA or postgraduate programme add-on</h4>
+                            <p class="text-sm text-neutral-400 leading-relaxed">Graduate Market Scans and labour-market intelligence can be added to an MBA, Masters or specialist postgraduate programme to give students a more personalised understanding of their target market.</p>
+                        </div>
+                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
+                            <h4 class="text-lg font-bold text-white mb-3">3. Institution-sponsored cohort</h4>
+                            <p class="text-sm text-neutral-400 leading-relaxed">A defined cohort receives structured Market Scans, employer targeting, relevant playbooks and action plans tailored to the institution’s priorities and student profile.</p>
+                        </div>
+                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
+                            <h4 class="text-lg font-bold text-white mb-3">4. Premium student option</h4>
+                            <p class="text-sm text-neutral-400 leading-relaxed">The institution can provide or refer students to an enhanced individual intelligence service for those who want deeper personalisation, employer mapping and execution support.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center bg-[#10b981] rounded-[2.5rem] p-10 sm:p-14 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.3)] relative overflow-hidden max-w-4xl mx-auto">
+                        <h4 class="text-2xl sm:text-3xl font-bold text-black mb-4 tracking-tight" style="font-family: ui-serif, Georgia, serif;">Hireovate complements — not replaces — your existing careers and employability support.</h4>
+                        <p class="text-[16px] font-medium text-black/80">We work with your team, your processes and your priorities.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- GRADUATE INTELLIGENCE UPDATE END -->
 
         <!-- ================= PAGE: CONTACT ================= -->
         <div id="page-contact" class="page-section hidden">
@@ -1777,9 +2078,9 @@
                         Privacy Notice
                     </h2>
                     <div class="text-sm text-neutral-500 mb-12 pb-8 border-b border-neutral-100">
-                        <p><strong>Effective date:</strong> [Insert date]</p>
-                        <p><strong>Business:</strong> Hireovate, part of Recruitovate</p>
-                        <p><strong>Contact:</strong> [Insert email address]</p>
+                        <p><strong>Effective date:</strong> 18th June 2026</p>
+                        <p><strong>Business:</strong> Hireovate Limited (Register Number: 819011)</p>
+                        <p><strong>Contact:</strong> hello@hireovate.com</p>
                     </div>
 
                     <div class="space-y-12 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal">
@@ -1888,9 +2189,9 @@
                             <h3 class="text-xl font-bold text-black mb-3">10. Contact us</h3>
                             <p class="mb-4">For questions about this Privacy Notice or how we handle personal information, contact:</p>
                             <ul class="space-y-2 text-neutral-600">
-                                <li><strong>Business:</strong> Hireovate / Recruitovate</li>
-                                <li><strong>Email:</strong> <a href="mailto:[Insert email]" class="text-[#10b981] hover:underline">[Insert email]</a></li>
-                                <li><strong>Address:</strong> [Insert business address, if publishing]</li>
+                                <li><strong>Business:</strong> Hireovate Limited (Register Number: 819011)</li>
+                                <li><strong>Email:</strong> <a href="mailto:hello@hireovate.com" class="text-[#10b981] hover:underline">hello@hireovate.com</a></li>
+                                <li><strong>Address:</strong> 197 Howth Road, Clontarf, Dublin, Ireland</li>
                             </ul>
                         </div>
                     </div>
@@ -1907,9 +2208,9 @@
                         Terms of Use
                     </h2>
                     <div class="text-sm text-neutral-500 mb-12 pb-8 border-b border-neutral-100">
-                        <p><strong>Effective date:</strong> [Insert date]</p>
-                        <p><strong>Business:</strong> Hireovate, part of Recruitovate</p>
-                        <p><strong>Contact:</strong> [Insert email address]</p>
+                        <p><strong>Effective date:</strong> 18th June 2026</p>
+                        <p><strong>Business:</strong> Hireovate Limited (Register Number: 819011)</p>
+                        <p><strong>Contact:</strong> hello@hireovate.com</p>
                     </div>
 
                     <div class="space-y-12 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal">
@@ -2022,9 +2323,9 @@
                             <h3 class="text-xl font-bold text-black mb-3">14. Contact us</h3>
                             <p class="mb-4">For questions about these Terms, contact:</p>
                             <ul class="space-y-2 text-neutral-600">
-                                <li><strong>Business:</strong> Hireovate / Recruitovate</li>
-                                <li><strong>Email:</strong> <a href="mailto:[Insert email]" class="text-[#10b981] hover:underline">[Insert email]</a></li>
-                                <li><strong>Address:</strong> [Insert business address, if publishing]</li>
+                                <li><strong>Business:</strong> Hireovate Limited (Register Number: 819011)</li>
+                                <li><strong>Email:</strong> <a href="mailto:hello@hireovate.com" class="text-[#10b981] hover:underline">hello@hireovate.com</a></li>
+                                <li><strong>Address:</strong> 197 Howth Road, Clontarf, Dublin, Ireland</li>
                             </ul>
                         </div>
                     </div>
@@ -2037,7 +2338,7 @@
     <footer class="py-12 border-t border-neutral-100 bg-white mt-auto">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 text-center">
             <div class="flex items-center justify-center gap-2 mb-8">
-                <div class="flex h-6 w-6 items-center justify-center rounded-md bg-black text-white overflow-hidden relative">
+                <div class="flex h-6 w-6 items-center justify-center rounded-md bg-white text-black border border-neutral-200 overflow-hidden relative">
                     <svg viewBox="0 0 32 32" class="w-[14px] h-[14px]" fill="currentColor">
                         <circle cx="16" cy="16" r="2.5" fill="#10b981" class="anim-converge-c" />
                         <g class="anim-converge-t">
@@ -2070,6 +2371,10 @@
     </footer>
 
     <script>
+        // GRADUATE INTELLIGENCE UPDATE START
+        const ENABLE_GRADUATE_INTELLIGENCE = true;
+        // GRADUATE INTELLIGENCE UPDATE END
+
         lucide.createIcons();
 
         function navTo(pageId) {
@@ -2105,12 +2410,40 @@
         }
 
         window.addEventListener('load', () => {
+            // GRADUATE INTELLIGENCE UPDATE START
+            if (!ENABLE_GRADUATE_INTELLIGENCE) {
+                document.querySelectorAll('.grad-feature-nav').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.grad-feature-mobile-nav').forEach(el => el.classList.add('hidden'));
+                
+                const gradCard = document.querySelector('.grad-feature-card');
+                if (gradCard) gradCard.classList.add('hidden');
+                
+                const heroGrid = document.getElementById('hero-card-grid');
+                if (heroGrid) {
+                    heroGrid.classList.remove('lg:grid-cols-3', 'max-w-6xl');
+                    heroGrid.classList.add('max-w-4xl');
+                }
+            } else {
+                document.querySelectorAll('.grad-feature-nav').forEach(el => el.classList.remove('hidden'));
+                document.querySelectorAll('.grad-feature-mobile-nav').forEach(el => el.classList.remove('hidden'));
+                
+                const gradCard = document.querySelector('.grad-feature-card');
+                if (gradCard) gradCard.classList.remove('hidden');
+            }
+            // GRADUATE INTELLIGENCE UPDATE END
+
             const hash = window.location.hash.replace('#', '');
-            if (['home', 'services', 'pathways', 'about', 'report', 'testimonials', 'aisprint', 'contact', 'privacy', 'terms', 'accessibility'].includes(hash)) {
+            if (['home', 'services', 'pathways', 'about', 'report', 'testimonials', 'aisprint', 'graduate-intelligence', 'contact', 'privacy', 'terms', 'accessibility'].includes(hash)) {
                 navTo(hash);
             } else {
                 navTo('home');
             }
+            
+            const heroBg = document.getElementById('hero-bg');
+            setTimeout(() => {
+                if(heroBg) heroBg.classList.add('visible');
+                document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+            }, 100);
         });
 
         const menuToggle = document.getElementById('menu-toggle');
@@ -2137,15 +2470,6 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.querySelectorAll('section, .fade-up').forEach(section => observer.observe(section));
-
-        window.addEventListener('load', () => {
-            const heroBg = document.getElementById('hero-bg');
-            
-            setTimeout(() => {
-                if(heroBg) heroBg.classList.add('visible');
-                document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
-            }, 100);
-        });
 
         // Market Scan Carousel Logic
         const carouselTrack = document.getElementById('report-carousel-track');
