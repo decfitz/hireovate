@@ -295,12 +295,12 @@
 
                             <a id="grad-hero-card" href="#graduate-intelligence" onclick="navTo('graduate-intelligence')" class="group relative flex flex-col p-8 sm:p-10 rounded-[2rem] border border-neutral-200 bg-white hover:shadow-xl transition-all overflow-hidden hidden grad-feature-card">
                                 <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-4 relative z-10 flex items-center gap-2">
-                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> FOR GRADUATES, MBAs, UNIVERSITIES & BUSINESS SCHOOLS
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> FOR UNIVERSITIES & BUSINESS SCHOOLS
                                 </p>
-                                <h3 class="text-3xl font-bold text-black mb-4 tracking-tight relative z-10" style="font-family: ui-serif, Georgia, serif;">Entering a difficult labour market.</h3>
-                                <p class="text-[14px] sm:text-[15px] text-neutral-500 leading-relaxed mb-8 flex-grow relative z-10">Personalised career intelligence, target-company mapping, live and hidden-market opportunities, emerging-skills analysis, visa and work-permit guidance, referral and outreach strategy, and a practical execution plan.</p>
+                                <h3 class="text-3xl font-bold text-black mb-4 tracking-tight relative z-10" style="font-family: ui-serif, Georgia, serif;">Supporting students into a harder market.</h3>
+                                <p class="text-[14px] sm:text-[15px] text-neutral-500 leading-relaxed mb-8 flex-grow relative z-10">A cohort-level market intelligence layer for careers services — live labour-market data, personalised student market scans, AI-readiness training, and reporting that supports graduate outcome metrics.</p>
                                 <div class="flex items-center gap-3 text-[12px] font-black text-black uppercase tracking-widest mt-auto relative z-10">
-                                    EXPLORE GRADUATE INTELLIGENCE
+                                    SEE THE UNIVERSITY PROGRAMME
                                     <div class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-[#10b981] group-hover:text-white group-hover:translate-x-1 transition-all"><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
                                 </div>
                             </a>
@@ -1724,209 +1724,362 @@
         <div id="page-graduate-intelligence" class="page-section hidden">
             
             <!-- SECTION A - PAGE HERO -->
-            <section class="relative bg-white pt-16 pb-16 md:pt-24 md:pb-24 border-b border-neutral-100 fade-up">
+            <section class="relative bg-white pt-10 pb-4 md:pt-14 md:pb-6 border-b border-neutral-100 fade-up">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-                    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
-                        <div class="w-full lg:w-1/2 text-left">
-                            <div class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#10b981] mb-6 flex items-center gap-4">
-                                <span class="w-8 h-px bg-[#10b981]"></span> GRADUATE INTELLIGENCE
-                            </div>
-                            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-6 leading-[1.1]" style="font-family: ui-serif, Georgia, serif;">
+                    <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                        
+                        <!-- TEXT COLUMN -->
+                        <div class="lg:col-span-6 text-left relative z-20 order-1 lg:order-1 mt-8 lg:mt-0">
+                            <h2 class="text-4xl sm:text-5xl lg:text-[2.75rem] font-bold tracking-tight text-black mb-4 leading-[1.05]" style="font-family: ui-serif, Georgia, serif;">
                                 A smarter route into the graduate market.
                             </h2>
-                            <p class="text-xl sm:text-2xl text-neutral-400 italic mb-8 font-normal" style="font-family: ui-serif, Georgia, serif;">
-                                For graduates, MBAs, and the careers teams supporting them.
+                            <p class="text-xl sm:text-2xl text-neutral-500 italic mb-8 font-normal" style="font-family: ui-serif, Georgia, serif;">
+                                For universities, business schools and the careers teams supporting them.
                             </p>
-                            <div class="space-y-6 text-[16px] sm:text-[17px] text-neutral-600 leading-relaxed font-normal mb-10">
-                                <p>Hireovate combines live market intelligence, recruiter expertise and AI-supported research to help graduates identify where they fit, which employers to target, how the market is changing and what to do next. For careers teams, it adds a tailored candidate-intelligence layer that strengthens existing guidance, employer engagement and employability support.</p>
+                            <div class="space-y-6 text-[15px] sm:text-[16px] text-neutral-600 leading-relaxed font-normal mb-10">
+                                <p>Hireovate adds a live market-intelligence layer to your existing careers service — personalised employer mapping, hidden-market signals and AI-era positioning for every student in the cohort.</p>
                             </div>
-                            <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] hover:bg-[#059669] shadow-xl">
+                            <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center px-10 py-4 rounded-full bg-[#059669] text-white text-[13px] font-bold uppercase tracking-[0.1em] transition-all hover:scale-[1.05] hover:bg-[#047857] shadow-md">
                                 GET IN TOUCH
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
                         </div>
-                        <div class="w-full lg:w-1/2 relative rounded-[2rem] overflow-hidden shadow-2xl">
-                            <!-- Soft white fade effect using a pseudo-element overlay on the left edge (desktop only) -->
-                            <div class="hidden lg:block absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-                            <img src="images/graduate-intelligence-hero.png" alt="Two graduates looking towards a modern city skyline" class="w-full h-auto object-cover block">
+                        
+                        <!-- IMAGE COLUMN -->
+                        <div class="lg:col-span-6 relative order-2 lg:order-2">
+                            <img src="https://hireovate.com/images/graduate-hero.png" alt="Two graduates looking towards a modern city skyline" class="w-full h-auto block grayscale-[0.85] contrast-[1.08] brightness-[1.02] -mb-8 lg:-mb-16">
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION - "Hiring has changed faster than the advice" -->
+            <section class="py-16 lg:py-24 bg-[#fafafa] fade-up border-b border-neutral-100">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE SHIFT</div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Hiring has changed faster than the advice</h3>
+                        <p class="text-lg text-neutral-500">Across Ireland, the UK and the US, the mechanics of getting hired have shifted underneath the standard careers-service playbook.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                        <div class="bg-white rounded-[2rem] border border-neutral-200 shadow-sm p-6 sm:p-8">
+                            <div class="text-5xl font-black text-[#10b981] mb-4 tracking-tighter">412%</div>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Rise in applications per recruiter per year, from 146 in 2022 to 746 in 2025</p>
+                        </div>
+                        <div class="bg-white rounded-[2rem] border border-neutral-200 shadow-sm p-6 sm:p-8">
+                            <div class="text-5xl font-black text-[#10b981] mb-4 tracking-tighter">111%</div>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Rise in applications per advertised role, from 116 to 244</p>
+                        </div>
+                        <div class="bg-white rounded-[2rem] border border-neutral-200 shadow-sm p-6 sm:p-8">
+                            <div class="text-5xl font-black text-[#10b981] mb-4 tracking-tighter">61%</div>
+                            <p class="text-sm text-neutral-600 leading-relaxed">of job seekers report being ghosted during a hiring process, up 19 points since April 2024</p>
+                        </div>
+                        <div class="bg-white rounded-[2rem] border border-neutral-200 shadow-sm p-6 sm:p-8">
+                            <div class="text-5xl font-black text-[#10b981] mb-4 tracking-tighter">35%</div>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Only around a third of senior hires now come from inbound applications</p>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-12 text-lg font-bold text-black max-w-4xl mx-auto text-left">The market is still active. It has become far harder to read, far more competitive per role, and far less responsive to the application-led approach most graduates are taught.</p>
+                    <p class="mt-8 text-xs text-neutral-400 italic max-w-4xl mx-auto text-left">Sources: Greenhouse, The Hire Standard (6,000+ companies, 640M+ applications, 2022–2025); Ashby, Talent Trends (54M applications, 93K jobs).</p>
+                </div>
+            </section>
+
+            <!-- SECTION - "AI is reshaping entry-level work — both ways" -->
+            <section class="py-16 lg:py-24 bg-white fade-up border-b border-neutral-100">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE FORCE &middot; AI & ENTRY-LEVEL WORK</div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">AI is reshaping entry-level work — both ways</h3>
+                        <p class="text-lg text-neutral-500">The clearest data is American, where the shift began earliest. The same pattern is now visible in UK and Irish hiring.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 text-left">
+                        <div>
+                            <div class="text-[11px] font-bold uppercase tracking-[0.25em] text-neutral-400 mb-6">CONTRACTING</div>
+                            <div class="bg-[#fafafa] border border-neutral-200 rounded-[2rem] p-8 mb-6 text-sm text-neutral-600 leading-relaxed">
+                                <strong class="text-black">16% decline</strong> in employment for 22–25 year olds in the most AI-exposed occupations since 2022
+                            </div>
+                            <div class="bg-[#fafafa] border border-neutral-200 rounded-[2rem] p-8 text-sm text-neutral-600 leading-relaxed">
+                                <strong class="text-black">65% fall</strong> in big-tech new-graduate hiring versus 2019
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#10b981] mb-6">EXPANDING</div>
+                            <div class="bg-[#fafafa] border border-neutral-200 rounded-[2rem] p-8 mb-6 text-sm text-neutral-600 leading-relaxed">
+                                <strong class="text-black">28% salary premium</strong> for roles requiring AI skills
+                            </div>
+                            <div class="bg-[#fafafa] border border-neutral-200 rounded-[2rem] p-8 text-sm text-neutral-600 leading-relaxed">
+                                <strong class="text-black">800% growth</strong> in generative-AI roles across non-tech industries since 2022
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-12 text-lg font-bold text-black max-w-4xl mx-auto text-left">The graduates who understand which side of this line their target roles sit on have a real and compounding advantage.</p>
+                    <p class="mt-8 text-xs text-neutral-400 italic max-w-4xl mx-auto text-left">Sources: Stanford Digital Economy Lab, 2025 (US payroll data); SignalFire, 2026 (US technology sector); Lightcast, 2025 (US job postings).</p>
+                </div>
+            </section>
+
+            <!-- SECTION - the route band -->
+            <section class="py-10 lg:py-14 bg-white fade-up">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="bg-[#10b981] rounded-[2.5rem] p-10 sm:p-14 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.5)] relative overflow-hidden text-center">
+                        <div class="absolute inset-0 pointer-events-none opacity-10" style="background-image: linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+
+                        <div class="relative z-10">
+                            <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">The route in matters more than the CV.</h3>
+                            <p class="text-lg text-black/80 font-medium max-w-2xl mx-auto">A cold application reaches interview roughly 3% of the time. A referral, 40%. Everything we build is designed around finding that second route.</p>
+                            <div class="text-[11px] font-bold uppercase tracking-widest text-black/60 mt-6">Ashby, 2025</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SECTION B - FOR GRADUATES AND MBAs -->
-            <section class="py-20 lg:py-32 bg-[#fafafa] fade-up relative">
-                <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
-                
-                <div class="mx-auto max-w-4xl px-4 sm:px-6 relative z-10 text-center mb-16">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#10b981]/10 text-[#10b981] mb-6">
-                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">For graduates and MBAs</h3>
-                    <p class="text-xl text-neutral-500 font-medium mb-10 max-w-2xl mx-auto">
-                        A new career-intelligence layer for a more competitive and fast-changing labour market.
-                    </p>
-                    <p class="text-lg text-neutral-600 leading-relaxed text-left sm:text-center">
-                        The Graduate Market Scan goes beyond generic career advice, job boards and high-volume applications. It combines live market data, scored employer targeting, hidden-market signals, emerging-skills analysis, work-authorisation and mobility guidance, compensation context, referral strategy, outreach templates and a sequenced action plan. The result is a personalised view of where you fit, which employers offer the strongest opportunity, how to stand out and what actions to take first.
-                    </p>
-                </div>
-
-                <!-- SECTION C - EMBED THE GRADUATE MARKET SCAN IMAGE -->
-                <div class="mx-auto max-w-5xl px-4 sm:px-6 relative z-10 pb-12">
-                    <img src="images/graduate-market-scan-overview.png" alt="Overview of the information included in a Hireovate Graduate Market Scan" class="w-full h-auto rounded-[2rem] border border-neutral-200 shadow-sm cursor-pointer hover:shadow-md transition-shadow" onclick="window.open(this.src, '_blank')">
-                </div>
-            </section>
-
-            <!-- SECTION D - WHAT THE REPORT PROVIDES -->
-            <section class="py-20 lg:py-32 bg-white fade-up border-y border-neutral-100">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center mb-16 max-w-3xl mx-auto">
-                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-neutral-100 text-black mb-6">
-                            <i data-lucide="layout-list" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="text-4xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">What the Graduate Market Scan gives you</h3>
+            <!-- SECTION - The Gap -->
+            <section class="py-16 lg:py-24 bg-[#fafafa] fade-up border-y border-neutral-100">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center mb-12">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE GAP</div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black" style="font-family: ui-serif, Georgia, serif;">What careers services already do — and what's missing</h3>
                     </div>
 
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left mb-16">
-                        <div>
-                            <h4 class="text-lg font-bold text-black mb-3">1. Market direction</h4>
-                            <p class="text-sm text-neutral-600 leading-relaxed">A live view of the graduate and MBA labour market, including hiring demand, sector conditions and the roles most relevant to the individual.</p>
+                    <div class="flex flex-col rounded-[1.25rem] overflow-hidden shadow-2xl border border-neutral-200 bg-white">
+                        <div class="grid grid-cols-1 sm:grid-cols-2">
+                            <div class="p-5 sm:p-6 bg-neutral-100 border-b border-neutral-200 border-r sm:border-r-neutral-200 flex items-center"><h3 class="text-[10px] font-black uppercase tracking-widest text-neutral-500">Your careers team already does this well</h3></div>
+                            <div class="p-5 sm:p-6 bg-black border-b border-neutral-800 flex items-center"><h3 class="text-[10px] font-black uppercase tracking-widest text-white">The layer Hireovate adds</h3></div>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-black mb-3">2. Scored target employers</h4>
-                            <p class="text-sm text-neutral-600 leading-relaxed">A prioritised employer map based on profile fit, current demand, location, work-authorisation feasibility, growth signals and likely opportunity.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2">
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] text-neutral-600 border-r border-neutral-200 border-b border-neutral-200 bg-[#fafafa]">Career coaching and CV support</div>
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] font-medium text-white/90 bg-black border-b border-neutral-800">Live labour-market intelligence</div>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-black mb-3">3. Visible and hidden opportunities</h4>
-                            <p class="text-sm text-neutral-600 leading-relaxed">Verified live roles alongside companies showing funding, expansion, leadership or hiring signals before suitable roles become widely advertised.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2">
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] text-neutral-600 border-r border-neutral-200 border-b border-neutral-200 bg-[#fafafa]">Interview preparation</div>
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] font-medium text-white/90 bg-black border-b border-neutral-800">Where AI is creating and destroying roles</div>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-black mb-3">4. Worker mobility</h4>
-                            <p class="text-sm text-neutral-600 leading-relaxed">Practical guidance on graduate visas, work permits, employer sponsorship likelihood, geographic options and mobility constraints. Present this as market guidance, not immigration or legal advice.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2">
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] text-neutral-600 border-r border-neutral-200 border-b border-neutral-200 bg-[#fafafa]">Employer fairs and connections</div>
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] font-medium text-white/90 bg-black border-b border-neutral-800">Personalised, forward-looking market scans</div>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-black mb-3">5. Referral and outreach strategy</h4>
-                            <p class="text-sm text-neutral-600 leading-relaxed">Warm-introduction routes, alumni strategies, decision-maker mapping, referral sequencing and tailored LinkedIn and email outreach templates.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-black mb-3">6. AI-economy positioning</h4>
-                            <p class="text-sm text-neutral-600 leading-relaxed">Analysis of how AI is changing target roles, which skills are becoming more important and how the graduate should position and upskill.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2">
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] text-neutral-600 border-r border-neutral-200 border-b border-neutral-200 bg-[#fafafa]">Job portals and vacancy listings</div>
+                            <div class="p-5 sm:px-6 sm:py-5 text-[13.5px] font-medium text-white/90 bg-black border-b border-neutral-800 sm:border-b-0">Hidden-market and warm-path targeting</div>
                         </div>
                     </div>
 
-                    <div class="text-center max-w-2xl mx-auto p-6 bg-[#fafafa] rounded-2xl border border-neutral-200">
-                        <p class="text-[15px] font-medium text-black italic">Every report ends with a prioritised execution plan showing what to research, who to approach, how to sequence outreach and what to do next.</p>
-                    </div>
+                    <p class="mt-10 text-center text-[16px] text-neutral-600 leading-relaxed max-w-3xl mx-auto">We don't replace anything your team already does. We add an external intelligence layer built from executive search methodology and frontier AI tools — calibrated to your students' target markets, whether that's Dublin, London, New York or further afield.</p>
                 </div>
             </section>
 
-            <!-- SECTION E - PRICING -->
-            <section class="py-20 bg-[#fafafa] fade-up">
-                <div class="mx-auto max-w-3xl px-4 sm:px-6 text-center">
-                    <div class="bg-white border border-neutral-200 p-10 sm:p-14 rounded-[2.5rem] shadow-xl relative overflow-hidden">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-[#10b981]"></div>
-                        
-                        <h3 class="text-3xl font-bold text-black mb-4 tracking-tight" style="font-family: ui-serif, Georgia, serif;">Graduate Market Scan</h3>
-                        
-                        <div class="flex justify-center items-end gap-2 mb-6">
-                            <span class="text-6xl font-black text-black tracking-tighter">€360</span>
-                        </div>
-                        
-                        <p class="text-base text-neutral-600 mb-8 max-w-md mx-auto leading-relaxed">
-                            A personalised graduate and MBA career-intelligence report, priced 20% below the standard Hireovate Market Scan.
-                        </p>
-                        
-                        <div class="bg-neutral-50 rounded-xl p-4 mb-10 text-sm text-neutral-500 inline-block text-left">
-                            <div class="flex justify-between gap-8 mb-1"><span>Standard Market Scan launch price:</span> <span>€450</span></div>
-                            <div class="flex justify-between gap-8 mb-2 font-medium text-black"><span>Graduate Market Scan price:</span> <span>€360</span></div>
-                            <div class="flex justify-between gap-8 pt-2 border-t border-neutral-200 text-[#10b981] font-bold"><span>You save:</span> <span>€90</span></div>
-                        </div>
+            <!-- SECTION - The Programme -->
+            <section class="py-16 lg:py-24 bg-[#0a0a0a] fade-up">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center mb-12">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROGRAMME</div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-white" style="font-family: ui-serif, Georgia, serif;">What the programme includes</h3>
+                    </div>
 
-                        <div class="text-xs text-neutral-400 font-medium tracking-widest uppercase mb-10 space-x-3">
-                            <span>€360</span> <span class="text-neutral-300">|</span> <span>£308</span> <span class="text-neutral-300">|</span> <span>$396</span>
+                    <div class="grid md:grid-cols-2 gap-8 text-left">
+                        <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 p-8 lg:p-10 transition-all hover:shadow-2xl">
+                            <div class="text-7xl font-black text-white/10 mb-8 group-hover:text-white transition-colors duration-500 leading-none">01</div>
+                            <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">The Briefing</h4>
+                            <p class="text-[15px] leading-relaxed text-neutral-400">A live 60–90 minute session to the cohort: where the market is, how AI is changing hiring, and how to run a modern search.</p>
+                        </div>
+                        <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 p-8 lg:p-10 transition-all hover:shadow-2xl">
+                            <div class="text-7xl font-black text-white/10 mb-8 group-hover:text-white transition-colors duration-500 leading-none">02</div>
+                            <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">The Cohort Report</h4>
+                            <p class="text-[15px] leading-relaxed text-neutral-400">A market report for the whole class: target sectors, employers, role families, AI impact, and routes to market.</p>
+                        </div>
+                        <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 p-8 lg:p-10 transition-all hover:shadow-2xl">
+                            <div class="text-7xl font-black text-white/10 mb-8 group-hover:text-white transition-colors duration-500 leading-none">03</div>
+                            <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">The Market Scan</h4>
+                            <p class="text-[15px] leading-relaxed text-neutral-400">A personalised report per student: scored target companies, hidden-market signals, compensation benchmarks, and a 30-60-90 plan.</p>
+                        </div>
+                        <div class="group relative flex flex-col rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 p-8 lg:p-10 transition-all hover:shadow-2xl">
+                            <div class="text-7xl font-black text-white/10 mb-8 group-hover:text-white transition-colors duration-500 leading-none">04</div>
+                            <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">AI Career Readiness Training Day</h4>
+                            <p class="text-[15px] leading-relaxed text-neutral-400">Practical AI workflows for CV targeting, company research, interview prep and networking. Every participant builds three working AI agents and leaves with a complete job-search system.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION - Inside each student's Market Scan -->
+            <section class="py-16 lg:py-24 bg-[#fafafa] fade-up border-y border-neutral-100">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE STUDENT DELIVERABLE</div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black" style="font-family: ui-serif, Georgia, serif;">Inside each student's Market Scan</h3>
+                    </div>
+
+                    <div class="mx-auto max-w-5xl mb-16">
+                        <img src="https://hireovate.com/images/graduate-market-scan-overview.png" alt="Overview of the information included in a Hireovate Graduate Market Scan" class="w-full h-auto rounded-[2rem] border border-neutral-200 shadow-sm cursor-pointer hover:shadow-md transition-shadow" onclick="window.open(this.src, '_blank')">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left mx-auto">
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">Scored target companies</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Employers ranked for their profile: who actually hires at this level, and where the growth is.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">Hidden-market signals</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Companies that just raised or are scaling, about to hire before roles are posted.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">AI impact on their role</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">What AI is automating, what it's creating, and how to position for the second group.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">Compensation benchmarks</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Realistic salary bands by function and sector, to ground expectations and negotiation.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">Warm-path and outreach</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Alumni and second-degree routes in, with outreach templates.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-black mb-3">A 30-60-90 plan</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">A concrete job-search operating system for the final term and first months out.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 text-center bg-white rounded-2xl border border-neutral-200 p-6 max-w-3xl mx-auto">
+                        <p class="text-[15px] font-medium text-black italic">Delivered as a 12–18 page report per student, standardised from a per-function data pack refreshed each cycle.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION - What your careers team receives -->
+            <section class="py-16 lg:py-24 bg-white fade-up">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE INSTITUTION DELIVERABLE</div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black" style="font-family: ui-serif, Georgia, serif;">What your careers team receives</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 text-left">
+                        <div class="bg-[#fafafa] rounded-[2rem] border border-neutral-200 p-8 sm:p-10">
+                            <h4 class="text-lg font-bold text-black mb-6">The cohort report covers</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">The macro picture for your fields</div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">AI disruption, function by function</div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">Where the demand actually is</div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">A demand-versus-market map of the class's own ambitions</div>
+                                </div>
+                            </div>
                         </div>
                         
-                        <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] hover:bg-[#059669] shadow-md">
-                            GET IN TOUCH
+                        <div class="bg-[#fafafa] rounded-[2rem] border border-neutral-200 p-8 sm:p-10">
+                            <h4 class="text-lg font-bold text-black mb-6">Why it matters to you</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">Advise students with current evidence</div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">Target employer engagement more sharply</div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">Support graduate-outcome metrics that feed reputation and rankings</div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#10b981] shrink-0 mt-0.5"></i>
+                                    <div class="text-sm text-neutral-700 leading-relaxed">Market the programme as market-aware and AI-era ready</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 text-center">
+                        <p class="text-[15px] text-neutral-500 italic">Produced once per cohort from a shared data pack, then amortised across every student's individual scan.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION - How we work with institutions -->
+            <section class="py-16 lg:py-24 bg-[#fafafa] fade-up border-y border-neutral-100">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center mb-12">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">ENGAGEMENT MODELS</div>
+                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">How we work with institutions</h3>
+                        <p class="text-lg text-neutral-500 max-w-2xl mx-auto">Four ways to bring market intelligence into your careers service, depending on how your programmes are structured.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 text-left">
+                        <div class="bg-white rounded-[2.5rem] border border-neutral-200 shadow-sm p-8 sm:p-10 hover:shadow-xl transition-all">
+                            <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-4">01</div>
+                            <h4 class="text-xl font-bold text-black mb-3">A single cohort</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">One programme, one term. The full sequence — briefing, cohort report, individual Market Scans and the AI Career Readiness Training Day — delivered to a defined group. The most common starting point.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-[2.5rem] border border-neutral-200 shadow-sm p-8 sm:p-10 hover:shadow-xl transition-all">
+                            <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-4">02</div>
+                            <h4 class="text-xl font-bold text-black mb-3">Embedded in a programme</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Market intelligence built into an MBA, Masters or specialist postgraduate course as a standard component, delivered to every student on the programme each intake.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-[2.5rem] border border-neutral-200 shadow-sm p-8 sm:p-10 hover:shadow-xl transition-all">
+                            <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-4">03</div>
+                            <h4 class="text-xl font-bold text-black mb-3">An annual careers-service partnership</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">Multiple cohorts across the academic year, with the cohort report refreshed each cycle and intelligence calibrated to each group's target markets.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-[2.5rem] border border-neutral-200 shadow-sm p-8 sm:p-10 hover:shadow-xl transition-all">
+                            <div class="text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-4">04</div>
+                            <h4 class="text-xl font-bold text-black mb-3">A scoped first engagement</h4>
+                            <p class="text-sm text-neutral-600 leading-relaxed">A smaller, defined group to prove the model before committing more widely. Includes a post-session student survey and an impact report for the careers office.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 text-center bg-white rounded-[2rem] border border-neutral-200 p-8 max-w-3xl mx-auto">
+                        <p class="text-[16px] text-neutral-700 leading-relaxed mb-6">Every engagement is scoped to your cohort size, format and target markets, and confirmed in writing before anything begins. A direct engagement — no lengthy procurement.</p>
+                        <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-black text-white text-[12px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-neutral-800 shadow-lg">
+                            DISCUSS YOUR COHORT
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- SECTION F - CAREER SERVICE DEPARTMENTS -->
-            <section class="py-20 lg:py-32 bg-white fade-up border-t border-neutral-100">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center mb-16 max-w-3xl mx-auto">
-                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-neutral-100 text-black mb-6">
-                            <i data-lucide="landmark" class="w-5 h-5"></i>
+            <!-- SECTION - Close -->
+            <section class="py-20 lg:py-28 bg-white fade-up">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 text-center">
+                    <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">NEXT STEPS</div>
+                    <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-12" style="font-family: ui-serif, Georgia, serif;">Let's talk about your next cohort.</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 text-left mb-12">
+                        <div class="bg-[#fafafa] rounded-[2rem] border border-neutral-200 p-8">
+                            <div class="text-2xl font-black text-[#10b981] mb-4">01</div>
+                            <div class="text-[15px] text-neutral-700 leading-relaxed">A 30-minute scoping call</div>
                         </div>
-                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">How Hireovate helps career service departments</h3>
-                        <p class="text-xl text-neutral-500 font-medium mb-8">
-                            A tailored career-intelligence layer that works alongside your careers team.
-                        </p>
-                        <p class="text-[16px] text-neutral-600 leading-relaxed text-left sm:text-center">
-                            Hireovate is designed to complement — not replace — existing careers and employability support. Careers teams already provide essential coaching, employer relationships, alumni access and student guidance. Hireovate adds an external, live intelligence layer: personalised employer maps, labour-market signals, work-authorisation context, hidden-market opportunities, outreach playbooks and structured execution plans. Advisors can use the report as a research pack before student meetings, align with students on realistic targets and spend more time on high-value guidance rather than repetitive market research.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 text-left">
-                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
-                            <h4 class="text-xl font-bold text-black mb-4">1. Sharper student targeting</h4>
-                            <p class="text-[15px] text-neutral-600 leading-relaxed">Help students focus on the employers, sectors, locations and roles where their profile has the strongest evidence of fit and demand.</p>
+                        <div class="bg-[#fafafa] rounded-[2rem] border border-neutral-200 p-8">
+                            <div class="text-2xl font-black text-[#10b981] mb-4">02</div>
+                            <div class="text-[15px] text-neutral-700 leading-relaxed">Agree the cohort and format</div>
                         </div>
-                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
-                            <h4 class="text-xl font-bold text-black mb-4">2. Faster movement towards employment</h4>
-                            <p class="text-[15px] text-neutral-600 leading-relaxed">Give students clearer priorities, realistic opportunities and a structured action sequence so they spend less time applying indiscriminately and move more quickly towards relevant interviews.</p>
-                        </div>
-                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
-                            <h4 class="text-xl font-bold text-black mb-4">3. More leverage for advisors</h4>
-                            <p class="text-[15px] text-neutral-600 leading-relaxed">Provide advisors with live market evidence, employer intelligence, mobility context and reusable frameworks that make individual conversations more focused and actionable.</p>
-                        </div>
-                        <div class="p-8 rounded-[2rem] bg-[#fafafa] border border-neutral-100">
-                            <h4 class="text-xl font-bold text-black mb-4">4. Better reporting and employer engagement</h4>
-                            <p class="text-[15px] text-neutral-600 leading-relaxed">Create clearer visibility into employer demand, emerging skills, student target markets and action progress, supporting employability reporting and more targeted employer partnerships.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION G - FLEXIBLE PARTNERSHIP MODELS -->
-            <section class="py-20 lg:py-32 bg-[#0a0a0a] fade-up">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center mb-16 max-w-3xl mx-auto">
-                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white mb-6">
-                            <i data-lucide="handshake" class="w-5 h-5 text-[#10b981]"></i>
-                        </div>
-                        <h3 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">Flexible partnership models</h3>
-                        <p class="text-xl text-neutral-400 font-medium">
-                            Designed to fit the way your institution supports its students.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-8 text-left mb-20">
-                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
-                            <h4 class="text-lg font-bold text-white mb-3">1. Embedded careers-service support</h4>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Hireovate works alongside existing advisors, systems and student journeys as an external intelligence and enablement layer. The university retains the primary coaching and student relationship.</p>
-                        </div>
-                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
-                            <h4 class="text-lg font-bold text-white mb-3">2. MBA or postgraduate programme add-on</h4>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Graduate Market Scans and labour-market intelligence can be added to an MBA, Masters or specialist postgraduate programme to give students a more personalised understanding of their target market.</p>
-                        </div>
-                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
-                            <h4 class="text-lg font-bold text-white mb-3">3. Institution-sponsored cohort</h4>
-                            <p class="text-sm text-neutral-400 leading-relaxed">A defined cohort receives structured Market Scans, employer targeting, relevant playbooks and action plans tailored to the institution’s priorities and student profile.</p>
-                        </div>
-                        <div class="p-8 rounded-[2.5rem] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-600 transition-colors">
-                            <h4 class="text-lg font-bold text-white mb-3">4. Premium student option</h4>
-                            <p class="text-sm text-neutral-400 leading-relaxed">The institution can provide or refer students to an enhanced individual intelligence service for those who want deeper personalisation, employer mapping and execution support.</p>
+                        <div class="bg-[#fafafa] rounded-[2rem] border border-neutral-200 p-8">
+                            <div class="text-2xl font-black text-[#10b981] mb-4">03</div>
+                            <div class="text-[15px] text-neutral-700 leading-relaxed">Deliver the briefing at orientation</div>
                         </div>
                     </div>
 
-                    <div class="text-center bg-[#10b981] rounded-[2.5rem] p-10 sm:p-14 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.3)] relative overflow-hidden max-w-4xl mx-auto">
-                        <h4 class="text-2xl sm:text-3xl font-bold text-black mb-4 tracking-tight" style="font-family: ui-serif, Georgia, serif;">Hireovate complements — not replaces — your existing careers and employability support.</h4>
-                        <p class="text-[16px] font-medium text-black/80">We work with your team, your processes and your priorities.</p>
-                    </div>
+                    <a href="#contact" onclick="navTo('contact')" class="inline-flex items-center justify-center gap-3 px-12 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] hover:bg-[#059669] shadow-xl">
+                        GET IN TOUCH
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
                 </div>
             </section>
         </div>
