@@ -57,7 +57,13 @@ footer [class*="tracking-"]::before{content:none!important;display:none!importan
 .font-bold.uppercase.tracking-\[0\.4em\]:not(.inline-flex):not(.rounded-full)::before,
 .font-black.uppercase.tracking-\[0\.4em\]:not(.inline-flex):not(.rounded-full)::before,
 .font-bold.uppercase.tracking-\[0\.25em\]:not(.inline-flex):not(.rounded-full)::before,
-.font-bold.uppercase.tracking-\[0\.2em\]:not(.inline-flex):not(.rounded-full)::before{
+.font-bold.uppercase.tracking-\[0\.2em\]:not(.inline-flex):not(.rounded-full)::before,
+.font-black.uppercase.tracking-\[0\.2em\]:not(.inline-flex):not(.rounded-full)::before,
+.font-black.uppercase.tracking-\[0\.25em\]:not(.inline-flex):not(.rounded-full)::before,
+.font-bold.uppercase.tracking-\[0\.3em\]:not(.inline-flex):not(.rounded-full)::before,
+.font-black.uppercase.tracking-\[0\.3em\]:not(.inline-flex):not(.rounded-full)::before,
+.font-bold.uppercase.tracking-\[0\.15em\]:not(.inline-flex):not(.rounded-full)::before,
+.font-black.uppercase.tracking-\[0\.15em\]:not(.inline-flex):not(.rounded-full)::before{
   content:"";display:inline-block;width:40px;height:2px;border-radius:0;background:#10B981;
   vertical-align:middle;margin-right:12px;position:relative;top:-1px;flex:0 0 40px;
 }
@@ -133,11 +139,11 @@ footer [class*="tracking-"]::before{content:none!important;display:none!importan
 .hover\:bg-black:hover{background-color:var(--hv-navy)!important;}
 /* Enterprise dark section -> navy (overrides #171717) */
 #enterprise-solutions.hv-dark{background:var(--hv-navy)!important;}
-#enterprise-solutions.hv-dark [class*="rounded-[2.5rem]"],#enterprise-solutions.hv-dark [class*="rounded-[2rem]"]{background:var(--hv-navy-raised)!important;border-color:rgba(255,255,255,.08)!important;}
+#enterprise-solutions.hv-dark [class*="rounded-[2.5rem]"]:not(.bg-\[\#10b981\]),#enterprise-solutions.hv-dark [class*="rounded-[2rem]"]:not(.bg-\[\#10b981\]){background:var(--hv-navy-raised)!important;border-color:rgba(255,255,255,.08)!important;}
 #enterprise-solutions.hv-dark .bg-neutral-50.rounded-2xl{background:var(--hv-navy-raised)!important;border-color:rgba(255,255,255,.08)!important;}
 </style>
 <style id="hv-home-v2">
-:root{--green:#10B981;--greenD:#047857;--deep:#064E3B;--pale:#D1FAE5;--mist:#ECFDF5;--mint:#6EE7B7;--panel:#0C1E30;--paper:#ECFDF5;--line:#D4D4D4;--slate:#737373;--tx:#141414;--n900:#171717;--ice:#BFEeda;--navy:#0C1E30;--navyD:#081522;--navy2:#0F2436}
+:root{--green:#10B981;--greenD:#047857;--deep:#064E3B;--pale:#D1FAE5;--mist:#ECFDF5;--mint:#6EE7B7;--panel:#0C1E30;--paper:#fafafa;--line:#D4D4D4;--slate:#737373;--tx:#141414;--n900:#171717;--ice:#BFEeda;--navy:#0C1E30;--navyD:#081522;--navy2:#0F2436}
 #page-home .wrap{max-width:1180px;margin:0 auto;padding:0 44px;position:relative}
 #page-home .nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0}
 #page-home .logo{font-size:23px;font-weight:800;color:#fff;text-shadow:0 1px 10px rgba(3,25,18,.5)}
@@ -297,8 +303,26 @@ body.hv-home nav #menu-toggle{color:#ffffff!important;}
 body.hv-home.hv-scrolled nav{background:rgba(255,255,255,.92)!important;-webkit-backdrop-filter:blur(10px)!important;backdrop-filter:blur(10px)!important;border-bottom-color:#f0f0f0!important;}
 body.hv-home.hv-scrolled nav .nav-link{color:#525252!important;}
 body.hv-home.hv-scrolled nav span.text-neutral-900{color:#171717!important;}
-body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;color:#ffffff!important;}
+body.hv-home.hv-scrolled nav a[href="#contact"]{background:#10b981!important;color:#04231a!important;}
 </style>
+<style id="hv-aisprint-navy">
+/* AI Sprint — align to the site's navy + green system */
+/* Hero -> navy feature band (bridges the enterprise block) */
+#ai-sprint-detail > section:first-of-type{
+  background:radial-gradient(900px 520px at 15% -10%,rgba(16,185,129,.18),transparent 55%),linear-gradient(160deg,#0C1E30,#081522) !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+}
+#ai-sprint-detail > section:first-of-type .text-black{color:#ffffff !important;}
+#ai-sprint-detail > section:first-of-type .text-neutral-500,
+#ai-sprint-detail > section:first-of-type .text-neutral-400{color:#C3D0DA !important;}
+#ai-sprint-detail > section:first-of-type .bg-neutral-200{background:rgba(255,255,255,.10) !important;}
+#ai-sprint-detail > section:first-of-type .bg-white{background:#0F2436 !important;}
+#ai-sprint-detail > section:first-of-type a.bg-black{background:#10b981 !important;color:#04231a !important;}
+#ai-sprint-detail > section:first-of-type a.bg-white{background:transparent !important;border-color:#3a4a50 !important;color:#ffffff !important;}
+/* Warm the cold-grey content sections to the homepage pale-mint */
+
+</style>
+<style id="hv-nav-cta">nav a[href="#contact"]{background:#10b981!important;color:#04231a!important;box-shadow:0 2px 10px rgba(16,185,129,.20)!important;}nav a[href="#contact"]:hover{background:#059669!important;color:#04231a!important;}</style>
 </head>
 <body class="bg-white text-neutral-900 selection:bg-black selection:text-white flex flex-col min-h-screen">
 
@@ -327,7 +351,7 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
                             </g>
                         </svg>
                     </div>
-                    <span class="text-xl font-bold tracking-tight text-neutral-900">Hireovate</span>
+                    <span class="text-xl font-bold tracking-tight text-neutral-900">Hireovate<span style="color:#10b981!important">.</span></span>
                 </div>
                 <div class="hidden md:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-wider text-neutral-500">
                     <a href="#organisations" onclick="navTo('organisations')" class="nav-link transition hover:text-black">For Organisations</a>
@@ -368,9 +392,8 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
         <h1>When people leave,<br>give them more<br>than a portal.</h1>
         <p class="sub">Hireovate is the modern alternative to outplacement &mdash; combining recruiter-grade market intelligence, practical AI-era tools, and experienced human guidance to help your people leave ready to compete, not just processed.</p>
         <div class="btns"><a href="#organisations" onclick="navTo('organisations')" class="b1">Explore enterprise transition</a><a href="#report" onclick="navTo('report')" class="b2">Start my Market Scan</a></div>
-        <div class="trust"><svg width="17" height="17" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#10B981"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#04231a" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Trusted by senior leaders across technology, professional services and investor-backed companies</div>
       </div>
-      <div class="heroimg"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1600&auto=format&fit=crop" alt="Senior professionals in a transition advisory conversation"></div>
+      <div class="heroimg"><img src="https://hireovate.com/images/woman%20and%20man.png" alt="Senior professionals in a transition advisory conversation"></div>
     </div>
   </div></div>
 
@@ -478,7 +501,7 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
         <p style="font-size:16px;color:var(--slate);max-width:520px;margin-top:12px;line-height:1.55">Independent, verified reviews from people we&rsquo;ve helped through transition.</p>
         <a class="readlink" href="#testimonials" onclick="navTo('testimonials')">Read what our customers are saying <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <div class="tsimg"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1200&auto=format&fit=crop" alt="Senior executive in a modern office"></div>
+      <div class="tsimg"><img src="https://hireovate.com/images/ChatGPT%20Image%20Aug%205%2C%202026%2C%2008_47_30%20PM%20%283%29.png" alt="Senior executive in a modern office"></div>
     </div>
   </div></div>
 </div>
@@ -489,6 +512,7 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
                     <div id="enterprise-solutions" class="pt-16 border-t border-neutral-100 scroll-mt-24 hv-dark">
                         <div class="text-center max-w-3xl mx-auto mb-16">
+                            <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WORKFORCE TRANSITION</div>
                             <h2 class="text-3xl font-semibold tracking-tight text-black">Enterprise Solutions for Companies</h2>
                             <p class="text-lg text-neutral-500 mt-4">Moving beyond generic outplacement to deliver active, intelligence-led transition support for impacted employees.</p>
                         </div>
@@ -630,7 +654,7 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
                                         A practical one-day programme that equips transitioning employees with AI tools, career intelligence, and a structured job search plan — so they land faster and your employer brand stays intact.
                                     </p>
                                     
-                                    <a href="#aisprint" onclick="navTo('aisprint')" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-black text-white text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] shadow-2xl">
+                                    <a href="#ai-sprint-detail" onclick="event.preventDefault();document.getElementById('ai-sprint-detail').scrollIntoView({behavior:'smooth'})" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-black text-white text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.05] shadow-2xl">
                                         Book AI Sprint briefing
                                         <i data-lucide="arrow-right" class="w-4 h-4 text-[#10b981]"></i>
                                     </a>
@@ -644,12 +668,266 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
                     <div class="hv-overview mt-32 max-w-6xl mx-auto fade-up delay-300">
                         <img src="https://hireovate.com/images/enterprise-offerings-overview.png" alt="Enterprise Offerings Overview" class="w-full h-auto rounded-[2rem] shadow-2xl border border-neutral-200">
                     </div>
-                    <!-- AI Sprint teaser link retained -->
+                    <!-- Jump to AI Sprint detail -->
                     <div class="text-center mt-16">
-                        <a href="#aisprint" onclick="navTo('aisprint')" class="inline-flex items-center gap-2 text-[13px] font-bold text-[#10b981] hover:gap-3 transition-all">Explore the AI Sprint <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        <a href="#ai-sprint-detail" onclick="event.preventDefault();document.getElementById('ai-sprint-detail').scrollIntoView({behavior:'smooth'})" class="inline-flex items-center gap-2 text-[13px] font-bold text-[#10b981] hover:gap-3 transition-all">See the full AI Sprint programme <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                     </div>
                 </div>
             </section>
+            <!-- ================= AI SPRINT (moved from standalone page) ================= -->
+            <div id="ai-sprint-detail">
+            <section class="bg-[#fafafa] pt-32 pb-20 relative overflow-hidden fade-up border-b border-neutral-100">
+                <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                
+                <div class="mx-auto max-w-5xl px-4 sm:px-6 relative z-10 text-center">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-widest mb-8 shadow-sm">
+                        AI Career Readiness Sprint
+                    </div>
+                    <h2 class="text-5xl lg:text-7xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">
+                        Your people are leaving. <br/><span class="text-neutral-400 italic font-normal">Make sure they leave ready.</span>
+                    </h2>
+                    <p class="text-xl text-neutral-500 font-medium max-w-3xl mx-auto leading-relaxed mb-10">
+                        A practical one-day programme that equips transitioning employees with AI tools, career intelligence, and a structured job search plan — so they land faster and your employer brand stays intact.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="#contact" onclick="navTo('contact')" class="px-8 py-4 rounded-full bg-black text-white text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-neutral-900 shadow-xl">Book a Briefing Call</a>
+                        <a href="#programme" onclick="document.getElementById('programme').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 rounded-full bg-white border border-neutral-200 text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:bg-neutral-50 shadow-sm">See the Programme</a>
+                    </div>
+
+                    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-neutral-200 rounded-[2rem] overflow-hidden border border-neutral-200">
+                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">1</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Day</div></div>
+                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">3</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">AI Agents Built</div></div>
+                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">5</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Hours Workshop</div></div>
+                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">10–30</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Participants</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white py-20 lg:py-32 fade-up">
+                <div class="mx-auto max-w-4xl px-4 sm:px-6">
+                    <div class="text-center mb-16">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROBLEM</div>
+                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Outplacement hasn't kept up.</h2>
+                    </div>
+                    <div class="space-y-6 text-lg text-neutral-600 leading-relaxed font-normal text-left">
+                        <p>Most transition support still looks the way it did in 2015. Generic CV workshops. Group sessions on “networking.” A portal login that nobody uses after week two.</p>
+                        <p>Meanwhile, the job market has fundamentally changed. AI is embedded in how companies screen, assess, and hire. Candidates who can’t use modern tools are falling behind — not because they lack experience, but because they lack fluency.</p>
+                        <p class="font-bold text-black text-xl italic">Your departing employees don’t need motivation talks. They need practical skills, working tools, and a system they can execute from day one.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-[#fafafa] py-20 lg:py-32 border-y border-neutral-100 fade-up">
+                <div class="mx-auto max-w-4xl px-4 sm:px-6">
+                    <div class="text-center mb-16">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHAT IT IS</div>
+                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">One day. Three AI agents. <br/><span class="italic text-neutral-400">A complete job search system.</span></h2>
+                    </div>
+                    <div class="space-y-6 text-lg text-neutral-600 leading-relaxed font-normal text-left">
+                        <p>The Hireovate AI Career Readiness Sprint is a facilitated, hands-on workshop for groups of professionals navigating career transition. Delivered in person or remotely, it compresses weeks of fragmented preparation into a single, structured day.</p>
+                        <p>Participants don’t just learn about AI — they <strong class="text-black">build</strong> with it using enterprise-grade LLMs including <strong class="text-black">ChatGPT, Claude, and Gemini</strong>. By 4:30 pm, every person in the room has three working AI career agents, an improved CV, a stronger LinkedIn profile, a company research dossier, interview preparation, and a personal action plan with deadlines.</p>
+                        <p>This is not a lecture. It is not a webinar. It is five hours of guided, practical work with a facilitator who has spent 25 years hiring at the companies your people want to work for.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white py-20 lg:py-32 fade-up">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 text-center">
+                    <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">OUTCOMES</div>
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-16" style="font-family: ui-serif, Georgia, serif;">What every participant leaves with.</h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="user" class="w-5 h-5 text-[#10b981]"></i></div>
+                            <h3 class="text-xl font-bold text-black mb-3">Personal Career Coach Agent</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed">An AI assistant pre-loaded with their CV, target roles, and career context — persistent across every conversation. Like having a recruiter on call 24/7.</p>
+                        </div>
+                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="search" class="w-5 h-5 text-[#10b981]"></i></div>
+                            <h3 class="text-xl font-bold text-black mb-3">Company Research Agent</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed">A reusable prompt that produces a structured company dossier in 90 seconds. Run it five times a week — 25 dossiers in a month.</p>
+                        </div>
+                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="mic" class="w-5 h-5 text-[#10b981]"></i></div>
+                            <h3 class="text-xl font-bold text-black mb-3">Mock Interview Agent</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed">An AI interviewer that asks realistic questions, waits for answers, gives honest feedback, and scores each response out of 10.</p>
+                        </div>
+                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="file-text" class="w-5 h-5 text-[#10b981]"></i></div>
+                            <h3 class="text-xl font-bold text-black mb-3">Improved CV & LinkedIn</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed">A rewritten CV summary aligned to their target role and three LinkedIn headline options — built during the workshop using their own materials.</p>
+                        </div>
+                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="message-square" class="w-5 h-5 text-[#10b981]"></i></div>
+                            <h3 class="text-xl font-bold text-black mb-3">Interview & Outreach Prep</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed">A company brief, predicted questions, a STAR answer, and a personalised outreach message — for a real target company.</p>
+                        </div>
+                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="map" class="w-5 h-5 text-[#10b981]"></i></div>
+                            <h3 class="text-xl font-bold text-black mb-3">Personal AI Career Action Plan</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed">Target roles, workflows, tools, agents, and 10 specific actions with deadlines. The system that turns today’s energy into next week’s results.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="programme" class="bg-black py-20 lg:py-32 fade-up relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 to-black pointer-events-none"></div>
+                <div class="mx-auto max-w-4xl px-4 sm:px-6 relative z-10">
+                    <div class="text-center mb-16">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROGRAMME</div>
+                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">The day at a glance.</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-16 text-left">
+                        <div class="border border-neutral-800 bg-neutral-900/50 p-8 rounded-[2rem]">
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-3">In Person</p>
+                            <p class="text-neutral-400 text-sm leading-relaxed">Your office or offsite venue. Facilitator travels to you. Best for cohorts who benefit from shared energy and real-time coaching.</p>
+                        </div>
+                        <div class="border border-neutral-800 bg-neutral-900/50 p-8 rounded-[2rem]">
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-3">Remote</p>
+                            <p class="text-neutral-400 text-sm leading-relaxed">Delivered live via Zoom or Google Meetings. Same content, same exercises, same facilitator attention. Best for distributed teams or multi-site restructures.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-0 text-left bg-neutral-900/30 rounded-[2.5rem] border border-neutral-800 p-8 sm:p-12">
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">10:00</span><span class="text-white font-medium">Welcome — Careers in the AI Economy</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">10:20</span><span class="text-white font-medium">AI Without the Jargon</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">11:00</span><span class="text-white font-medium">Prompting That Actually Works</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-neutral-600 text-sm font-medium">11:45</span><span class="text-neutral-500 italic">Break</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">12:00</span><span class="text-white font-medium">How to Build Agents to Help Find a Job</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-neutral-600 text-sm font-medium">12:45</span><span class="text-neutral-500 italic">Lunch</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">1:30</span><span class="text-white font-medium">AI for Career Positioning</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">2:30</span><span class="text-white font-medium">Job Search, Research & Interview Prep</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-neutral-600 text-sm font-medium">3:15</span><span class="text-neutral-500 italic">Break</span></div>
+                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">3:30</span><span class="text-white font-medium">Build Your Personal AI Career Workflow</span></div>
+                        <div class="grid grid-cols-[80px_1fr] pt-5"><span class="text-[#10b981] font-bold text-sm">4:10</span><span class="text-white font-medium">Responsible AI & Next Steps</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white py-20 lg:py-32 border-b border-neutral-100 fade-up">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="text-center mb-16">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHO IT'S FOR</div>
+                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Built for employers who take transition seriously.</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-10 text-left">
+                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
+                            <h3 class="text-xl font-bold text-black mb-3">Companies managing a restructure</h3>
+                            <p class="text-neutral-500 text-[15px] leading-relaxed">You’re reducing headcount and you want to do it well. The AI Sprint gives departing employees practical tools and genuine career momentum. Your people leave equipped. Your employer brand leaves intact.</p>
+                        </div>
+                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
+                            <h3 class="text-xl font-bold text-black mb-3">HR and People teams</h3>
+                            <p class="text-neutral-500 text-[15px] leading-relaxed">You need transition support that’s modern, practical, and credible. The AI Sprint slots into your existing redundancy programme as a standalone day or a complement to coaching and outplacement.</p>
+                        </div>
+                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
+                            <h3 class="text-xl font-bold text-black mb-3">Outplacement and career transition firms</h3>
+                            <p class="text-neutral-500 text-[15px] leading-relaxed">You have the coaching and emotional support. What you don’t have is a structured AI readiness module. The AI Sprint plugs that gap — white-label it, co-deliver it, or refer your clients to us.</p>
+                        </div>
+                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
+                            <h3 class="text-xl font-bold text-black mb-3">VC and PE portfolio talent teams</h3>
+                            <p class="text-neutral-500 text-[15px] leading-relaxed">When a portfolio company restructures, your reputation travels with the departing employees. The AI Sprint protects that reputation by giving impacted people something genuinely useful.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-[#fafafa] py-20 lg:py-32 fade-up">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+                        <div class="text-left">
+                            <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">YOUR FACILITATOR</div>
+                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-black mb-8" style="font-family: ui-serif, Georgia, serif;">Led by a recruiter, not a trainer.</h2>
+                            <div class="space-y-6 text-neutral-600 text-lg leading-relaxed">
+                                <p>The AI Sprint is facilitated by Declan Fitzgerald — founder of Hireovate and a 25-year executive recruitment leader. Declan has hired thousands of professionals across Microsoft, HubSpot, Meta, LinkedIn, and multiple startups.</p>
+                                <p>He has been made redundant three times and led teams through reductions three times. This programme is delivered by someone who has been on both sides of the table — who knows what hiring managers actually look for, how AI is changing the process, and what separates candidates who land from those who drift.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-neutral-200 p-10 sm:p-12 rounded-[2.5rem] shadow-sm text-left">
+                            <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-neutral-400 mb-4">INCLUDED</div>
+                            <h3 class="text-2xl font-bold text-black mb-8">Everything in one engagement.</h3>
+                            <ul class="space-y-5 text-[15px] text-neutral-600 font-medium">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
+                                    <span>Full-day facilitated workshop (10:00 am – 4:30 pm)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
+                                    <span>Digital workbook with all prompts, agent guides, and templates</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
+                                    <span>Anonymised post-programme feedback summary</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
+                                    <span>Certificate of completion for each participant (on request)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
+                                    <span>Responsible AI guidance aligned to EU AI Act principles</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white py-20 lg:py-32 border-t border-neutral-100 fade-up">
+                <div class="mx-auto max-w-4xl px-4 sm:px-6 text-left">
+                    <div class="text-center mb-10">
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">FAQ</div>
+                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black" style="font-family: ui-serif, Georgia, serif;">Common questions.</h2>
+                    </div>
+                    
+                    <div class="space-y-10">
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">Is there a minimum number of participants required?</h3>
+                            <p class="text-neutral-600 leading-relaxed">Yes, there is a minimum of 10 people required to attend to run an AI Sprint class.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">Do participants need any technical background?</h3>
+                            <p class="text-neutral-600 leading-relaxed">No. The programme is designed for non-technical professionals. Everything is taught from scratch, and every tool used is free.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">What do participants need to bring?</h3>
+                            <p class="text-neutral-600 leading-relaxed">A laptop or tablet, a copy of their CV (digital), and one job description for a role they’re interested in. Everything else is provided.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">Can we run this for multiple cohorts?</h3>
+                            <p class="text-neutral-600 leading-relaxed">Yes. Many employers run the AI Sprint for each wave of a restructure. We offer discounted pricing for repeat bookings — get in touch to discuss.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">Can you deliver alongside our existing outplacement provider?</h3>
+                            <p class="text-neutral-600 leading-relaxed">Absolutely. The AI Sprint complements coaching and outplacement by adding a practical AI skills layer that most providers don’t offer. We’re happy to coordinate.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">Can you customise for our industry or team?</h3>
+                            <p class="text-neutral-600 leading-relaxed">Yes. For cohorts of 15 or more, we tailor examples, target companies, and exercises to your sector and the seniority level of participants. Customisation is included in the cohort price.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-3">What happens after the AI Sprint?</h3>
+                            <p class="text-neutral-600 leading-relaxed">Participants who want deeper, individualised market intelligence can upgrade to Hireovate’s Market Scan or Transition Advisory services at a preferred rate.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-black py-16 lg:py-20 text-white text-center">
+                <div class="mx-auto max-w-4xl px-4 sm:px-6">
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">Ready to give your people a real advantage?</h2>
+                    <p class="text-lg text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">Book a 20-minute briefing call. We’ll walk you through the programme, answer your questions, and scope the right format for your team.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="#contact" onclick="navTo('contact')" class="w-full sm:w-auto px-10 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-[#059669] shadow-xl">
+                            Book a Briefing Call
+                        </a>
+                        <p class="text-sm font-medium text-neutral-500">Or email <a href="mailto:hello@hireovate.com" class="text-[#10b981] hover:underline">hello@hireovate.com</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
         </div>
 
         <!-- ================= PAGE: FOR INDIVIDUALS ================= -->
@@ -657,9 +935,7 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
             <section class="relative bg-white py-16 lg:py-24 border-b border-neutral-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
                     <div class="max-w-4xl mx-auto text-center mb-16">
-                        <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#10b981]/10 text-[#10b981] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] shadow-sm mb-6">
-                            WAYS TO WORK TOGETHER
-                        </div>
+                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-6">WAYS TO WORK TOGETHER</div>
                         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter text-black mb-8 leading-[1.1]">
                             Recruiter-grade intelligence, strategy, and execution.
                         </h2>
@@ -681,6 +957,7 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
                     <!-- B2C Section (Individuals) -->
                     <div class="mb-32">
                         <div class="text-center max-w-3xl mx-auto mb-10">
+                            <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">ADVISORY TIERS</div>
                             <h2 class="text-3xl font-semibold tracking-tight text-black mb-6">Advisory for Individuals</h2>
                         </div>
                         
@@ -1470,262 +1747,6 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
                 </div>
             </section>
         </div>
-
-        <!-- ================= PAGE: AI SPRINT ================= -->
-        <div id="page-aisprint" class="page-section hidden">
-            <section class="bg-[#fafafa] pt-32 pb-20 relative overflow-hidden fade-up border-b border-neutral-100">
-                <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
-                
-                <div class="mx-auto max-w-5xl px-4 sm:px-6 relative z-10 text-center">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-widest mb-8 shadow-sm">
-                        AI Career Readiness Sprint
-                    </div>
-                    <h2 class="text-5xl lg:text-7xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">
-                        Your people are leaving. <br/><span class="text-neutral-400 italic font-normal">Make sure they leave ready.</span>
-                    </h2>
-                    <p class="text-xl text-neutral-500 font-medium max-w-3xl mx-auto leading-relaxed mb-10">
-                        A practical one-day programme that equips transitioning employees with AI tools, career intelligence, and a structured job search plan — so they land faster and your employer brand stays intact.
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <a href="#contact" onclick="navTo('contact')" class="px-8 py-4 rounded-full bg-black text-white text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-neutral-900 shadow-xl">Book a Briefing Call</a>
-                        <a href="#programme" onclick="document.getElementById('programme').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 rounded-full bg-white border border-neutral-200 text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:bg-neutral-50 shadow-sm">See the Programme</a>
-                    </div>
-
-                    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-neutral-200 rounded-[2rem] overflow-hidden border border-neutral-200">
-                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">1</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Day</div></div>
-                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">3</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">AI Agents Built</div></div>
-                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">5</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Hours Workshop</div></div>
-                        <div class="bg-white p-8 text-center"><div class="text-4xl font-black text-black mb-2 tracking-tighter">10–30</div><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#10b981]">Participants</div></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-white py-20 lg:py-32 fade-up">
-                <div class="mx-auto max-w-4xl px-4 sm:px-6">
-                    <div class="text-center mb-16">
-                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROBLEM</div>
-                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Outplacement hasn't kept up.</h2>
-                    </div>
-                    <div class="space-y-6 text-lg text-neutral-600 leading-relaxed font-normal text-left">
-                        <p>Most transition support still looks the way it did in 2015. Generic CV workshops. Group sessions on “networking.” A portal login that nobody uses after week two.</p>
-                        <p>Meanwhile, the job market has fundamentally changed. AI is embedded in how companies screen, assess, and hire. Candidates who can’t use modern tools are falling behind — not because they lack experience, but because they lack fluency.</p>
-                        <p class="font-bold text-black text-xl italic">Your departing employees don’t need motivation talks. They need practical skills, working tools, and a system they can execute from day one.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-[#fafafa] py-20 lg:py-32 border-y border-neutral-100 fade-up">
-                <div class="mx-auto max-w-4xl px-4 sm:px-6">
-                    <div class="text-center mb-16">
-                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHAT IT IS</div>
-                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">One day. Three AI agents. <br/><span class="italic text-neutral-400">A complete job search system.</span></h2>
-                    </div>
-                    <div class="space-y-6 text-lg text-neutral-600 leading-relaxed font-normal text-left">
-                        <p>The Hireovate AI Career Readiness Sprint is a facilitated, hands-on workshop for groups of professionals navigating career transition. Delivered in person or remotely, it compresses weeks of fragmented preparation into a single, structured day.</p>
-                        <p>Participants don’t just learn about AI — they <strong class="text-black">build</strong> with it using enterprise-grade LLMs including <strong class="text-black">ChatGPT, Claude, and Gemini</strong>. By 4:30 pm, every person in the room has three working AI career agents, an improved CV, a stronger LinkedIn profile, a company research dossier, interview preparation, and a personal action plan with deadlines.</p>
-                        <p>This is not a lecture. It is not a webinar. It is five hours of guided, practical work with a facilitator who has spent 25 years hiring at the companies your people want to work for.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-white py-20 lg:py-32 fade-up">
-                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 text-center">
-                    <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">OUTCOMES</div>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-16" style="font-family: ui-serif, Georgia, serif;">What every participant leaves with.</h2>
-                    
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="user" class="w-5 h-5 text-[#10b981]"></i></div>
-                            <h3 class="text-xl font-bold text-black mb-3">Personal Career Coach Agent</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed">An AI assistant pre-loaded with their CV, target roles, and career context — persistent across every conversation. Like having a recruiter on call 24/7.</p>
-                        </div>
-                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="search" class="w-5 h-5 text-[#10b981]"></i></div>
-                            <h3 class="text-xl font-bold text-black mb-3">Company Research Agent</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed">A reusable prompt that produces a structured company dossier in 90 seconds. Run it five times a week — 25 dossiers in a month.</p>
-                        </div>
-                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="mic" class="w-5 h-5 text-[#10b981]"></i></div>
-                            <h3 class="text-xl font-bold text-black mb-3">Mock Interview Agent</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed">An AI interviewer that asks realistic questions, waits for answers, gives honest feedback, and scores each response out of 10.</p>
-                        </div>
-                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="file-text" class="w-5 h-5 text-[#10b981]"></i></div>
-                            <h3 class="text-xl font-bold text-black mb-3">Improved CV & LinkedIn</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed">A rewritten CV summary aligned to their target role and three LinkedIn headline options — built during the workshop using their own materials.</p>
-                        </div>
-                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="message-square" class="w-5 h-5 text-[#10b981]"></i></div>
-                            <h3 class="text-xl font-bold text-black mb-3">Interview & Outreach Prep</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed">A company brief, predicted questions, a STAR answer, and a personalised outreach message — for a real target company.</p>
-                        </div>
-                        <div class="bg-white border border-neutral-200 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-12 h-12 rounded-2xl bg-[#fafafa] border border-neutral-200 flex items-center justify-center mb-6 shadow-sm"><i data-lucide="map" class="w-5 h-5 text-[#10b981]"></i></div>
-                            <h3 class="text-xl font-bold text-black mb-3">Personal AI Career Action Plan</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed">Target roles, workflows, tools, agents, and 10 specific actions with deadlines. The system that turns today’s energy into next week’s results.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="programme" class="bg-black py-20 lg:py-32 fade-up relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 to-black pointer-events-none"></div>
-                <div class="mx-auto max-w-4xl px-4 sm:px-6 relative z-10">
-                    <div class="text-center mb-16">
-                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">THE PROGRAMME</div>
-                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">The day at a glance.</h2>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6 mb-16 text-left">
-                        <div class="border border-neutral-800 bg-neutral-900/50 p-8 rounded-[2rem]">
-                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-3">In Person</p>
-                            <p class="text-neutral-400 text-sm leading-relaxed">Your office or offsite venue. Facilitator travels to you. Best for cohorts who benefit from shared energy and real-time coaching.</p>
-                        </div>
-                        <div class="border border-neutral-800 bg-neutral-900/50 p-8 rounded-[2rem]">
-                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#10b981] mb-3">Remote</p>
-                            <p class="text-neutral-400 text-sm leading-relaxed">Delivered live via Zoom or Google Meetings. Same content, same exercises, same facilitator attention. Best for distributed teams or multi-site restructures.</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-0 text-left bg-neutral-900/30 rounded-[2.5rem] border border-neutral-800 p-8 sm:p-12">
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">10:00</span><span class="text-white font-medium">Welcome — Careers in the AI Economy</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">10:20</span><span class="text-white font-medium">AI Without the Jargon</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">11:00</span><span class="text-white font-medium">Prompting That Actually Works</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-neutral-600 text-sm font-medium">11:45</span><span class="text-neutral-500 italic">Break</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">12:00</span><span class="text-white font-medium">How to Build Agents to Help Find a Job</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-neutral-600 text-sm font-medium">12:45</span><span class="text-neutral-500 italic">Lunch</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">1:30</span><span class="text-white font-medium">AI for Career Positioning</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">2:30</span><span class="text-white font-medium">Job Search, Research & Interview Prep</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-neutral-600 text-sm font-medium">3:15</span><span class="text-neutral-500 italic">Break</span></div>
-                        <div class="grid grid-cols-[80px_1fr] border-b border-neutral-800 py-5"><span class="text-[#10b981] font-bold text-sm">3:30</span><span class="text-white font-medium">Build Your Personal AI Career Workflow</span></div>
-                        <div class="grid grid-cols-[80px_1fr] pt-5"><span class="text-[#10b981] font-bold text-sm">4:10</span><span class="text-white font-medium">Responsible AI & Next Steps</span></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-white py-20 lg:py-32 border-b border-neutral-100 fade-up">
-                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-                    <div class="text-center mb-16">
-                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">WHO IT'S FOR</div>
-                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6" style="font-family: ui-serif, Georgia, serif;">Built for employers who take transition seriously.</h2>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-10 text-left">
-                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
-                            <h3 class="text-xl font-bold text-black mb-3">Companies managing a restructure</h3>
-                            <p class="text-neutral-500 text-[15px] leading-relaxed">You’re reducing headcount and you want to do it well. The AI Sprint gives departing employees practical tools and genuine career momentum. Your people leave equipped. Your employer brand leaves intact.</p>
-                        </div>
-                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
-                            <h3 class="text-xl font-bold text-black mb-3">HR and People teams</h3>
-                            <p class="text-neutral-500 text-[15px] leading-relaxed">You need transition support that’s modern, practical, and credible. The AI Sprint slots into your existing redundancy programme as a standalone day or a complement to coaching and outplacement.</p>
-                        </div>
-                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
-                            <h3 class="text-xl font-bold text-black mb-3">Outplacement and career transition firms</h3>
-                            <p class="text-neutral-500 text-[15px] leading-relaxed">You have the coaching and emotional support. What you don’t have is a structured AI readiness module. The AI Sprint plugs that gap — white-label it, co-deliver it, or refer your clients to us.</p>
-                        </div>
-                        <div class="border-l-4 border-[#10b981] pl-6 py-2">
-                            <h3 class="text-xl font-bold text-black mb-3">VC and PE portfolio talent teams</h3>
-                            <p class="text-neutral-500 text-[15px] leading-relaxed">When a portfolio company restructures, your reputation travels with the departing employees. The AI Sprint protects that reputation by giving impacted people something genuinely useful.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-[#fafafa] py-20 lg:py-32 fade-up">
-                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-                    <div class="grid lg:grid-cols-2 gap-16 items-start">
-                        <div class="text-left">
-                            <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">YOUR FACILITATOR</div>
-                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-black mb-8" style="font-family: ui-serif, Georgia, serif;">Led by a recruiter, not a trainer.</h2>
-                            <div class="space-y-6 text-neutral-600 text-lg leading-relaxed">
-                                <p>The AI Sprint is facilitated by Declan Fitzgerald — founder of Hireovate and a 25-year executive recruitment leader. Declan has hired thousands of professionals across Microsoft, HubSpot, Meta, LinkedIn, and multiple startups.</p>
-                                <p>He has been made redundant three times and led teams through reductions three times. This programme is delivered by someone who has been on both sides of the table — who knows what hiring managers actually look for, how AI is changing the process, and what separates candidates who land from those who drift.</p>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-neutral-200 p-10 sm:p-12 rounded-[2.5rem] shadow-sm text-left">
-                            <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-neutral-400 mb-4">INCLUDED</div>
-                            <h3 class="text-2xl font-bold text-black mb-8">Everything in one engagement.</h3>
-                            <ul class="space-y-5 text-[15px] text-neutral-600 font-medium">
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
-                                    <span>Full-day facilitated workshop (10:00 am – 4:30 pm)</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
-                                    <span>Digital workbook with all prompts, agent guides, and templates</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
-                                    <span>Anonymised post-programme feedback summary</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
-                                    <span>Certificate of completion for each participant (on request)</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="w-5 h-5 text-[#10b981] shrink-0"></i>
-                                    <span>Responsible AI guidance aligned to EU AI Act principles</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-white py-20 lg:py-32 border-t border-neutral-100 fade-up">
-                <div class="mx-auto max-w-4xl px-4 sm:px-6 text-left">
-                    <div class="text-center mb-10">
-                        <div class="text-[11px] font-bold uppercase tracking-[0.4em] text-[#10b981] mb-4">FAQ</div>
-                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-black" style="font-family: ui-serif, Georgia, serif;">Common questions.</h2>
-                    </div>
-                    
-                    <div class="space-y-10">
-                        <div>
-                            <h3 class="text-xl font-bold text-black mb-3">Is there a minimum number of participants required?</h3>
-                            <p class="text-neutral-600 leading-relaxed">Yes, there is a minimum of 10 people required to attend to run an AI Sprint class.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-black mb-3">Do participants need any technical background?</h3>
-                            <p class="text-neutral-600 leading-relaxed">No. The programme is designed for non-technical professionals. Everything is taught from scratch, and every tool used is free.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-black mb-3">What do participants need to bring?</h3>
-                            <p class="text-neutral-600 leading-relaxed">A laptop or tablet, a copy of their CV (digital), and one job description for a role they’re interested in. Everything else is provided.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-black mb-3">Can we run this for multiple cohorts?</h3>
-                            <p class="text-neutral-600 leading-relaxed">Yes. Many employers run the AI Sprint for each wave of a restructure. We offer discounted pricing for repeat bookings — get in touch to discuss.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-black mb-3">Can you deliver alongside our existing outplacement provider?</h3>
-                            <p class="text-neutral-600 leading-relaxed">Absolutely. The AI Sprint complements coaching and outplacement by adding a practical AI skills layer that most providers don’t offer. We’re happy to coordinate.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-black mb-3">Can you customise for our industry or team?</h3>
-                            <p class="text-neutral-600 leading-relaxed">Yes. For cohorts of 15 or more, we tailor examples, target companies, and exercises to your sector and the seniority level of participants. Customisation is included in the cohort price.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-black mb-3">What happens after the AI Sprint?</h3>
-                            <p class="text-neutral-600 leading-relaxed">Participants who want deeper, individualised market intelligence can upgrade to Hireovate’s Market Scan or Transition Advisory services at a preferred rate.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-black py-16 lg:py-20 text-white text-center">
-                <div class="mx-auto max-w-4xl px-4 sm:px-6">
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6" style="font-family: ui-serif, Georgia, serif;">Ready to give your people a real advantage?</h2>
-                    <p class="text-lg text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">Book a 20-minute briefing call. We’ll walk you through the programme, answer your questions, and scope the right format for your team.</p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <a href="#contact" onclick="navTo('contact')" class="w-full sm:w-auto px-10 py-5 rounded-full bg-[#10b981] text-black text-[13px] font-black uppercase tracking-[0.15em] transition-all hover:scale-[1.02] hover:bg-[#059669] shadow-xl">
-                            Book a Briefing Call
-                        </a>
-                        <p class="text-sm font-medium text-neutral-500">Or email <a href="mailto:hello@hireovate.com" class="text-[#10b981] hover:underline">hello@hireovate.com</a></p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
         <!-- GRADUATE INTELLIGENCE UPDATE START -->
         <!-- ================= PAGE: GRADUATE INTELLIGENCE ================= -->
         <div id="page-graduate-intelligence" class="page-section hidden">
@@ -2684,6 +2705,7 @@ body.hv-home.hv-scrolled nav a[href="#contact"]{background:#0C1E30!important;col
 
         function navTo(pageId) {
             if (pageId === 'services') pageId = 'individuals';
+            if (pageId === 'aisprint') pageId = 'organisations';
             document.body.classList.toggle('hv-home', pageId === 'home');
             // Temporarily disable smooth scrolling for an instant page transition
             document.documentElement.classList.remove('scroll-smooth');
